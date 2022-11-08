@@ -1,0 +1,8 @@
+<RCC>
+    <qresource prefix="/resource">
+        <file>qrc/sber.png</file>
+        <file>qrc/upload.png</file>
+        <file>qrc/icon.icns</file>
+        <file>qrc/download.png</file>
+    </qresource>
+</RCC>

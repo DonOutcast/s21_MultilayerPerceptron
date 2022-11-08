@@ -11,21 +11,22 @@ CONFIG += c++17
 SOURCES += \
     main.cpp \
     qcustomplot.cpp \
-    renderscene.cpp \
+    render_scene.cpp \
     s21_view.cpp
 
 HEADERS += \
     qcustomplot.h \
-    renderscene.h \
+    render_scene.h \
     s21_view.h
 
 FORMS += \
     s21_view.ui
 
 
-ICON = ../icon.icns
-
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
+
+RESOURCES += \
+    resource.qrc

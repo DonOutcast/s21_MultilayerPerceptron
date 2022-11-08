@@ -54,16 +54,18 @@ OBJECTS_DIR   = ./
 
 SOURCES       = ../s21_view/main.cpp \
 		../s21_view/qcustomplot.cpp \
-		../s21_view/renderscene.cpp \
-		../s21_view/s21_view.cpp moc_qcustomplot.cpp \
-		moc_renderscene.cpp \
+		../s21_view/render_scene.cpp \
+		../s21_view/s21_view.cpp qrc_resource.cpp \
+		moc_qcustomplot.cpp \
+		moc_render_scene.cpp \
 		moc_s21_view.cpp
 OBJECTS       = main.o \
 		qcustomplot.o \
-		renderscene.o \
+		render_scene.o \
 		s21_view.o \
+		qrc_resource.o \
 		moc_qcustomplot.o \
-		moc_renderscene.o \
+		moc_render_scene.o \
 		moc_s21_view.o
 DIST          = /usr/local/share/qt/mkspecs/features/spec_pre.prf \
 		/usr/local/share/qt/mkspecs/features/device_config.prf \
@@ -321,10 +323,10 @@ DIST          = /usr/local/share/qt/mkspecs/features/spec_pre.prf \
 		/usr/local/share/qt/mkspecs/features/yacc.prf \
 		/usr/local/share/qt/mkspecs/features/lex.prf \
 		../s21_view/s21_view.pro ../s21_view/qcustomplot.h \
-		../s21_view/renderscene.h \
+		../s21_view/render_scene.h \
 		../s21_view/s21_view.h ../s21_view/main.cpp \
 		../s21_view/qcustomplot.cpp \
-		../s21_view/renderscene.cpp \
+		../s21_view/render_scene.cpp \
 		../s21_view/s21_view.cpp
 QMAKE_TARGET  = s21_view
 DESTDIR       = 
@@ -606,6 +608,7 @@ Makefile: ../s21_view/s21_view.pro /usr/local/share/qt/mkspecs/macx-clang/qmake.
 		/usr/local/share/qt/mkspecs/features/yacc.prf \
 		/usr/local/share/qt/mkspecs/features/lex.prf \
 		../s21_view/s21_view.pro \
+		../s21_view/resource.qrc \
 		/usr/local/lib/QtWidgets.framework/Resources/QtWidgets.prl \
 		/usr/local/lib/QtGui.framework/Resources/QtGui.prl \
 		/usr/local/lib/QtCore.framework/Resources/QtCore.prl
@@ -866,6 +869,7 @@ Makefile: ../s21_view/s21_view.pro /usr/local/share/qt/mkspecs/macx-clang/qmake.
 /usr/local/share/qt/mkspecs/features/yacc.prf:
 /usr/local/share/qt/mkspecs/features/lex.prf:
 ../s21_view/s21_view.pro:
+../s21_view/resource.qrc:
 /usr/local/lib/QtWidgets.framework/Resources/QtWidgets.prl:
 /usr/local/lib/QtGui.framework/Resources/QtGui.prl:
 /usr/local/lib/QtCore.framework/Resources/QtCore.prl:
@@ -885,17 +889,12 @@ s21_view.app/Contents/Resources/empty.lproj:
 s21_view.app/Contents/Info.plist: 
 	@test -d s21_view.app/Contents || mkdir -p s21_view.app/Contents
 	@$(DEL_FILE) s21_view.app/Contents/Info.plist
-	@sed -e "s,@SHORT_VERSION@,1.0,g" -e "s,\$${QMAKE_SHORT_VERSION},1.0,g" -e "s,@FULL_VERSION@,1.0.0,g" -e "s,\$${QMAKE_FULL_VERSION},1.0.0,g" -e "s,@TYPEINFO@,????,g" -e "s,\$${QMAKE_PKGINFO_TYPEINFO},????,g" -e "s,@BUNDLEIDENTIFIER@,com.yourcompany.s21-view,g" -e "s,\$${PRODUCT_BUNDLE_IDENTIFIER},com.yourcompany.s21-view,g" -e "s,\$${MACOSX_DEPLOYMENT_TARGET},11,g" -e "s,\$${IPHONEOS_DEPLOYMENT_TARGET},,g" -e "s,\$${TVOS_DEPLOYMENT_TARGET},,g" -e "s,\$${WATCHOS_DEPLOYMENT_TARGET},,g" -e "s,\$${IOS_LAUNCH_SCREEN},LaunchScreen,g" -e "s,@ICON@,icon.icns,g" -e "s,\$${ASSETCATALOG_COMPILER_APPICON_NAME},icon.icns,g" -e "s,@EXECUTABLE@,s21_view,g" -e "s,@LIBRARY@,s21_view,g" -e "s,\$${EXECUTABLE_NAME},s21_view,g" -e "s,@TYPEINFO@,????,g" -e "s,\$${QMAKE_PKGINFO_TYPEINFO},????,g" /usr/local/share/qt/mkspecs/macx-clang/Info.plist.app >s21_view.app/Contents/Info.plist
-s21_view.app/Contents/Resources/icon.icns: ../icon.icns
-	@test -d s21_view.app/Contents/Resources/ || mkdir -p s21_view.app/Contents/Resources/
-	@$(DEL_FILE) s21_view.app/Contents/Resources/icon.icns
-	@$(COPY_FILE) ../icon.icns s21_view.app/Contents/Resources/icon.icns
+	@sed -e "s,@SHORT_VERSION@,1.0,g" -e "s,\$${QMAKE_SHORT_VERSION},1.0,g" -e "s,@FULL_VERSION@,1.0.0,g" -e "s,\$${QMAKE_FULL_VERSION},1.0.0,g" -e "s,@TYPEINFO@,????,g" -e "s,\$${QMAKE_PKGINFO_TYPEINFO},????,g" -e "s,@BUNDLEIDENTIFIER@,com.yourcompany.s21-view,g" -e "s,\$${PRODUCT_BUNDLE_IDENTIFIER},com.yourcompany.s21-view,g" -e "s,\$${MACOSX_DEPLOYMENT_TARGET},11,g" -e "s,\$${IPHONEOS_DEPLOYMENT_TARGET},,g" -e "s,\$${TVOS_DEPLOYMENT_TARGET},,g" -e "s,\$${WATCHOS_DEPLOYMENT_TARGET},,g" -e "s,\$${IOS_LAUNCH_SCREEN},LaunchScreen,g" -e "s,@ICON@,,g" -e "s,\$${ASSETCATALOG_COMPILER_APPICON_NAME},,g" -e "s,@EXECUTABLE@,s21_view,g" -e "s,@LIBRARY@,s21_view,g" -e "s,\$${EXECUTABLE_NAME},s21_view,g" -e "s,@TYPEINFO@,????,g" -e "s,\$${QMAKE_PKGINFO_TYPEINFO},????,g" /usr/local/share/qt/mkspecs/macx-clang/Info.plist.app >s21_view.app/Contents/Info.plist
 
 all: Makefile \
 		s21_view.app/Contents/PkgInfo \
 		s21_view.app/Contents/Resources/empty.lproj \
-		s21_view.app/Contents/Info.plist \
-		s21_view.app/Contents/Resources/icon.icns s21_view.app/Contents/MacOS/s21_view
+		s21_view.app/Contents/Info.plist s21_view.app/Contents/MacOS/s21_view
 
 dist: distdir FORCE
 	(cd `dirname $(DISTDIR)` && $(TAR) $(DISTNAME).tar $(DISTNAME) && $(COMPRESS) $(DISTNAME).tar) && $(MOVE) `dirname $(DISTDIR)`/$(DISTNAME).tar.gz . && $(DEL_FILE) -r $(DISTDIR)
@@ -903,9 +902,10 @@ dist: distdir FORCE
 distdir: FORCE
 	@test -d $(DISTDIR) || mkdir -p $(DISTDIR)
 	$(COPY_FILE) --parents $(DIST) $(DISTDIR)/
+	$(COPY_FILE) --parents ../s21_view/resource.qrc $(DISTDIR)/
 	$(COPY_FILE) --parents /usr/local/share/qt/mkspecs/features/data/dummy.cpp $(DISTDIR)/
-	$(COPY_FILE) --parents ../s21_view/qcustomplot.h ../s21_view/renderscene.h ../s21_view/s21_view.h $(DISTDIR)/
-	$(COPY_FILE) --parents ../s21_view/main.cpp ../s21_view/qcustomplot.cpp ../s21_view/renderscene.cpp ../s21_view/s21_view.cpp $(DISTDIR)/
+	$(COPY_FILE) --parents ../s21_view/qcustomplot.h ../s21_view/render_scene.h ../s21_view/s21_view.h $(DISTDIR)/
+	$(COPY_FILE) --parents ../s21_view/main.cpp ../s21_view/qcustomplot.cpp ../s21_view/render_scene.cpp ../s21_view/s21_view.cpp $(DISTDIR)/
 	$(COPY_FILE) --parents ../s21_view/s21_view.ui $(DISTDIR)/
 
 
@@ -933,17 +933,26 @@ check: first
 
 benchmark: first
 
-compiler_rcc_make_all:
+compiler_rcc_make_all: qrc_resource.cpp
 compiler_rcc_clean:
+	-$(DEL_FILE) qrc_resource.cpp
+qrc_resource.cpp: ../s21_view/resource.qrc \
+		/usr/local/share/qt/libexec/rcc \
+		../s21_view/qrc/sber.png \
+		../s21_view/qrc/download.png \
+		../s21_view/qrc/icon.icns \
+		../s21_view/qrc/upload.png
+	/usr/local/share/qt/libexec/rcc -name resource ../s21_view/resource.qrc -o qrc_resource.cpp
+
 compiler_moc_predefs_make_all: moc_predefs.h
 compiler_moc_predefs_clean:
 	-$(DEL_FILE) moc_predefs.h
 moc_predefs.h: /usr/local/share/qt/mkspecs/features/data/dummy.cpp
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++ -pipe -stdlib=libc++ -g -std=gnu++1z $(EXPORT_ARCH_ARGS) -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11 -Wall -Wextra -dM -E -o moc_predefs.h /usr/local/share/qt/mkspecs/features/data/dummy.cpp
 
-compiler_moc_header_make_all: moc_qcustomplot.cpp moc_renderscene.cpp moc_s21_view.cpp
+compiler_moc_header_make_all: moc_qcustomplot.cpp moc_render_scene.cpp moc_s21_view.cpp
 compiler_moc_header_clean:
-	-$(DEL_FILE) moc_qcustomplot.cpp moc_renderscene.cpp moc_s21_view.cpp
+	-$(DEL_FILE) moc_qcustomplot.cpp moc_render_scene.cpp moc_s21_view.cpp
 moc_qcustomplot.cpp: ../s21_view/qcustomplot.h \
 		/usr/local/lib/QtCore.framework/Headers/qmath.h \
 		/usr/local/lib/QtCore.framework/Headers/qnumeric.h \
@@ -952,7 +961,7 @@ moc_qcustomplot.cpp: ../s21_view/qcustomplot.h \
 		/usr/local/share/qt/libexec/moc
 	/usr/local/share/qt/libexec/moc $(DEFINES) --include /Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/build-s21_view-Desktop_x86_darwin_generic_mach_o_64bit-Debug/moc_predefs.h -I/usr/local/share/qt/mkspecs/macx-clang -I/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/s21_view -I/usr/local/lib/QtWidgets.framework/Headers -I/usr/local/lib/QtGui.framework/Headers -I/usr/local/lib/QtCore.framework/Headers -I. -I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk/usr/include/c++/v1 -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/13.0.0/include -I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -F/usr/local/lib ../s21_view/qcustomplot.h -o moc_qcustomplot.cpp
 
-moc_renderscene.cpp: ../s21_view/renderscene.h \
+moc_render_scene.cpp: ../s21_view/render_scene.h \
 		/usr/local/lib/QtWidgets.framework/Headers/QWidget \
 		/usr/local/lib/QtWidgets.framework/Headers/qwidget.h \
 		/usr/local/lib/QtGui.framework/Headers/QMouseEvent \
@@ -975,7 +984,7 @@ moc_renderscene.cpp: ../s21_view/renderscene.h \
 		/usr/local/lib/QtWidgets.framework/Headers/qfiledialog.h \
 		moc_predefs.h \
 		/usr/local/share/qt/libexec/moc
-	/usr/local/share/qt/libexec/moc $(DEFINES) --include /Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/build-s21_view-Desktop_x86_darwin_generic_mach_o_64bit-Debug/moc_predefs.h -I/usr/local/share/qt/mkspecs/macx-clang -I/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/s21_view -I/usr/local/lib/QtWidgets.framework/Headers -I/usr/local/lib/QtGui.framework/Headers -I/usr/local/lib/QtCore.framework/Headers -I. -I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk/usr/include/c++/v1 -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/13.0.0/include -I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -F/usr/local/lib ../s21_view/renderscene.h -o moc_renderscene.cpp
+	/usr/local/share/qt/libexec/moc $(DEFINES) --include /Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/build-s21_view-Desktop_x86_darwin_generic_mach_o_64bit-Debug/moc_predefs.h -I/usr/local/share/qt/mkspecs/macx-clang -I/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/s21_view -I/usr/local/lib/QtWidgets.framework/Headers -I/usr/local/lib/QtGui.framework/Headers -I/usr/local/lib/QtCore.framework/Headers -I. -I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk/usr/include/c++/v1 -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/13.0.0/include -I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -F/usr/local/lib ../s21_view/render_scene.h -o moc_render_scene.cpp
 
 moc_s21_view.cpp: ../s21_view/s21_view.h \
 		/usr/local/lib/QtWidgets.framework/Headers/QMainWindow \
@@ -998,7 +1007,28 @@ compiler_uic_make_all: ui_s21_view.h
 compiler_uic_clean:
 	-$(DEL_FILE) ui_s21_view.h
 ui_s21_view.h: ../s21_view/s21_view.ui \
-		/usr/local/share/qt/libexec/uic
+		/usr/local/share/qt/libexec/uic \
+		../s21_view/render_scene.h \
+		/usr/local/lib/QtWidgets.framework/Headers/QWidget \
+		/usr/local/lib/QtWidgets.framework/Headers/qwidget.h \
+		/usr/local/lib/QtGui.framework/Headers/QMouseEvent \
+		/usr/local/lib/QtGui.framework/Headers/qevent.h \
+		/usr/local/lib/QtGui.framework/Headers/QPainter \
+		/usr/local/lib/QtGui.framework/Headers/qpainter.h \
+		/usr/local/lib/QtGui.framework/Headers/QPaintEvent \
+		/usr/local/lib/QtGui.framework/Headers/QColor \
+		/usr/local/lib/QtGui.framework/Headers/qcolor.h \
+		/usr/local/lib/QtGui.framework/Headers/QImage \
+		/usr/local/lib/QtGui.framework/Headers/qimage.h \
+		../s21_view/s21_view.h \
+		/usr/local/lib/QtWidgets.framework/Headers/QMainWindow \
+		/usr/local/lib/QtWidgets.framework/Headers/qmainwindow.h \
+		/usr/local/lib/QtCore.framework/Headers/QDateTime \
+		/usr/local/lib/QtCore.framework/Headers/qdatetime.h \
+		/usr/local/lib/QtCore.framework/Headers/QDir \
+		/usr/local/lib/QtCore.framework/Headers/qdir.h \
+		/usr/local/lib/QtWidgets.framework/Headers/QFileDialog \
+		/usr/local/lib/QtWidgets.framework/Headers/qfiledialog.h
 	/usr/local/share/qt/libexec/uic ../s21_view/s21_view.ui -o ui_s21_view.h
 
 compiler_rez_source_make_all:
@@ -1009,7 +1039,7 @@ compiler_yacc_impl_make_all:
 compiler_yacc_impl_clean:
 compiler_lex_make_all:
 compiler_lex_clean:
-compiler_clean: compiler_moc_predefs_clean compiler_moc_header_clean compiler_uic_clean 
+compiler_clean: compiler_rcc_clean compiler_moc_predefs_clean compiler_moc_header_clean compiler_uic_clean 
 
 ####### Compile
 
@@ -1032,7 +1062,7 @@ qcustomplot.o: ../s21_view/qcustomplot.cpp ../s21_view/qcustomplot.h \
 		/usr/local/lib/QtCore.framework/Headers/QtNumeric
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o qcustomplot.o ../s21_view/qcustomplot.cpp
 
-renderscene.o: ../s21_view/renderscene.cpp ../s21_view/renderscene.h \
+render_scene.o: ../s21_view/render_scene.cpp ../s21_view/render_scene.h \
 		/usr/local/lib/QtWidgets.framework/Headers/QWidget \
 		/usr/local/lib/QtWidgets.framework/Headers/qwidget.h \
 		/usr/local/lib/QtGui.framework/Headers/QMouseEvent \
@@ -1053,7 +1083,7 @@ renderscene.o: ../s21_view/renderscene.cpp ../s21_view/renderscene.h \
 		/usr/local/lib/QtCore.framework/Headers/qdir.h \
 		/usr/local/lib/QtWidgets.framework/Headers/QFileDialog \
 		/usr/local/lib/QtWidgets.framework/Headers/qfiledialog.h
-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o renderscene.o ../s21_view/renderscene.cpp
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o render_scene.o ../s21_view/render_scene.cpp
 
 s21_view.o: ../s21_view/s21_view.cpp ../s21_view/s21_view.h \
 		/usr/local/lib/QtWidgets.framework/Headers/QMainWindow \
@@ -1064,14 +1094,29 @@ s21_view.o: ../s21_view/s21_view.cpp ../s21_view/s21_view.h \
 		/usr/local/lib/QtCore.framework/Headers/qdir.h \
 		/usr/local/lib/QtWidgets.framework/Headers/QFileDialog \
 		/usr/local/lib/QtWidgets.framework/Headers/qfiledialog.h \
-		ui_s21_view.h
+		ui_s21_view.h \
+		../s21_view/render_scene.h \
+		/usr/local/lib/QtWidgets.framework/Headers/QWidget \
+		/usr/local/lib/QtWidgets.framework/Headers/qwidget.h \
+		/usr/local/lib/QtGui.framework/Headers/QMouseEvent \
+		/usr/local/lib/QtGui.framework/Headers/qevent.h \
+		/usr/local/lib/QtGui.framework/Headers/QPainter \
+		/usr/local/lib/QtGui.framework/Headers/qpainter.h \
+		/usr/local/lib/QtGui.framework/Headers/QPaintEvent \
+		/usr/local/lib/QtGui.framework/Headers/QColor \
+		/usr/local/lib/QtGui.framework/Headers/qcolor.h \
+		/usr/local/lib/QtGui.framework/Headers/QImage \
+		/usr/local/lib/QtGui.framework/Headers/qimage.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o s21_view.o ../s21_view/s21_view.cpp
+
+qrc_resource.o: qrc_resource.cpp 
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o qrc_resource.o qrc_resource.cpp
 
 moc_qcustomplot.o: moc_qcustomplot.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_qcustomplot.o moc_qcustomplot.cpp
 
-moc_renderscene.o: moc_renderscene.cpp 
-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_renderscene.o moc_renderscene.cpp
+moc_render_scene.o: moc_render_scene.cpp 
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_render_scene.o moc_render_scene.cpp
 
 moc_s21_view.o: moc_s21_view.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_s21_view.o moc_s21_view.cpp

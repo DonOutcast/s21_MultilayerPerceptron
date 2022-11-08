@@ -14,9 +14,10 @@
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenuBar>
+#include <QtWidgets/QPushButton>
 #include <QtWidgets/QStatusBar>
 #include <QtWidgets/QWidget>
-#include "renderscene.h"
+#include "render_scene.h"
 
 QT_BEGIN_NAMESPACE
 
@@ -26,6 +27,13 @@ public:
     QWidget *centralwidget;
     RenderScene *scene;
     QLabel *answer_label;
+    QLabel *image_label;
+    QLabel *weights_label;
+    QPushButton *button_download;
+    QLabel *label;
+    QPushButton *button_upload;
+    QPushButton *button_download_w;
+    QPushButton *button_upload_w;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -59,6 +67,140 @@ public:
 "   background: rgba(255, 255, 255, 0)\n"
 "}"));
         answer_label->setAlignment(Qt::AlignCenter);
+        image_label = new QLabel(centralwidget);
+        image_label->setObjectName(QString::fromUtf8("image_label"));
+        image_label->setGeometry(QRect(410, 10, 151, 60));
+        image_label->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	font: 16pt ;\n"
+"	font-weight: bold;\n"
+"	color: #FFFFFF;\n"
+"	border-style: solid;\n"
+"	border-width: 4px 0px 4px 0px;\n"
+"	border-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 #30D5C8 , stop:1 #4169E1);\n"
+"}"));
+        weights_label = new QLabel(centralwidget);
+        weights_label->setObjectName(QString::fromUtf8("weights_label"));
+        weights_label->setGeometry(QRect(410, 80, 151, 60));
+        weights_label->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	font: 16pt ;\n"
+"	font-weight: bold;\n"
+"	color: #FFFFFF;\n"
+"	border-style: solid;\n"
+"	border-width: 4px 0px 4px 0px;\n"
+"	border-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 #30D5C8 , stop:1 #4169E1);\n"
+"}"));
+        button_download = new QPushButton(centralwidget);
+        button_download->setObjectName(QString::fromUtf8("button_download"));
+        button_download->setGeometry(QRect(580, 10, 60, 60));
+        button_download->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"	qproperty-icon: url(:/resource/qrc/download.png);\n"
+"	qproperty-iconSize: 30px;	\n"
+"	font: 16pt ;\n"
+"	font-weight: bold;\n"
+"	color: rgb(255, 255, 255);\n"
+"	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 #30D5C8 , stop:1 #4169E1);\n"
+"	border-style: solid;\n"
+"	border-width: 0.5px;\n"
+"	border-radius: 20px;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    border-width: 4px;\n"
+"    border-color: #FFFFFF;\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"	border-width: 4px;\n"
+"	border-color:  qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 #30D5C8 , stop:1 #4169E1);\n"
+"	background-color: #FFFFFF;\n"
+"	color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 #30D5C8 , stop:1\n"
+"#4169E1);\n"
+"}"));
+        label = new QLabel(centralwidget);
+        label->setObjectName(QString::fromUtf8("label"));
+        label->setGeometry(QRect(430, 180, 101, 101));
+        label->setStyleSheet(QString::fromUtf8("background-image: url(:/resource/qrc/sber.png);"));
+        button_upload = new QPushButton(centralwidget);
+        button_upload->setObjectName(QString::fromUtf8("button_upload"));
+        button_upload->setGeometry(QRect(650, 10, 60, 60));
+        button_upload->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"	qproperty-icon: url(:/resource/qrc/upload.png);\n"
+"	qproperty-iconSize: 30px;	\n"
+"	font: 16pt ;\n"
+"	font-weight: bold;\n"
+"	color: rgb(255, 255, 255);\n"
+"	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 #30D5C8 , stop:1 #4169E1);\n"
+"	border-style: solid;\n"
+"	border-width: 0.5px;\n"
+"	border-radius: 20px;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    border-width: 4px;\n"
+"    border-color: #FFFFFF;\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"	border-width: 4px;\n"
+"	border-color:  qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 #30D5C8 , stop:1 #4169E1);\n"
+"	background-color: #FFFFFF;\n"
+"	color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 #30D5C8 , stop:1\n"
+"#4169E1);\n"
+"}"));
+        button_download_w = new QPushButton(centralwidget);
+        button_download_w->setObjectName(QString::fromUtf8("button_download_w"));
+        button_download_w->setGeometry(QRect(580, 80, 60, 60));
+        button_download_w->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"	qproperty-icon: url(:/resource/qrc/download.png);\n"
+"	qproperty-iconSize: 30px;	\n"
+"	font: 16pt ;\n"
+"	font-weight: bold;\n"
+"	color: rgb(255, 255, 255);\n"
+"	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 #30D5C8 , stop:1 #4169E1);\n"
+"	border-style: solid;\n"
+"	border-width: 0.5px;\n"
+"	border-radius: 20px;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    border-width: 4px;\n"
+"    border-color: #FFFFFF;\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"	border-width: 4px;\n"
+"	border-color:  qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 #30D5C8 , stop:1 #4169E1);\n"
+"	background-color: #FFFFFF;\n"
+"	color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 #30D5C8 , stop:1\n"
+"#4169E1);\n"
+"}"));
+        button_upload_w = new QPushButton(centralwidget);
+        button_upload_w->setObjectName(QString::fromUtf8("button_upload_w"));
+        button_upload_w->setGeometry(QRect(650, 80, 60, 60));
+        button_upload_w->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"	qproperty-icon: url(:/resource/qrc/upload.png);\n"
+"	qproperty-iconSize: 30px;	\n"
+"	font: 16pt ;\n"
+"	font-weight: bold;\n"
+"	color: rgb(255, 255, 255);\n"
+"	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 #30D5C8 , stop:1 #4169E1);\n"
+"	border-style: solid;\n"
+"	border-width: 0.5px;\n"
+"	border-radius: 20px;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    border-width: 4px;\n"
+"    border-color: #FFFFFF;\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"	border-width: 4px;\n"
+"	border-color:  qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 #30D5C8 , stop:1 #4169E1);\n"
+"	background-color: #FFFFFF;\n"
+"	color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 #30D5C8 , stop:1\n"
+"#4169E1);\n"
+"}"));
         s21_view->setCentralWidget(centralwidget);
         menubar = new QMenuBar(s21_view);
         menubar->setObjectName(QString::fromUtf8("menubar"));
@@ -77,6 +219,13 @@ public:
     {
         s21_view->setWindowTitle(QCoreApplication::translate("s21_view", "s21_view", nullptr));
         answer_label->setText(QString());
+        image_label->setText(QCoreApplication::translate("s21_view", "            IMAGE", nullptr));
+        weights_label->setText(QCoreApplication::translate("s21_view", "           WEIGHTS", nullptr));
+        button_download->setText(QString());
+        label->setText(QString());
+        button_upload->setText(QString());
+        button_download_w->setText(QString());
+        button_upload_w->setText(QString());
     } // retranslateUi
 
 };

@@ -7,7 +7,7 @@
         "-I",
         "/Volumes/Qt Creator/Qt Creator.app/Contents/Resources/cplusplus/wrappedQtHeaders/QtCore",
         "-I",
-        "/private/var/folders/zz/zyxvpxvq6csfxvn_n003vsjc00yycb/T/QtCreator-TZekbD/clang-uiheader-EDphfp",
+        "/private/var/folders/zz/zyxvpxvq6csfxvn_n003vsjc00yycb/T/QtCreator-uRVwaK/clang-uiheader-YBVjfS",
         "-nostdinc",
         "-nostdinc++",
         "-pipe",
@@ -79,7 +79,7 @@
         "-I",
         "/Volumes/Qt Creator/Qt Creator.app/Contents/Resources/cplusplus/wrappedQtHeaders/QtCore",
         "-I",
-        "/private/var/folders/zz/zyxvpxvq6csfxvn_n003vsjc00yycb/T/QtCreator-TZekbD/clang-uiheader-EDphfp",
+        "/private/var/folders/zz/zyxvpxvq6csfxvn_n003vsjc00yycb/T/QtCreator-uRVwaK/clang-uiheader-YBVjfS",
         "-nostdinc",
         "-nostdinc++",
         "-pipe",
@@ -151,7 +151,7 @@
         "-I",
         "/Volumes/Qt Creator/Qt Creator.app/Contents/Resources/cplusplus/wrappedQtHeaders/QtCore",
         "-I",
-        "/private/var/folders/zz/zyxvpxvq6csfxvn_n003vsjc00yycb/T/QtCreator-TZekbD/clang-uiheader-EDphfp",
+        "/private/var/folders/zz/zyxvpxvq6csfxvn_n003vsjc00yycb/T/QtCreator-uRVwaK/clang-uiheader-YBVjfS",
         "-nostdinc",
         "-nostdinc++",
         "-pipe",
@@ -210,10 +210,10 @@
         "-Wno-unknown-pragmas",
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
-        "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/s21_view/renderscene.cpp"
+        "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/s21_view/render_scene.cpp"
     ],
     "directory": "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/build-s21_view-Desktop_x86_darwin_generic_mach_o_64bit-Debug/.qtc_clangd",
-    "file": "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/s21_view/renderscene.cpp"
+    "file": "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/s21_view/render_scene.cpp"
 },
 {
     "arguments": [
@@ -223,7 +223,7 @@
         "-I",
         "/Volumes/Qt Creator/Qt Creator.app/Contents/Resources/cplusplus/wrappedQtHeaders/QtCore",
         "-I",
-        "/private/var/folders/zz/zyxvpxvq6csfxvn_n003vsjc00yycb/T/QtCreator-TZekbD/clang-uiheader-EDphfp",
+        "/private/var/folders/zz/zyxvpxvq6csfxvn_n003vsjc00yycb/T/QtCreator-uRVwaK/clang-uiheader-YBVjfS",
         "-nostdinc",
         "-nostdinc++",
         "-pipe",
@@ -295,7 +295,7 @@
         "-I",
         "/Volumes/Qt Creator/Qt Creator.app/Contents/Resources/cplusplus/wrappedQtHeaders/QtCore",
         "-I",
-        "/private/var/folders/zz/zyxvpxvq6csfxvn_n003vsjc00yycb/T/QtCreator-TZekbD/clang-uiheader-EDphfp",
+        "/private/var/folders/zz/zyxvpxvq6csfxvn_n003vsjc00yycb/T/QtCreator-uRVwaK/clang-uiheader-YBVjfS",
         "-nostdinc",
         "-nostdinc++",
         "-pipe",
@@ -367,7 +367,7 @@
         "-I",
         "/Volumes/Qt Creator/Qt Creator.app/Contents/Resources/cplusplus/wrappedQtHeaders/QtCore",
         "-I",
-        "/private/var/folders/zz/zyxvpxvq6csfxvn_n003vsjc00yycb/T/QtCreator-TZekbD/clang-uiheader-EDphfp",
+        "/private/var/folders/zz/zyxvpxvq6csfxvn_n003vsjc00yycb/T/QtCreator-uRVwaK/clang-uiheader-YBVjfS",
         "-nostdinc",
         "-nostdinc++",
         "-pipe",
@@ -426,10 +426,10 @@
         "-Wno-unknown-pragmas",
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
-        "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/s21_view/renderscene.h"
+        "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/s21_view/render_scene.h"
     ],
     "directory": "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/build-s21_view-Desktop_x86_darwin_generic_mach_o_64bit-Debug/.qtc_clangd",
-    "file": "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/s21_view/renderscene.h"
+    "file": "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/s21_view/render_scene.h"
 },
 {
     "arguments": [
@@ -439,7 +439,7 @@
         "-I",
         "/Volumes/Qt Creator/Qt Creator.app/Contents/Resources/cplusplus/wrappedQtHeaders/QtCore",
         "-I",
-        "/private/var/folders/zz/zyxvpxvq6csfxvn_n003vsjc00yycb/T/QtCreator-TZekbD/clang-uiheader-EDphfp",
+        "/private/var/folders/zz/zyxvpxvq6csfxvn_n003vsjc00yycb/T/QtCreator-uRVwaK/clang-uiheader-YBVjfS",
         "-nostdinc",
         "-nostdinc++",
         "-pipe",
@@ -511,7 +511,7 @@
         "-I",
         "/Volumes/Qt Creator/Qt Creator.app/Contents/Resources/cplusplus/wrappedQtHeaders/QtCore",
         "-I",
-        "/private/var/folders/zz/zyxvpxvq6csfxvn_n003vsjc00yycb/T/QtCreator-TZekbD/clang-uiheader-EDphfp",
+        "/private/var/folders/zz/zyxvpxvq6csfxvn_n003vsjc00yycb/T/QtCreator-uRVwaK/clang-uiheader-YBVjfS",
         "-nostdinc",
         "-nostdinc++",
         "-pipe",

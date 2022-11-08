@@ -83,6 +83,224 @@
      </property>
     </widget>
    </widget>
+   <widget class="QLabel" name="image_label">
+    <property name="geometry">
+     <rect>
+      <x>410</x>
+      <y>10</y>
+      <width>151</width>
+      <height>60</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {
+	font: 16pt ;
+	font-weight: bold;
+	color: #FFFFFF;
+	border-style: solid;
+	border-width: 4px 0px 4px 0px;
+	border-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 #30D5C8 , stop:1 #4169E1);
+}</string>
+    </property>
+    <property name="text">
+     <string>            IMAGE</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="weights_label">
+    <property name="geometry">
+     <rect>
+      <x>410</x>
+      <y>80</y>
+      <width>151</width>
+      <height>60</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {
+	font: 16pt ;
+	font-weight: bold;
+	color: #FFFFFF;
+	border-style: solid;
+	border-width: 4px 0px 4px 0px;
+	border-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 #30D5C8 , stop:1 #4169E1);
+}</string>
+    </property>
+    <property name="text">
+     <string>           WEIGHTS</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="button_download">
+    <property name="geometry">
+     <rect>
+      <x>580</x>
+      <y>10</y>
+      <width>60</width>
+      <height>60</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+	qproperty-icon: url(:/resource/qrc/download.png);
+	qproperty-iconSize: 30px;	
+	font: 16pt ;
+	font-weight: bold;
+	color: rgb(255, 255, 255);
+	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 #30D5C8 , stop:1 #4169E1);
+	border-style: solid;
+	border-width: 0.5px;
+	border-radius: 20px;
+}
+
+QPushButton:hover {
+    border-width: 4px;
+    border-color: #FFFFFF;
+}
+
+QPushButton:pressed {
+	border-width: 4px;
+	border-color:  qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 #30D5C8 , stop:1 #4169E1);
+	background-color: #FFFFFF;
+	color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 #30D5C8 , stop:1
+#4169E1);
+}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>430</x>
+      <y>180</y>
+      <width>101</width>
+      <height>101</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-image: url(:/resource/qrc/sber.png);</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="button_upload">
+    <property name="geometry">
+     <rect>
+      <x>650</x>
+      <y>10</y>
+      <width>60</width>
+      <height>60</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+	qproperty-icon: url(:/resource/qrc/upload.png);
+	qproperty-iconSize: 30px;	
+	font: 16pt ;
+	font-weight: bold;
+	color: rgb(255, 255, 255);
+	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 #30D5C8 , stop:1 #4169E1);
+	border-style: solid;
+	border-width: 0.5px;
+	border-radius: 20px;
+}
+
+QPushButton:hover {
+    border-width: 4px;
+    border-color: #FFFFFF;
+}
+
+QPushButton:pressed {
+	border-width: 4px;
+	border-color:  qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 #30D5C8 , stop:1 #4169E1);
+	background-color: #FFFFFF;
+	color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 #30D5C8 , stop:1
+#4169E1);
+}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="button_download_w">
+    <property name="geometry">
+     <rect>
+      <x>580</x>
+      <y>80</y>
+      <width>60</width>
+      <height>60</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+	qproperty-icon: url(:/resource/qrc/download.png);
+	qproperty-iconSize: 30px;	
+	font: 16pt ;
+	font-weight: bold;
+	color: rgb(255, 255, 255);
+	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 #30D5C8 , stop:1 #4169E1);
+	border-style: solid;
+	border-width: 0.5px;
+	border-radius: 20px;
+}
+
+QPushButton:hover {
+    border-width: 4px;
+    border-color: #FFFFFF;
+}
+
+QPushButton:pressed {
+	border-width: 4px;
+	border-color:  qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 #30D5C8 , stop:1 #4169E1);
+	background-color: #FFFFFF;
+	color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 #30D5C8 , stop:1
+#4169E1);
+}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="button_upload_w">
+    <property name="geometry">
+     <rect>
+      <x>650</x>
+      <y>80</y>
+      <width>60</width>
+      <height>60</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+	qproperty-icon: url(:/resource/qrc/upload.png);
+	qproperty-iconSize: 30px;	
+	font: 16pt ;
+	font-weight: bold;
+	color: rgb(255, 255, 255);
+	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 #30D5C8 , stop:1 #4169E1);
+	border-style: solid;
+	border-width: 0.5px;
+	border-radius: 20px;
+}
+
+QPushButton:hover {
+    border-width: 4px;
+    border-color: #FFFFFF;
+}
+
+QPushButton:pressed {
+	border-width: 4px;
+	border-color:  qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 #30D5C8 , stop:1 #4169E1);
+	background-color: #FFFFFF;
+	color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 #30D5C8 , stop:1
+#4169E1);
+}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
@@ -100,7 +318,7 @@
   <customwidget>
    <class>RenderScene</class>
    <extends>QWidget</extends>
-   <header>renderscene.h</header>
+   <header>render_scene.h</header>
    <container>1</container>
   </customwidget>
  </customwidgets>

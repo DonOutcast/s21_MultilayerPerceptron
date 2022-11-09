@@ -18,26 +18,29 @@
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>10</y>
-      <width>400</width>
-      <height>400</height>
+      <y>0</y>
+      <width>402</width>
+      <height>402</height>
      </rect>
     </property>
     <property name="minimumSize">
      <size>
-      <width>400</width>
-      <height>400</height>
+      <width>402</width>
+      <height>402</height>
      </size>
     </property>
     <property name="maximumSize">
      <size>
-      <width>400</width>
-      <height>400</height>
+      <width>404</width>
+      <height>404</height>
      </size>
     </property>
     <property name="styleSheet">
      <string notr="true">QWidget {
 	background: #FFFFFF;
+	border-style: solid;
+	border-width: 2px 2px 2px 2px;
+	border-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 #30D5C8 , stop:1 #4169E1);
 }</string>
     </property>
     <widget class="QLabel" name="answer_label">
@@ -86,19 +89,20 @@
    <widget class="QLabel" name="image_label">
     <property name="geometry">
      <rect>
-      <x>410</x>
-      <y>10</y>
+      <x>420</x>
+      <y>130</y>
       <width>151</width>
       <height>60</height>
      </rect>
     </property>
     <property name="styleSheet">
      <string notr="true">QLabel {
+	background-color:  qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 #30D5C8 , stop:1 #4169E1);
 	font: 16pt ;
 	font-weight: bold;
 	color: #FFFFFF;
 	border-style: solid;
-	border-width: 4px 0px 4px 0px;
+	border-width: 4px 4px 4px 4px;
 	border-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 #30D5C8 , stop:1 #4169E1);
 }</string>
     </property>
@@ -109,21 +113,23 @@
    <widget class="QLabel" name="weights_label">
     <property name="geometry">
      <rect>
-      <x>410</x>
-      <y>80</y>
+      <x>420</x>
+      <y>270</y>
       <width>151</width>
       <height>60</height>
      </rect>
     </property>
     <property name="styleSheet">
      <string notr="true">QLabel {
+	background-color:  qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 #30D5C8 , stop:1 #4169E1);
 	font: 16pt ;
 	font-weight: bold;
 	color: #FFFFFF;
 	border-style: solid;
-	border-width: 4px 0px 4px 0px;
+	border-width: 4px 4px 4px 4px;
 	border-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 #30D5C8 , stop:1 #4169E1);
-}</string>
+}
+</string>
     </property>
     <property name="text">
      <string>           WEIGHTS</string>
@@ -132,9 +138,9 @@
    <widget class="QPushButton" name="button_download">
     <property name="geometry">
      <rect>
-      <x>580</x>
-      <y>10</y>
-      <width>60</width>
+      <x>420</x>
+      <y>200</y>
+      <width>71</width>
       <height>60</height>
      </rect>
     </property>
@@ -171,14 +177,24 @@ QPushButton:pressed {
    <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
-      <x>430</x>
-      <y>180</y>
-      <width>101</width>
-      <height>101</height>
+      <x>420</x>
+      <y>0</y>
+      <width>151</width>
+      <height>121</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-image: url(:/resource/qrc/sber.png);</string>
+     <string notr="true">
+QLabel {
+	background-color:  qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 #30D5C8 , stop:1 #4169E1);
+	background-image: url(:/resource/qrc/sber.png);
+	font: 16pt ;
+	font-weight: bold;
+	color: #FFFFFF;
+	border-style: solid;
+	border-width: 4px 4px 4px 4px;
+	border-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 #30D5C8 , stop:1 #4169E1);
+}</string>
     </property>
     <property name="text">
      <string/>
@@ -187,9 +203,9 @@ QPushButton:pressed {
    <widget class="QPushButton" name="button_upload">
     <property name="geometry">
      <rect>
-      <x>650</x>
-      <y>10</y>
-      <width>60</width>
+      <x>499</x>
+      <y>200</y>
+      <width>71</width>
       <height>60</height>
      </rect>
     </property>
@@ -226,9 +242,9 @@ QPushButton:pressed {
    <widget class="QPushButton" name="button_download_w">
     <property name="geometry">
      <rect>
-      <x>580</x>
-      <y>80</y>
-      <width>60</width>
+      <x>420</x>
+      <y>340</y>
+      <width>71</width>
       <height>60</height>
      </rect>
     </property>
@@ -265,9 +281,9 @@ QPushButton:pressed {
    <widget class="QPushButton" name="button_upload_w">
     <property name="geometry">
      <rect>
-      <x>650</x>
-      <y>80</y>
-      <width>60</width>
+      <x>499</x>
+      <y>340</y>
+      <width>71</width>
       <height>60</height>
      </rect>
     </property>

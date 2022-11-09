@@ -1,6 +1,5 @@
 #include "neuron.h"
-
-auto s21::Neuron::set_weights(const_vec_double &w) -> void {
+auto s21::Neuron::set_weights(const vector_double &w) -> void {
     this->m_weights_ = w;
 }
 
@@ -14,16 +13,4 @@ auto s21::Neuron::set_value(double value) -> void {
 
 auto s21::Neuron::get_value() -> double {
     return this->m_value_;
-}
-
-auto s21::Neuron::action() -> void {
-
-}
-
-
-
-int main(void) {
-    
-
-    return 0;
 }

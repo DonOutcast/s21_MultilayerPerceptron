@@ -4,17 +4,20 @@
 #include "network.h"
 
 namespace s21 {
-    class Neuron : public Network {
+    class Neuron {
         public:
             Neuron() = default;
             ~Neuron() = default;
-            auto set_weights(const_vec_double &w) -> void;
+
+            using size_type = size_t;
+            using vector_double = std::vector<double>;
+
+            auto set_weights(const vector_double &w) -> void;
             auto get_weights(size_type index) -> double&;
             auto set_value(double value) -> void;
             auto get_value() -> double;
         private:
-            vec_double m_weights_;
-            auto action() -> void;
+            vector_double m_weights_;
             double m_value_{};
 
     };

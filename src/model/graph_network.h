@@ -17,8 +17,8 @@ namespace s21 {
         vec_double  m_biases_;
         matrix_neuron_ m_neurons_;
         auto generation_weights(size_type number_of_weights_) -> vec_double;
-        auto activate_functions_sigmoid(double value) -> double;
-        auto acticate_function_derivative(double value) -> double;
+        static auto activate_functions_sigmoid(double value) -> double;
+        static auto acticate_function_derivative(double value) -> double;
     };
 
 

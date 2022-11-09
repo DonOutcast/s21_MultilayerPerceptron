@@ -21,11 +21,11 @@ auto s21::Graph::feed_forward() -> void {
             m_neurons_[layer_][i].set_value(activate_functions_sigmoid(summary_ + m_biases_[layer_]));
         }
     }
+}
 
-    auto s21::Graph::activate_functions_sigmoid(double value) -> double {
-        return 1.0 / (1.0 + exp(-value));
-    }
-    auto s21::Graph::acticate_function_derivative(double value) -> double {
-        return value * (1  - value);
-    }
+auto s21::Graph::activate_functions_sigmoid(double value) -> double {
+    return 1.0 / (1.0 + exp(-value));
+}
+auto s21::Graph::acticate_function_derivative(double value) -> double {
+    return value * (1  - value);
 }

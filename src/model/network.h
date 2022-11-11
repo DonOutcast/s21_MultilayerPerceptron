@@ -7,7 +7,7 @@
 #include <string>
 #include <vector>
 #include <iostream>
-
+#include "../matrix/s21_matrix.h"
 #include "neuron.h"
 
 namespace s21 {
@@ -27,18 +27,23 @@ namespace s21 {
         using const_vec_double = const std::vector<double>;
         using vec_double = std::vector<double>;
 
-        virtual auto feed_forward() -> void;
-//        virtual auto feed_init_values() -> void;
+        virtual auto feed_forward() -> void = 0;
+        virtual auto feed_init_value(const vec_double &values) -> void = 0;
 //        virtual auto back_propagation() -> void;
 //        virtual auto show_result() -> void;
 //        virtual auto save_weights() -> void;
 //        virtual auto get_weights() -> bool;
 //        virtual auto get_result() -> size_type;
 //        virtual auto get_result_vector() -> const_vec_double;
-//        virtual auto set_layers(std::vector<LayersInfo> info) -> void;
-//        virtual auto set_layers(std::initializer_list<size_type> items) -> void;
-
+        virtual auto set_layers(std::vector<LayersInfo> info) -> void = 0;
+        virtual auto set_layers(std::initializer_list<size_type> items) -> void = 0;
+//        auto activate_function(double  value) -> double;
+//        auto activate_function_derivative(double value) -> double;
+    protected:
+        std::vector<size_type> m_topology_;
+        std::mt19937  m_generator_;
     };
+
 
 
 }  // namespace s21

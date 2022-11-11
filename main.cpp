@@ -1,6 +1,8 @@
-#include "src/model/graph_network.h"
+#include "src/model/matrix.h"
 int main(void) {
-    s21::Graph tmp;
-    tmp.generation_weights(3);
+    std::cout << "Hello World!" << std::endl;
+    s21::MatrixNetwork tmp;
+//    tmp.set_layers(5);
+    std::cout  << std::endl;
     return 0;
 }

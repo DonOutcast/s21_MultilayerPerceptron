@@ -83,10 +83,25 @@
 		<Unit filename="/Users/lymondgl/Desktop/s21_MultilayerPerceptron/main.cpp">
 			<Option target="s21_MultilayerPerceptron"/>
 		</Unit>
+		<Unit filename="/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/matrix/s21_matrix.cpp">
+			<Option target="s21_MultilayerPerceptron"/>
+		</Unit>
+		<Unit filename="/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/matrix/s21_matrix.h">
+			<Option target="s21_MultilayerPerceptron"/>
+		</Unit>
+		<Unit filename="/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/matrix/s21_support_func.cc">
+			<Option target="s21_MultilayerPerceptron"/>
+		</Unit>
 		<Unit filename="/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/model/graph_network.cc">
 			<Option target="s21_MultilayerPerceptron"/>
 		</Unit>
 		<Unit filename="/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/model/graph_network.h">
+			<Option target="s21_MultilayerPerceptron"/>
+		</Unit>
+		<Unit filename="/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/model/matrix.cc">
+			<Option target="s21_MultilayerPerceptron"/>
+		</Unit>
+		<Unit filename="/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/model/matrix.h">
 			<Option target="s21_MultilayerPerceptron"/>
 		</Unit>
 		<Unit filename="/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/model/network.h">

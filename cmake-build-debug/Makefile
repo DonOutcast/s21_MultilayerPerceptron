@@ -153,6 +153,54 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/s21_MultilayerPerceptron.dir/build.make CMakeFiles/s21_MultilayerPerceptron.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+src/matrix/s21_matrix.o: src/matrix/s21_matrix.cpp.o
+.PHONY : src/matrix/s21_matrix.o
+
+# target to build an object file
+src/matrix/s21_matrix.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/s21_MultilayerPerceptron.dir/build.make CMakeFiles/s21_MultilayerPerceptron.dir/src/matrix/s21_matrix.cpp.o
+.PHONY : src/matrix/s21_matrix.cpp.o
+
+src/matrix/s21_matrix.i: src/matrix/s21_matrix.cpp.i
+.PHONY : src/matrix/s21_matrix.i
+
+# target to preprocess a source file
+src/matrix/s21_matrix.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/s21_MultilayerPerceptron.dir/build.make CMakeFiles/s21_MultilayerPerceptron.dir/src/matrix/s21_matrix.cpp.i
+.PHONY : src/matrix/s21_matrix.cpp.i
+
+src/matrix/s21_matrix.s: src/matrix/s21_matrix.cpp.s
+.PHONY : src/matrix/s21_matrix.s
+
+# target to generate assembly for a file
+src/matrix/s21_matrix.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/s21_MultilayerPerceptron.dir/build.make CMakeFiles/s21_MultilayerPerceptron.dir/src/matrix/s21_matrix.cpp.s
+.PHONY : src/matrix/s21_matrix.cpp.s
+
+src/matrix/s21_support_func.o: src/matrix/s21_support_func.cc.o
+.PHONY : src/matrix/s21_support_func.o
+
+# target to build an object file
+src/matrix/s21_support_func.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/s21_MultilayerPerceptron.dir/build.make CMakeFiles/s21_MultilayerPerceptron.dir/src/matrix/s21_support_func.cc.o
+.PHONY : src/matrix/s21_support_func.cc.o
+
+src/matrix/s21_support_func.i: src/matrix/s21_support_func.cc.i
+.PHONY : src/matrix/s21_support_func.i
+
+# target to preprocess a source file
+src/matrix/s21_support_func.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/s21_MultilayerPerceptron.dir/build.make CMakeFiles/s21_MultilayerPerceptron.dir/src/matrix/s21_support_func.cc.i
+.PHONY : src/matrix/s21_support_func.cc.i
+
+src/matrix/s21_support_func.s: src/matrix/s21_support_func.cc.s
+.PHONY : src/matrix/s21_support_func.s
+
+# target to generate assembly for a file
+src/matrix/s21_support_func.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/s21_MultilayerPerceptron.dir/build.make CMakeFiles/s21_MultilayerPerceptron.dir/src/matrix/s21_support_func.cc.s
+.PHONY : src/matrix/s21_support_func.cc.s
+
 src/model/graph_network.o: src/model/graph_network.cc.o
 .PHONY : src/model/graph_network.o
 
@@ -176,6 +224,30 @@ src/model/graph_network.s: src/model/graph_network.cc.s
 src/model/graph_network.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/s21_MultilayerPerceptron.dir/build.make CMakeFiles/s21_MultilayerPerceptron.dir/src/model/graph_network.cc.s
 .PHONY : src/model/graph_network.cc.s
+
+src/model/matrix.o: src/model/matrix.cc.o
+.PHONY : src/model/matrix.o
+
+# target to build an object file
+src/model/matrix.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/s21_MultilayerPerceptron.dir/build.make CMakeFiles/s21_MultilayerPerceptron.dir/src/model/matrix.cc.o
+.PHONY : src/model/matrix.cc.o
+
+src/model/matrix.i: src/model/matrix.cc.i
+.PHONY : src/model/matrix.i
+
+# target to preprocess a source file
+src/model/matrix.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/s21_MultilayerPerceptron.dir/build.make CMakeFiles/s21_MultilayerPerceptron.dir/src/model/matrix.cc.i
+.PHONY : src/model/matrix.cc.i
+
+src/model/matrix.s: src/model/matrix.cc.s
+.PHONY : src/model/matrix.s
+
+# target to generate assembly for a file
+src/model/matrix.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/s21_MultilayerPerceptron.dir/build.make CMakeFiles/s21_MultilayerPerceptron.dir/src/model/matrix.cc.s
+.PHONY : src/model/matrix.cc.s
 
 src/model/neuron.o: src/model/neuron.cc.o
 .PHONY : src/model/neuron.o
@@ -213,9 +285,18 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... src/matrix/s21_matrix.o"
+	@echo "... src/matrix/s21_matrix.i"
+	@echo "... src/matrix/s21_matrix.s"
+	@echo "... src/matrix/s21_support_func.o"
+	@echo "... src/matrix/s21_support_func.i"
+	@echo "... src/matrix/s21_support_func.s"
 	@echo "... src/model/graph_network.o"
 	@echo "... src/model/graph_network.i"
 	@echo "... src/model/graph_network.s"
+	@echo "... src/model/matrix.o"
+	@echo "... src/model/matrix.i"
+	@echo "... src/model/matrix.s"
 	@echo "... src/model/neuron.o"
 	@echo "... src/model/neuron.i"
 	@echo "... src/model/neuron.s"

@@ -1,5 +1,5 @@
-CMakeFiles/s21_MultilayerPerceptron.dir/main.cpp.o: \
-  /Users/lymondgl/Desktop/s21_MultilayerPerceptron/main.cpp \
+CMakeFiles/s21_MultilayerPerceptron.dir/src/model/matrix.cc.o: \
+  /Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/model/matrix.cc \
   /Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/model/matrix.h \
   /Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/model/network.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk/usr/include/c++/v1/cmath \

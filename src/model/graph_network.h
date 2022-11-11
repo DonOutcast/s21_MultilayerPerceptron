@@ -5,20 +5,32 @@
 namespace s21 {
     class Graph : public Network{
     public:
-        using Layer = std::vector<Neuron>;
-        using matrix_neuron_ = std::vector<Layer>;
         Graph() = default;
         ~Graph() = default;
+        using Layer = std::vector<Neuron>;
+        using matrix_neuron_ = std::vector<Layer>;
         auto feed_forward() -> void override;
-
+        auto feed_init_value(const vec_double &values) -> void override;
+        auto set_layers(std::vector<LayersInfo> info) -> void override;
+        auto set_layers(std::initializer_list<size_type> items) -> void override;
+        auto generation_weights(size_type number_of_weights_) -> vec_double;
     private:
         std::mt19937  random_generator_;
         static constexpr double m_step_ = 0.8;
         vec_double  m_biases_;
         matrix_neuron_ m_neurons_;
-        auto generation_weights(size_type number_of_weights_) -> vec_double;
+
         static auto activate_functions_sigmoid(double value) -> double;
         static auto acticate_function_derivative(double value) -> double;
+
+        auto change_random_device() -> void;
+
+        auto added_neuron_to_m_neurons() -> void;
+
+        auto bring_to_zero_all() -> void;
+        auto clear_topology() -> void;
+        auto clear_neurons() -> void;
+        auto clear_biases() -> void;
     };
 
 

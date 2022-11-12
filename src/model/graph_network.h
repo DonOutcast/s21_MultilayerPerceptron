@@ -14,6 +14,8 @@ namespace s21 {
         auto set_layers(std::vector<LayersInfo> info) -> void override;
         auto set_layers(std::initializer_list<size_type> items) -> void override;
         auto generation_weights(size_type number_of_weights_) -> vec_double;
+
+
     private:
         std::mt19937  random_generator_;
         static constexpr double m_step_ = 0.8;

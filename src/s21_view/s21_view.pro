@@ -28,5 +28,8 @@ qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
+ICON = ../icon/s21.icns
+
 RESOURCES += \
     resource.qrc
+

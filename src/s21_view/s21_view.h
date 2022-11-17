@@ -8,7 +8,7 @@
 #include <QMainWindow>
 #include <chrono>
 #include <thread>
-
+#include <QIcon>
 
 
 using namespace std::chrono_literals;

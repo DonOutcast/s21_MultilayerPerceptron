@@ -29,12 +29,12 @@ namespace s21 {
 
         virtual auto feed_forward() -> void = 0;
         virtual auto feed_init_value(const vec_double &values) -> void = 0;
-//        virtual auto back_propagation() -> void;
+        virtual auto back_propagation(vec_double &expected_values) -> void = 0;
 //        virtual auto show_result() -> void;
-//        virtual auto save_weights() -> void;
-//        virtual auto get_weights() -> bool;
-//        virtual auto get_result() -> size_type;
-//        virtual auto get_result_vector() -> const_vec_double;
+        virtual auto save_weights(std::string) -> void = 0;
+        virtual auto get_weights(std::string) -> bool = 0;
+        virtual auto get_result() -> size_type = 0;
+        virtual auto get_result_vector() -> const_vec_double = 0;
         virtual auto set_layers(std::vector<LayersInfo> info) -> void = 0;
         virtual auto set_layers(std::initializer_list<size_type> items) -> void = 0;
 //        auto activate_function(double  value) -> double;

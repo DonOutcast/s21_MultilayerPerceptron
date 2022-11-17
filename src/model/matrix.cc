@@ -23,8 +23,6 @@ auto s21::MatrixNetwork::feed_forward() -> void {
     }
 }
 
-
-
 auto s21::MatrixNetwork::set_layers(std::vector<LayersInfo> info) -> void {
     this->bring_to_zero_all();
     this->change_random_device();
@@ -120,4 +118,134 @@ auto s21::MatrixNetwork::set_layers_vector(int number) -> void {
         this->m_layers_info_.emplace_back(s21::LayersInfo::HIDDEN);
     }
     this->m_layers_info_.emplace_back(s21::LayersInfo::OUTPUT);
+}
+
+auto s21::MatrixNetwork::get_local_grads(vector_double &local_grads, const vector_double &expected_values, size_type layer) -> void {
+    if (local_grads.empty()) {
+        for (auto i = 0; i < this->m_neurons_.back().GetRow(); i++) {
+            double  error_ = expected_values[i] - this->m_neurons_.back()[i][0];
+            local_grads.push_back(error_ * this->activate_function_derivative(this->m_neurons_.back()[i][0]));
+        }
+    } else {
+        vector_double new_grads_;
+        for (auto i = 0; i < this->m_weights_[layer].GetColumn(); i++) {
+            double  teta_ = 0.;
+            for (auto j = 0; j < this->m_weights_[layer].GetRow(); j++) {
+                teta_ += local_grads[j] * this->m_weights_[layer][j][i];
+            }
+            new_grads_.push_back(teta_ * activate_function_derivative(this->m_neurons_[layer][i][0]));
+        }
+
+        local_grads = new_grads_;
+    }
+}
+
+auto s21::MatrixNetwork::back_propagation(vector_double &expected_values) -> void {
+    vector_double  local_grads_;
+    for (auto i = this->m_weights_.size() - 1; i >= 0; i--) {
+        this->get_local_grads(local_grads_, expected_values, i + 1);
+        for (auto j = 0; j < this->m_weights_[i].GetColumn(); j++) {
+            for (auto k = 0; k < this->m_weights_[i].GetRow(); k++) {
+                this->m_weights_[i][k][j] += s21::MatrixNetwork::step_ * local_grads_[k] * this->m_neurons_[i][j][0];
+            }
+        }
+    }
+}
+
+auto s21::MatrixNetwork::save_weights(std::string file_name) -> void {
+    std::fstream file_;
+    file_.open(file_name, std::fstream::out);
+    if (!file_.is_open()) {
+        throw std::out_of_range("Error with file opening!");
+    }
+    file_ << "Network weights" << std::endl;
+    for (auto i = 0; i < this->m_topology_.size(); i++) {
+        file_ << m_topology_[i] << ' ';
+    }
+    file_ << '\n';
+    for (auto & m_weight : this->m_weights_) {
+        for (auto i = 0; i < m_weight.GetRow(); i++) {
+            for (auto j = 0; j < m_weight.GetColumn(); j++) {
+                file_ << m_weight[i][j] << std::endl;
+            }
+        }
+    }
+    file_.close();
+}
+
+auto s21::MatrixNetwork::check_topology(const std::vector<size_type> &topology) -> bool {
+    bool result_ = true;
+    if (topology.size() != this->m_topology_.size()) {
+        result_ = false;
+    } else {
+        for (auto i = 0; i < topology.size(); i++) {
+            if (this->m_topology_[i] != topology[i]) {
+                result_ = false;
+            }
+        }
+    }
+    return result_;
+}
+
+auto s21::MatrixNetwork::get_weights(std::string file_name) -> bool {
+    setlocale(LC_NUMERIC, "C");
+    std::fstream file_;
+    file_.open(file_name, std::fstream::in);
+    if (!file_.is_open()) {
+        return false;
+    }
+    std::string check_file_;
+    std::getline(file_, check_file_, '\n');
+
+    std::string num_;
+    char c = 0;
+    std::vector<size_type> topology;
+    while (c != '\n' && !file_.eof()) {
+        c = 0;
+        while (c != ' ' && c != '\n' && !file_.eof()) {
+            file_.get(c);
+            if (c != ' ' && c != '\n' && !file_.eof()) {
+                num_ += c;
+            }
+        }
+        if (c != '\n') {
+            topology.push_back(std::stod(num_));
+            num_ = "";
+        }
+    }
+    if (this->check_topology(topology)) {
+        for (auto & m_weight : this->m_weights_) {
+            for (size_type i = 0; i < m_weight.GetRow(); i++) {
+                for (size_type j = 0; j < m_weight.GetColumn(); j++) {
+                    std::getline(file_, num_, '\n');
+                    double number = std::stod(num_);
+                    m_weight[i][j] = number;
+                }
+            }
+        }
+    } else {
+        return  false;
+    }
+    file_.close();
+    return true;
+}
+
+auto s21::MatrixNetwork::get_result() -> s21::Network::size_type {
+    size_type result_ ;
+    double max_ = this->m_neurons_.back()[0][0];
+    for (auto i = 0; i < this->m_neurons_.back().GetRow(); i++) {
+        if (max_ < this->m_neurons_.back()[i][0]) {
+            max_ = this->m_neurons_.back()[i][0];
+            result_ = i;
+        }
+    }
+    return result_;
+}
+
+auto s21::MatrixNetwork::get_result_vector() -> s21::MatrixNetwork::const_vec_double {
+    vector_double result_(this->m_topology_.back());
+    for (auto i = 0; i < result_.size(); i++) {
+        result_[i] = this->m_neurons_.back()[i][0];
+    }
+    return result_;
 }

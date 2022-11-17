@@ -92,6 +92,12 @@
 		<Unit filename="/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/matrix/s21_support_func.cc">
 			<Option target="s21_MultilayerPerceptron"/>
 		</Unit>
+		<Unit filename="/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/model/data.cc">
+			<Option target="s21_MultilayerPerceptron"/>
+		</Unit>
+		<Unit filename="/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/model/data.h">
+			<Option target="s21_MultilayerPerceptron"/>
+		</Unit>
 		<Unit filename="/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/model/graph_network.cc">
 			<Option target="s21_MultilayerPerceptron"/>
 		</Unit>
@@ -111,6 +117,12 @@
 			<Option target="s21_MultilayerPerceptron"/>
 		</Unit>
 		<Unit filename="/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/model/neuron.h">
+			<Option target="s21_MultilayerPerceptron"/>
+		</Unit>
+		<Unit filename="/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/model/reader.cc">
+			<Option target="s21_MultilayerPerceptron"/>
+		</Unit>
+		<Unit filename="/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/model/reader.h">
 			<Option target="s21_MultilayerPerceptron"/>
 		</Unit>
 		<Unit filename="/Users/lymondgl/Desktop/s21_MultilayerPerceptron/CMakeLists.txt">

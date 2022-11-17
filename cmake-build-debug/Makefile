@@ -201,6 +201,30 @@ src/matrix/s21_support_func.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/s21_MultilayerPerceptron.dir/build.make CMakeFiles/s21_MultilayerPerceptron.dir/src/matrix/s21_support_func.cc.s
 .PHONY : src/matrix/s21_support_func.cc.s
 
+src/model/data.o: src/model/data.cc.o
+.PHONY : src/model/data.o
+
+# target to build an object file
+src/model/data.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/s21_MultilayerPerceptron.dir/build.make CMakeFiles/s21_MultilayerPerceptron.dir/src/model/data.cc.o
+.PHONY : src/model/data.cc.o
+
+src/model/data.i: src/model/data.cc.i
+.PHONY : src/model/data.i
+
+# target to preprocess a source file
+src/model/data.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/s21_MultilayerPerceptron.dir/build.make CMakeFiles/s21_MultilayerPerceptron.dir/src/model/data.cc.i
+.PHONY : src/model/data.cc.i
+
+src/model/data.s: src/model/data.cc.s
+.PHONY : src/model/data.s
+
+# target to generate assembly for a file
+src/model/data.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/s21_MultilayerPerceptron.dir/build.make CMakeFiles/s21_MultilayerPerceptron.dir/src/model/data.cc.s
+.PHONY : src/model/data.cc.s
+
 src/model/graph_network.o: src/model/graph_network.cc.o
 .PHONY : src/model/graph_network.o
 
@@ -273,6 +297,30 @@ src/model/neuron.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/s21_MultilayerPerceptron.dir/build.make CMakeFiles/s21_MultilayerPerceptron.dir/src/model/neuron.cc.s
 .PHONY : src/model/neuron.cc.s
 
+src/model/reader.o: src/model/reader.cc.o
+.PHONY : src/model/reader.o
+
+# target to build an object file
+src/model/reader.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/s21_MultilayerPerceptron.dir/build.make CMakeFiles/s21_MultilayerPerceptron.dir/src/model/reader.cc.o
+.PHONY : src/model/reader.cc.o
+
+src/model/reader.i: src/model/reader.cc.i
+.PHONY : src/model/reader.i
+
+# target to preprocess a source file
+src/model/reader.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/s21_MultilayerPerceptron.dir/build.make CMakeFiles/s21_MultilayerPerceptron.dir/src/model/reader.cc.i
+.PHONY : src/model/reader.cc.i
+
+src/model/reader.s: src/model/reader.cc.s
+.PHONY : src/model/reader.s
+
+# target to generate assembly for a file
+src/model/reader.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/s21_MultilayerPerceptron.dir/build.make CMakeFiles/s21_MultilayerPerceptron.dir/src/model/reader.cc.s
+.PHONY : src/model/reader.cc.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -291,6 +339,9 @@ help:
 	@echo "... src/matrix/s21_support_func.o"
 	@echo "... src/matrix/s21_support_func.i"
 	@echo "... src/matrix/s21_support_func.s"
+	@echo "... src/model/data.o"
+	@echo "... src/model/data.i"
+	@echo "... src/model/data.s"
 	@echo "... src/model/graph_network.o"
 	@echo "... src/model/graph_network.i"
 	@echo "... src/model/graph_network.s"
@@ -300,6 +351,9 @@ help:
 	@echo "... src/model/neuron.o"
 	@echo "... src/model/neuron.i"
 	@echo "... src/model/neuron.s"
+	@echo "... src/model/reader.o"
+	@echo "... src/model/reader.i"
+	@echo "... src/model/reader.s"
 .PHONY : help
 
 

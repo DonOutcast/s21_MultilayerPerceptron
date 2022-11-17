@@ -19,6 +19,15 @@ namespace s21 {
 
         auto get_layers_vector() -> vector_info ;
         auto set_layers_vector(int number) -> void;
+
+        auto back_propagation(vector_double &values) -> void override;
+
+        auto save_weights(std::string file_name) -> void override;
+
+        auto get_weights(std::string file_name) -> bool override;
+
+        auto get_result() -> size_type  override;
+        auto get_result_vector() -> const_vec_double override;
     private:
 
         s21_matrix m_neurons_;
@@ -38,6 +47,9 @@ namespace s21 {
         auto clear_neurons() -> void;
         auto clear_biases() -> void;
 
+        auto get_local_grads(vector_double &local_grads, const vector_double &expected_values, size_type layer) -> void;
+
+        auto check_topology(const std::vector<size_type> &topology) -> bool;
 
 
     };

@@ -14,5 +14,9 @@ add_executable(s21_MultilayerPerceptron
                 src/model/graph_network.h
                 src/model/matrix.cc
                 src/model/matrix.h
+                src/model/reader.cc
+                src/model/reader.h
+                src/model/data.h
+                src/model/data.cc
                 main.cpp
         )

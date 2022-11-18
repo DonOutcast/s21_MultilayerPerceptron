@@ -3,5 +3,7 @@
         <file>qrc/sber.png</file>
         <file>qrc/upload.png</file>
         <file>qrc/download.png</file>
+        <file>qrc/icon.png</file>
     </qresource>
+    <qresource prefix="/resource/qrc"/>
 </RCC>

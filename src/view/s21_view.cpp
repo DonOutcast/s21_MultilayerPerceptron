@@ -73,74 +73,63 @@ auto s21_view::action_open_folder() -> void {
 }
 
 
-//void MainWindow::on_saveWeightsButton_clicked() {
-//  filePath = QFileDialog::getExistingDirectory(
-//                 this, "Open directory to save file", weightsPath,
-//                 QFileDialog::ShowDirsOnly | QFileDialog::DontResolveSymlinks) +
-//             "/";
-//  if (!filePath.isEmpty()) {
-//    fileName = filePath + "weights_" +
-//               QString::number((settingsWindow->GetLayersNumber()));
-//    m_controller->SaveWeights(fileName.toStdString() + ".txt");
-//  }
-//}
-
-//void MainWindow::on_loadWeigthsButton_clicked() {
-//  filePath =
-//      QFileDialog::getOpenFileName(this, QFileDialog::tr("Open file"),
-//                                   weightsPath, QFileDialog::tr("(*.txt)"));
-//  if (!filePath.isEmpty()) {
-//    m_controller->LoadWeights(filePath.toStdString());
-//  }
-//}
-
-//void MainWindow::on_saveImageButton_clicked() {
-//  if (!ui->renderingScene->IsClear()) {
-//    QString currentTime =
-//        QDateTime::currentDateTime().toString("yyyy_MM_dd_HH_mm_ss");
-//    filePath =
-//        QFileDialog::getExistingDirectory(
-//            this, "Open directory to save file", bmpPath,
-//            QFileDialog::ShowDirsOnly | QFileDialog::DontResolveSymlinks) +
-//        "/";
-//    if (!filePath.isEmpty()) {
-//      fileName = filePath + ui->answerLabel->text() + "_" + currentTime;
-//      ui->renderingScene->GetImage().save(fileName + ".bmp", "BMP");
-//    }
-//  }
-//}
-
-//void MainWindow::on_loadImageButton_clicked() {
-//  filePath = QFileDialog::getOpenFileName(this, QFileDialog::tr("Open file"),
-//                                          bmpPath, QFileDialog::tr("(*.bmp)"));
-//  if (!filePath.isEmpty()) {
-//    ui->renderingScene->SetImage(filePath);
-//    Predict();
-//  }
-//}
-
-
 
 auto s21_view::action_download_weights() -> void{
-
+      ui->actionDownload_images->setIcon(QIcon(":/resource/qrc/download_on.png"));
+      filePath_ = QFileDialog::getExistingDirectory(
+                     this, "Open directory to save file", weightsPath,
+                     QFileDialog::ShowDirsOnly | QFileDialog::DontResolveSymlinks) +
+                 "/";
+      if (!filePath_.isEmpty()) {
+//        fileName_ = filePath_ + "weights_" +
+//                   QString::number((settingsWindow->GetLayersNumber()));
+//        m_controller->SaveWeights(fileName_.toStdString() + ".txt");
+      }
+      ui->actionDownload_images->setIcon(QIcon(":/resource/qrc/download.png"));
 }
 
 auto s21_view::action_upload_weights() -> void {
+      ui->action_upload_images->setIcon(QIcon(":/resource/qrc/upload_on.png"));
+      filePath_ =
+          QFileDialog::getOpenFileName(this, QFileDialog::tr("Open file"),
+                                       weightsPath, QFileDialog::tr("(*.txt)"));
+      if (!filePath_.isEmpty()) {
+//        m_controller->LoadWeights(filePath_.toStdString());
+      }
+     ui->action_upload_images->setIcon(QIcon(":/resource/qrc/upload.png"));
 
 }
 
 auto s21_view::action_download_images() -> void {
+      ui->actionDownload_images->setIcon(QIcon(":/resource/qrc/download_on.png"));
+      if (!ui->scene->IsClear()) {
+        QString currentTime =
+            QDateTime::currentDateTime().toString("yyyy_MM_dd_HH_mm_ss");
+        filePath_ =
+            QFileDialog::getExistingDirectory(
+                this, "Open directory to save file", bmpPath,
+                QFileDialog::ShowDirsOnly | QFileDialog::DontResolveSymlinks) +
+            "/";
+        if (!filePath_.isEmpty()) {
+          fileName_ = filePath_ + ui->answer_label->text() + "_" + currentTime;
+          ui->scene->GetImage().save(fileName_ + ".bmp", "BMP");
+        }
 
+      } else {
+        QMessageBox::information(this, "titel", "No have latter for save");
+      }
+        ui->actionDownload_images->setIcon(QIcon(":/resource/qrc/download.png"));
 }
 
 auto s21_view::action_upload_images() -> void {
+      ui->action_upload_images->setIcon(QIcon(":/resource/qrc/upload_on.png"));
       filePath_ = QFileDialog::getOpenFileName(this, QFileDialog::tr("Open file"),
-                                              QDir::homePath(), QFileDialog::tr("(*.bmp)"));
-      qDebug() << "IN function";
+                                               QDir::homePath(), QFileDialog::tr("(*.bmp)"));
       if (!filePath_.isEmpty()) {
         ui->scene->SetImage(filePath_);
         Predict();
        }
+      ui->action_upload_images->setIcon(QIcon(":/resource/qrc/upload.png"));
 }
 
 
@@ -161,7 +150,7 @@ auto s21_view::settings_on_off() -> void {
 
 auto s21_view::triggeredGroupActionUpper(QAction *action) -> void {
   if (action == ui->actionDownload_images) {
-    this->action_open_folder();
+    this->action_download_images();
   }
   else if (action == ui->action_upload_images) {
     this->action_upload_images();

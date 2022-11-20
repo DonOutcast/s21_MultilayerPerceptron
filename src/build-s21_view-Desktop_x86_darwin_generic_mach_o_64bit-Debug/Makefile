@@ -943,7 +943,9 @@ qrc_resource.cpp: ../view/resource.qrc \
 		../view/qrc/settings_on.png \
 		../view/qrc/sber.png \
 		../view/qrc/download.png \
+		../view/qrc/download_on.png \
 		../view/qrc/icon.png \
+		../view/qrc/upload_on.png \
 		../view/qrc/setting.png \
 		../view/qrc/upload.png \
 		../view/qrc/title.png \

@@ -1,0 +1,17 @@
+<RCC>
+    <qresource prefix="/resource">
+        <file>qrc/sber.png</file>
+        <file>qrc/upload.png</file>
+        <file>qrc/download.png</file>
+        <file>qrc/icon.png</file>
+        <file>qrc/setting.png</file>
+        <file>qrc/settings_on.png</file>
+        <file>qrc/title.png</file>
+        <file>qrc/download_on.png</file>
+        <file>qrc/upload_on.png</file>
+    </qresource>
+    <qresource prefix="/resource/qrc"/>
+    <qresource prefix="/">
+        <file>qrc/settings_on.png</file>
+    </qresource>
+</RCC>

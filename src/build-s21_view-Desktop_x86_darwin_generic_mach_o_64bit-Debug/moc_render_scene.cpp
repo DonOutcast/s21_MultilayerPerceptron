@@ -7,7 +7,7 @@
 *****************************************************************************/
 
 #include <memory>
-#include "../s21_view/render_scene.h"
+#include "../view/render_scene.h"
 #include <QtCore/qbytearray.h>
 #include <QtCore/qmetatype.h>
 #if !defined(Q_MOC_OUTPUT_REVISION)

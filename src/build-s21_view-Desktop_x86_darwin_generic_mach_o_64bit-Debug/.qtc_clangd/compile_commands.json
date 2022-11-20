@@ -7,7 +7,7 @@
         "-I",
         "/Volumes/Qt Creator/Qt Creator.app/Contents/Resources/cplusplus/wrappedQtHeaders/QtCore",
         "-I",
-        "/private/var/folders/zz/zyxvpxvq6csfxvn_n003vsjc00yycb/T/QtCreator-niKLGM/clang-uiheader-jtKUYi",
+        "/private/var/folders/zz/zyxvpxvq6csfxvn_n003vsjc00yycb/T/QtCreator-kLnfnL/clang-uiheader-MCVftv",
         "-nostdinc",
         "-nostdinc++",
         "-pipe",
@@ -29,7 +29,7 @@
         "-DQT_GUI_LIB",
         "-DQT_CORE_LIB",
         "-I",
-        "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/s21_view",
+        "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/view",
         "-I",
         "/usr/local/lib/QtWidgets.framework/Headers",
         "-I",
@@ -66,10 +66,10 @@
         "-Wno-unknown-pragmas",
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
-        "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/s21_view/main.cpp"
+        "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/view/main.cpp"
     ],
     "directory": "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/build-s21_view-Desktop_x86_darwin_generic_mach_o_64bit-Debug/.qtc_clangd",
-    "file": "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/s21_view/main.cpp"
+    "file": "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/view/main.cpp"
 },
 {
     "arguments": [
@@ -79,7 +79,7 @@
         "-I",
         "/Volumes/Qt Creator/Qt Creator.app/Contents/Resources/cplusplus/wrappedQtHeaders/QtCore",
         "-I",
-        "/private/var/folders/zz/zyxvpxvq6csfxvn_n003vsjc00yycb/T/QtCreator-niKLGM/clang-uiheader-jtKUYi",
+        "/private/var/folders/zz/zyxvpxvq6csfxvn_n003vsjc00yycb/T/QtCreator-kLnfnL/clang-uiheader-MCVftv",
         "-nostdinc",
         "-nostdinc++",
         "-pipe",
@@ -101,7 +101,7 @@
         "-DQT_GUI_LIB",
         "-DQT_CORE_LIB",
         "-I",
-        "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/s21_view",
+        "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/view",
         "-I",
         "/usr/local/lib/QtWidgets.framework/Headers",
         "-I",
@@ -138,10 +138,10 @@
         "-Wno-unknown-pragmas",
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
-        "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/s21_view/qcustomplot.cpp"
+        "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/view/qcustomplot.cpp"
     ],
     "directory": "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/build-s21_view-Desktop_x86_darwin_generic_mach_o_64bit-Debug/.qtc_clangd",
-    "file": "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/s21_view/qcustomplot.cpp"
+    "file": "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/view/qcustomplot.cpp"
 },
 {
     "arguments": [
@@ -151,7 +151,7 @@
         "-I",
         "/Volumes/Qt Creator/Qt Creator.app/Contents/Resources/cplusplus/wrappedQtHeaders/QtCore",
         "-I",
-        "/private/var/folders/zz/zyxvpxvq6csfxvn_n003vsjc00yycb/T/QtCreator-niKLGM/clang-uiheader-jtKUYi",
+        "/private/var/folders/zz/zyxvpxvq6csfxvn_n003vsjc00yycb/T/QtCreator-kLnfnL/clang-uiheader-MCVftv",
         "-nostdinc",
         "-nostdinc++",
         "-pipe",
@@ -173,7 +173,7 @@
         "-DQT_GUI_LIB",
         "-DQT_CORE_LIB",
         "-I",
-        "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/s21_view",
+        "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/view",
         "-I",
         "/usr/local/lib/QtWidgets.framework/Headers",
         "-I",
@@ -210,10 +210,10 @@
         "-Wno-unknown-pragmas",
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
-        "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/s21_view/render_scene.cpp"
+        "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/view/render_scene.cpp"
     ],
     "directory": "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/build-s21_view-Desktop_x86_darwin_generic_mach_o_64bit-Debug/.qtc_clangd",
-    "file": "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/s21_view/render_scene.cpp"
+    "file": "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/view/render_scene.cpp"
 },
 {
     "arguments": [
@@ -223,7 +223,7 @@
         "-I",
         "/Volumes/Qt Creator/Qt Creator.app/Contents/Resources/cplusplus/wrappedQtHeaders/QtCore",
         "-I",
-        "/private/var/folders/zz/zyxvpxvq6csfxvn_n003vsjc00yycb/T/QtCreator-niKLGM/clang-uiheader-jtKUYi",
+        "/private/var/folders/zz/zyxvpxvq6csfxvn_n003vsjc00yycb/T/QtCreator-kLnfnL/clang-uiheader-MCVftv",
         "-nostdinc",
         "-nostdinc++",
         "-pipe",
@@ -245,7 +245,7 @@
         "-DQT_GUI_LIB",
         "-DQT_CORE_LIB",
         "-I",
-        "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/s21_view",
+        "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/view",
         "-I",
         "/usr/local/lib/QtWidgets.framework/Headers",
         "-I",
@@ -282,10 +282,10 @@
         "-Wno-unknown-pragmas",
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
-        "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/s21_view/s21_view.cpp"
+        "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/view/s21_view.cpp"
     ],
     "directory": "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/build-s21_view-Desktop_x86_darwin_generic_mach_o_64bit-Debug/.qtc_clangd",
-    "file": "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/s21_view/s21_view.cpp"
+    "file": "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/view/s21_view.cpp"
 },
 {
     "arguments": [
@@ -295,7 +295,7 @@
         "-I",
         "/Volumes/Qt Creator/Qt Creator.app/Contents/Resources/cplusplus/wrappedQtHeaders/QtCore",
         "-I",
-        "/private/var/folders/zz/zyxvpxvq6csfxvn_n003vsjc00yycb/T/QtCreator-niKLGM/clang-uiheader-jtKUYi",
+        "/private/var/folders/zz/zyxvpxvq6csfxvn_n003vsjc00yycb/T/QtCreator-kLnfnL/clang-uiheader-MCVftv",
         "-nostdinc",
         "-nostdinc++",
         "-pipe",
@@ -317,7 +317,7 @@
         "-DQT_GUI_LIB",
         "-DQT_CORE_LIB",
         "-I",
-        "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/s21_view",
+        "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/view",
         "-I",
         "/usr/local/lib/QtWidgets.framework/Headers",
         "-I",
@@ -354,10 +354,10 @@
         "-Wno-unknown-pragmas",
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
-        "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/s21_view/qcustomplot.h"
+        "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/view/qcustomplot.h"
     ],
     "directory": "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/build-s21_view-Desktop_x86_darwin_generic_mach_o_64bit-Debug/.qtc_clangd",
-    "file": "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/s21_view/qcustomplot.h"
+    "file": "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/view/qcustomplot.h"
 },
 {
     "arguments": [
@@ -367,7 +367,7 @@
         "-I",
         "/Volumes/Qt Creator/Qt Creator.app/Contents/Resources/cplusplus/wrappedQtHeaders/QtCore",
         "-I",
-        "/private/var/folders/zz/zyxvpxvq6csfxvn_n003vsjc00yycb/T/QtCreator-niKLGM/clang-uiheader-jtKUYi",
+        "/private/var/folders/zz/zyxvpxvq6csfxvn_n003vsjc00yycb/T/QtCreator-kLnfnL/clang-uiheader-MCVftv",
         "-nostdinc",
         "-nostdinc++",
         "-pipe",
@@ -389,7 +389,7 @@
         "-DQT_GUI_LIB",
         "-DQT_CORE_LIB",
         "-I",
-        "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/s21_view",
+        "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/view",
         "-I",
         "/usr/local/lib/QtWidgets.framework/Headers",
         "-I",
@@ -426,10 +426,10 @@
         "-Wno-unknown-pragmas",
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
-        "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/s21_view/render_scene.h"
+        "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/view/render_scene.h"
     ],
     "directory": "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/build-s21_view-Desktop_x86_darwin_generic_mach_o_64bit-Debug/.qtc_clangd",
-    "file": "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/s21_view/render_scene.h"
+    "file": "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/view/render_scene.h"
 },
 {
     "arguments": [
@@ -439,7 +439,7 @@
         "-I",
         "/Volumes/Qt Creator/Qt Creator.app/Contents/Resources/cplusplus/wrappedQtHeaders/QtCore",
         "-I",
-        "/private/var/folders/zz/zyxvpxvq6csfxvn_n003vsjc00yycb/T/QtCreator-niKLGM/clang-uiheader-jtKUYi",
+        "/private/var/folders/zz/zyxvpxvq6csfxvn_n003vsjc00yycb/T/QtCreator-kLnfnL/clang-uiheader-MCVftv",
         "-nostdinc",
         "-nostdinc++",
         "-pipe",
@@ -461,7 +461,7 @@
         "-DQT_GUI_LIB",
         "-DQT_CORE_LIB",
         "-I",
-        "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/s21_view",
+        "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/view",
         "-I",
         "/usr/local/lib/QtWidgets.framework/Headers",
         "-I",
@@ -498,10 +498,10 @@
         "-Wno-unknown-pragmas",
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
-        "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/s21_view/s21_view.h"
+        "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/view/s21_view.h"
     ],
     "directory": "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/build-s21_view-Desktop_x86_darwin_generic_mach_o_64bit-Debug/.qtc_clangd",
-    "file": "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/s21_view/s21_view.h"
+    "file": "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/view/s21_view.h"
 },
 {
     "arguments": [
@@ -511,7 +511,7 @@
         "-I",
         "/Volumes/Qt Creator/Qt Creator.app/Contents/Resources/cplusplus/wrappedQtHeaders/QtCore",
         "-I",
-        "/private/var/folders/zz/zyxvpxvq6csfxvn_n003vsjc00yycb/T/QtCreator-niKLGM/clang-uiheader-jtKUYi",
+        "/private/var/folders/zz/zyxvpxvq6csfxvn_n003vsjc00yycb/T/QtCreator-kLnfnL/clang-uiheader-MCVftv",
         "-nostdinc",
         "-nostdinc++",
         "-pipe",
@@ -533,7 +533,7 @@
         "-DQT_GUI_LIB",
         "-DQT_CORE_LIB",
         "-I",
-        "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/s21_view",
+        "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/view",
         "-I",
         "/usr/local/lib/QtWidgets.framework/Headers",
         "-I",

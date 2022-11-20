@@ -1,0 +1,798 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>s21_view</class>
+ <widget class="QMainWindow" name="s21_view">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1103</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>s21_view</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">
+QMainWindow{
+
+background-image: url(:/resource/qrc/icon.png);
+}
+
+QToolBar {
+background-color: white;
+}
+QToolBar {
+	background-color:  red;
+}</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="RenderScene" name="scene" native="true">
+    <property name="geometry">
+     <rect>
+      <x>700</x>
+      <y>140</y>
+      <width>404</width>
+      <height>404</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>402</width>
+      <height>402</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>404</width>
+      <height>404</height>
+     </size>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QWidget {
+	background: #FFFFFF;
+	border-style: solid;
+	border-width: 2px 2px 2px 2px;
+	border-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 #30D5C8 , stop:1 #4169E1);
+}</string>
+    </property>
+    <widget class="QLabel" name="answer_label">
+     <property name="geometry">
+      <rect>
+       <x>320</x>
+       <y>10</y>
+       <width>70</width>
+       <height>60</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>70</width>
+       <height>60</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>70</width>
+       <height>60</height>
+      </size>
+     </property>
+     <property name="font">
+      <font>
+       <family>Umpush</family>
+       <pointsize>-1</pointsize>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel {
+	color: #30D5C8;
+	font-size: 72px;
+   background: rgba(255, 255, 255, 0)
+}</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>940</x>
+      <y>10</y>
+      <width>151</width>
+      <height>121</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {
+/*	background-color:  qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 #30D5C8 , stop:1 #4169E1);*/
+	background-image: url(:/resource/qrc/sber.png);
+	font: 16pt ;
+	font-weight: bold;
+	color: #FFFFFF;
+	/*border-style: solid;
+	border-width: 4px 4px 4px 4px;
+	border-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 #30D5C8 , stop:1 #4169E1);*/
+}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_settings">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>130</y>
+      <width>391</width>
+      <height>401</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Settings</string>
+    </property>
+    <widget class="QLabel" name="selectionPartLabel">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>350</y>
+       <width>181</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Umpush</family>
+       <pointsize>16</pointsize>
+       <italic>false</italic>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel {
+	font: 16pt ;
+	font-weight: bold;
+	color: #FFFFFF;
+
+}</string>
+     </property>
+     <property name="text">
+      <string>SELECTION PART</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="testsLabel">
+     <property name="geometry">
+      <rect>
+       <x>110</x>
+       <y>300</y>
+       <width>200</width>
+       <height>40</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Umpush</family>
+       <pointsize>16</pointsize>
+       <italic>false</italic>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel {
+	font: 16pt ;
+	font-weight: bold;
+	color: #FFFFFF;
+	border-style: solid;
+	border-width: 4px 0px 4px 0px;
+	border-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 #30D5C8 , stop:1 #4169E1);
+}</string>
+     </property>
+     <property name="text">
+      <string>TESTS</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="graphTypeButton">
+     <property name="geometry">
+      <rect>
+       <x>270</x>
+       <y>70</y>
+       <width>120</width>
+       <height>40</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Umpush</family>
+       <pointsize>16</pointsize>
+       <italic>false</italic>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QRadioButton{
+	font: 16pt ;
+	font-weight: bold;
+	color: #FFFFFF;
+}
+
+QRadioButton::indicator {
+    width:                  10px;
+    height:                 10px;
+    border-radius:          7px;
+}
+
+QRadioButton::indicator:checked {
+    background-color:       #30D5C8;
+    border:                 2px solid white;
+}
+
+QRadioButton::indicator:unchecked {
+    background-color:       #FFFFFF;
+    border:                 2px solid white;
+}</string>
+     </property>
+     <property name="text">
+      <string>GRAPH</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="epochNumberLabel">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>210</y>
+       <width>181</width>
+       <height>40</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Umpush</family>
+       <pointsize>16</pointsize>
+       <italic>false</italic>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel {
+	font: 16pt ;
+	font-weight: bold;
+	color: #FFFFFF;
+
+}</string>
+     </property>
+     <property name="text">
+      <string>EPOCH NUMBER</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="matrixTypeButton">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>70</y>
+       <width>120</width>
+       <height>40</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Umpush</family>
+       <pointsize>16</pointsize>
+       <italic>false</italic>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="layoutDirection">
+      <enum>Qt::LeftToRight</enum>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QRadioButton{
+	font: 16pt ;
+	font-weight: bold;
+	color: #FFFFFF;
+}
+
+QRadioButton::indicator {
+    width:                  10px;
+    height:                 10px;
+    border-radius:          7px;
+}
+
+QRadioButton::indicator:checked {
+    background-color:       #30D5C8;
+    border:                 2px solid white;
+}
+
+QRadioButton::indicator:unchecked {
+    background-color:       #FFFFFF;
+    border:                 2px solid white;
+}</string>
+     </property>
+     <property name="text">
+      <string>MATRIX</string>
+     </property>
+     <property name="checked">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="hiddenLayersLabel">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>110</y>
+       <width>181</width>
+       <height>40</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Umpush</family>
+       <pointsize>16</pointsize>
+       <italic>false</italic>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel {
+	font: 16pt ;
+	font-weight: bold;
+	color: #FFFFFF;
+
+}</string>
+     </property>
+     <property name="text">
+      <string>HIDDEN LAYERS</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QDoubleSpinBox" name="selectonPartSpinBox">
+     <property name="geometry">
+      <rect>
+       <x>290</x>
+       <y>355</y>
+       <width>101</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Umpush</family>
+       <pointsize>16</pointsize>
+       <italic>false</italic>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QDoubleSpinBox {
+	font: 16pt ;
+	font-weight: bold;
+	color: #FFFFFF;
+	background: #202020;
+}</string>
+     </property>
+     <property name="maximum">
+      <double>1.000000000000000</double>
+     </property>
+     <property name="singleStep">
+      <double>0.050000000000000</double>
+     </property>
+     <property name="value">
+      <double>1.000000000000000</double>
+     </property>
+    </widget>
+    <widget class="QSpinBox" name="kGroupsSpinBox">
+     <property name="geometry">
+      <rect>
+       <x>290</x>
+       <y>255</y>
+       <width>101</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Umpush</family>
+       <pointsize>16</pointsize>
+       <italic>false</italic>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QSpinBox {
+	font: 16pt ;
+	font-weight: bold;
+	color: #FFFFFF;
+	background: #202020;
+}</string>
+     </property>
+     <property name="minimum">
+      <number>1</number>
+     </property>
+     <property name="maximum">
+      <number>10</number>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="crossValidationCheckBox">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>260</y>
+       <width>151</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Umpush</family>
+       <pointsize>10</pointsize>
+       <italic>false</italic>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QCheckBox {
+	font: 10pt ;
+	font-weight: bold;
+	color: #FFFFFF;
+	background-color: #202020;
+}
+</string>
+     </property>
+     <property name="text">
+      <string>CROSS VALIDATION</string>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="layersBox">
+     <property name="geometry">
+      <rect>
+       <x>290</x>
+       <y>120</y>
+       <width>100</width>
+       <height>30</height>
+      </rect>
+     </property>
+     <property name="layoutDirection">
+      <enum>Qt::LeftToRight</enum>
+     </property>
+     <property name="autoFillBackground">
+      <bool>false</bool>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QComboBox {
+	font: 16pt ;
+	font-weight: bold;
+	color: #FFFFFF;
+	background: #202020;
+}
+
+QComboBox QAbstractItemView{
+	font: 16pt ;
+	font-weight: bold;
+	color: #FFFFFF;
+	background: #202020;
+	selection-background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 #30D5C8 , stop:1 #4169E1);;
+}
+
+QComboBox::item:selected {
+	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 #30D5C8 , stop:1 #4169E1);
+}
+
+
+</string>
+     </property>
+     <property name="currentIndex">
+      <number>0</number>
+     </property>
+     <property name="maxVisibleItems">
+      <number>4</number>
+     </property>
+     <item>
+      <property name="text">
+       <string>2</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>3</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>4</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>5</string>
+      </property>
+     </item>
+    </widget>
+    <widget class="QLabel" name="kGroupsLabel">
+     <property name="geometry">
+      <rect>
+       <x>200</x>
+       <y>250</y>
+       <width>81</width>
+       <height>40</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Umpush</family>
+       <pointsize>10</pointsize>
+       <italic>false</italic>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel {
+	font: 10pt ;
+	font-weight: bold;
+	color: #FFFFFF;
+
+}</string>
+     </property>
+     <property name="text">
+      <string>K-GROUPS</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="trainingLabel">
+     <property name="geometry">
+      <rect>
+       <x>100</x>
+       <y>160</y>
+       <width>200</width>
+       <height>40</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Umpush</family>
+       <pointsize>16</pointsize>
+       <italic>false</italic>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel {
+	font: 16pt ;
+	font-weight: bold;
+	color: #FFFFFF;
+	border-style: solid;
+	border-width: 4px 0px 4px 0px;
+	border-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 #30D5C8 , stop:1 #4169E1);
+}</string>
+     </property>
+     <property name="text">
+      <string>TRAINING</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="networkTypeLabel">
+     <property name="geometry">
+      <rect>
+       <x>100</x>
+       <y>20</y>
+       <width>200</width>
+       <height>40</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Umpush</family>
+       <pointsize>16</pointsize>
+       <italic>false</italic>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel {
+	font: 16pt ;
+	font-weight: bold;
+	color: #FFFFFF;
+	border-style: solid;
+	border-width: 4px 0px 4px 0px;
+	border-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 #30D5C8 , stop:1 #4169E1);
+}</string>
+     </property>
+     <property name="text">
+      <string>NETWORK TYPE</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="epochBox">
+     <property name="geometry">
+      <rect>
+       <x>290</x>
+       <y>210</y>
+       <width>100</width>
+       <height>30</height>
+      </rect>
+     </property>
+     <property name="layoutDirection">
+      <enum>Qt::LeftToRight</enum>
+     </property>
+     <property name="autoFillBackground">
+      <bool>false</bool>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QComboBox {
+	font: 16pt ;
+	font-weight: bold;
+	color: #FFFFFF;
+	background: #202020;
+}
+
+QComboBox QAbstractItemView{
+	font: 16pt ;
+	font-weight: bold;
+	color: #FFFFFF;
+	background: #202020;
+	selection-background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 #30D5C8 , stop:1 #4169E1);;
+}
+
+QComboBox::item:selected {
+	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 #30D5C8 , stop:1 #4169E1);
+}
+
+
+</string>
+     </property>
+     <property name="currentIndex">
+      <number>0</number>
+     </property>
+     <property name="maxVisibleItems">
+      <number>4</number>
+     </property>
+     <item>
+      <property name="text">
+       <string>1</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>2</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>3</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>4</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>5</string>
+      </property>
+     </item>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QToolBar" name="toolBar">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>50</width>
+     <height>32</height>
+    </size>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="action_upload_images"/>
+   <addaction name="actionDownload_images"/>
+   <addaction name="actionSettings"/>
+   <addaction name="actionDownload_weights"/>
+   <addaction name="actionUpload_weights"/>
+  </widget>
+  <action name="actionDownload_images">
+   <property name="icon">
+    <iconset resource="resource.qrc">
+     <normaloff>:/resource/qrc/download.png</normaloff>:/resource/qrc/download.png</iconset>
+   </property>
+   <property name="text">
+    <string>Download</string>
+   </property>
+   <property name="toolTip">
+    <string>Dowonload Images</string>
+   </property>
+  </action>
+  <action name="actionSettings">
+   <property name="icon">
+    <iconset resource="resource.qrc">
+     <normaloff>:/resource/qrc/setting.png</normaloff>:/resource/qrc/setting.png</iconset>
+   </property>
+   <property name="text">
+    <string>Settings_off</string>
+   </property>
+   <property name="toolTip">
+    <string>Setting</string>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>25</pointsize>
+    </font>
+   </property>
+  </action>
+  <action name="action_upload_images">
+   <property name="icon">
+    <iconset resource="resource.qrc">
+     <normaloff>:/resource/qrc/upload.png</normaloff>:/resource/qrc/upload.png</iconset>
+   </property>
+   <property name="text">
+    <string>upload_images</string>
+   </property>
+   <property name="toolTip">
+    <string>Upload Images</string>
+   </property>
+  </action>
+  <action name="actionDownload_weights">
+   <property name="icon">
+    <iconset resource="resource.qrc">
+     <normaloff>:/resource/qrc/download.png</normaloff>:/resource/qrc/download.png</iconset>
+   </property>
+   <property name="text">
+    <string>Download</string>
+   </property>
+   <property name="toolTip">
+    <string>Download weights</string>
+   </property>
+  </action>
+  <action name="actionUpload_weights">
+   <property name="icon">
+    <iconset resource="resource.qrc">
+     <normaloff>:/resource/qrc/upload.png</normaloff>:/resource/qrc/upload.png</iconset>
+   </property>
+   <property name="text">
+    <string>Upload_weights</string>
+   </property>
+   <property name="toolTip">
+    <string>Upload Weights</string>
+   </property>
+  </action>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>RenderScene</class>
+   <extends>QWidget</extends>
+   <header>render_scene.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="resource.qrc"/>
+ </resources>
+ <connections/>
+</ui>

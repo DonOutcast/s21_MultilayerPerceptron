@@ -7,7 +7,7 @@
 *****************************************************************************/
 
 #include <memory>
-#include "../s21_view/qcustomplot.h"
+#include "../view/qcustomplot.h"
 #include <QtGui/qtextcursor.h>
 #include <QScreen>
 #include <QtCore/qbytearray.h>

@@ -17,8 +17,8 @@ namespace s21 {
         auto set_layers(std::initializer_list<size_type> items) -> void override;
         auto set_layers(std::vector<LayersInfo> info) -> void override;
 
-        auto get_layers_vector() -> vector_info ;
-        auto set_layers_vector(int number) -> void;
+        auto get_layers_vector() -> vector_info override;
+        auto set_layers_vector(int number) -> void override;
 
         auto back_propagation(vector_double &values) -> void override;
 

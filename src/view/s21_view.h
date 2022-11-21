@@ -16,7 +16,7 @@
 #include <QProgressBar>
 #include <QRadioButton>
 #include <QMessageBox>
-
+#include "../controller/controller.h"
 
 
 
@@ -41,6 +41,7 @@ private:
 
 private slots:
       void triggeredGroupActionUpper(QAction *action);
+      auto on_crossValidationCheckBox_stateChanged(int arg1) -> void;
 
 private:
       auto action_open_folder() -> void;
@@ -53,8 +54,17 @@ private:
       auto action_train() -> void;
       auto settings_on_off() -> void;
 
+      auto closeEvent(QCloseEvent* enevet) -> void override;
+      auto GetKGroups() -> size_t;
+      auto IsCrossValidation() -> bool;
+      auto GetEpochNumber() -> size_t;
+      auto GetSelectionPart() -> double;
+//      auto SetController(s21::Controller* controller) -> void;
+      auto GetLayersNumber() -> int;
+
 private:
     Ui::s21_view *ui;
+    s21::Controller*     m_controller {};
     QActionGroup *groupActionUpper_;
     QString filePath_{};
     QString fileName_{};

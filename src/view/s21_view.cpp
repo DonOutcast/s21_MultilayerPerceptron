@@ -9,6 +9,8 @@ s21_view::s21_view(QWidget *parent) : QMainWindow(parent) , ui(new Ui::s21_view)
      /*-------------------------------------------------------*/
       ui->groupBox_settings->hide();
      this->setSlots();
+
+      ui->kGroupsSpinBox->setDisabled(true);
 }
 
 s21_view::~s21_view() {
@@ -175,3 +177,51 @@ auto s21_view::triggeredGroupActionUpper(QAction *action) -> void {
 //    action_axis_rotate();
 //  }
 }
+
+
+auto s21_view::GetLayersNumber() -> int {
+  return ui->layersBox->currentText().toInt();
+}
+
+auto s21_view::closeEvent(QCloseEvent* event) -> void {
+//  s21::NetworkType netType;
+  if (ui->matrixTypeButton->isChecked()) {
+//    netType = s21::NetworkType::MATRIX;
+  } else {
+//    netType = s21::NetworkType::GRAPH;
+  }
+//  m_controller->SetNet(netType, ui->layersBox->currentText().toInt());
+  event->accept();
+}
+
+//auto SettingsWindow::SetController(s21::Controller* controller) -> void {
+//  m_controller = controller;
+//}
+
+auto s21_view::GetSelectionPart() -> double {
+  return ui->selectonPartSpinBox->value();
+}
+
+auto s21_view::on_crossValidationCheckBox_stateChanged(int arg1) -> void{
+  if (arg1) {
+    ui->kGroupsSpinBox->setEnabled(true);
+  } else {
+    ui->kGroupsSpinBox->setValue(1);
+    ui->kGroupsSpinBox->setDisabled(true);
+  }
+}
+
+auto s21_view::GetEpochNumber() -> size_t {
+  return ui->epochBox->currentText().toUInt();
+}
+
+auto s21_view::IsCrossValidation() -> bool {
+  return ui->crossValidationCheckBox->isChecked();
+}
+
+auto s21_view::GetKGroups() -> size_t {
+  return static_cast<size_t>(ui->kGroupsSpinBox->value());
+}
+
+
+

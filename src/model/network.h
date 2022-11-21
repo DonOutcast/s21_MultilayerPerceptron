@@ -18,6 +18,11 @@ namespace s21 {
         OUTPUT = 26
     };
 
+    enum class NetworkType {
+        MATRIX = 0,
+        GRAPH = 1
+    };
+
     class Network {
     public:
         Network() = default;
@@ -26,6 +31,7 @@ namespace s21 {
         using size_type = size_t;
         using const_vec_double = const std::vector<double>;
         using vec_double = std::vector<double>;
+        using vector_info = std::vector<LayersInfo>;
 
         virtual auto feed_forward() -> void = 0;
         virtual auto feed_init_value(const vec_double &values) -> void = 0;
@@ -39,6 +45,8 @@ namespace s21 {
         virtual auto set_layers(std::initializer_list<size_type> items) -> void = 0;
 //        auto activate_function(double  value) -> double;
 //        auto activate_function_derivative(double value) -> double;
+        virtual auto get_layers_vector() -> vector_info = 0;
+        virtual auto set_layers_vector(int number) -> void = 0;
     protected:
         std::vector<size_type> m_topology_;
         std::mt19937  m_generator_;

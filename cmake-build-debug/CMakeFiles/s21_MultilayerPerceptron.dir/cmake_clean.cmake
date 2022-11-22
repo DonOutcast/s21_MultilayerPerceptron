@@ -1,6 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/s21_MultilayerPerceptron.dir/main.cpp.o"
   "CMakeFiles/s21_MultilayerPerceptron.dir/main.cpp.o.d"
+  "CMakeFiles/s21_MultilayerPerceptron.dir/src/controller/controller.cc.o"
+  "CMakeFiles/s21_MultilayerPerceptron.dir/src/controller/controller.cc.o.d"
   "CMakeFiles/s21_MultilayerPerceptron.dir/src/matrix/s21_matrix.cpp.o"
   "CMakeFiles/s21_MultilayerPerceptron.dir/src/matrix/s21_matrix.cpp.o.d"
   "CMakeFiles/s21_MultilayerPerceptron.dir/src/matrix/s21_support_func.cc.o"

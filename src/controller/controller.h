@@ -15,11 +15,12 @@ namespace s21 {
 
         using vector_double = std::vector<double>;
         using size_type = size_t;
-        auto set_net(NetworkType type, int hidden_layers);
+
+        auto set_net(s21::NetworkType type, int hidden_layers) -> void;
         auto feed_forward() -> void;
         auto feed_init_values(const vector_double & values) -> void;
         auto get_result() -> size_t;
-
+        auto get_weights(std::string file_name) -> bool ;
 
     private:
         Network* m_net_{};

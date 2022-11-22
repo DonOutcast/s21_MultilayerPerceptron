@@ -153,6 +153,30 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/s21_MultilayerPerceptron.dir/build.make CMakeFiles/s21_MultilayerPerceptron.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+src/controller/controller.o: src/controller/controller.cc.o
+.PHONY : src/controller/controller.o
+
+# target to build an object file
+src/controller/controller.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/s21_MultilayerPerceptron.dir/build.make CMakeFiles/s21_MultilayerPerceptron.dir/src/controller/controller.cc.o
+.PHONY : src/controller/controller.cc.o
+
+src/controller/controller.i: src/controller/controller.cc.i
+.PHONY : src/controller/controller.i
+
+# target to preprocess a source file
+src/controller/controller.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/s21_MultilayerPerceptron.dir/build.make CMakeFiles/s21_MultilayerPerceptron.dir/src/controller/controller.cc.i
+.PHONY : src/controller/controller.cc.i
+
+src/controller/controller.s: src/controller/controller.cc.s
+.PHONY : src/controller/controller.s
+
+# target to generate assembly for a file
+src/controller/controller.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/s21_MultilayerPerceptron.dir/build.make CMakeFiles/s21_MultilayerPerceptron.dir/src/controller/controller.cc.s
+.PHONY : src/controller/controller.cc.s
+
 src/matrix/s21_matrix.o: src/matrix/s21_matrix.cpp.o
 .PHONY : src/matrix/s21_matrix.o
 
@@ -333,6 +357,9 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... src/controller/controller.o"
+	@echo "... src/controller/controller.i"
+	@echo "... src/controller/controller.s"
 	@echo "... src/matrix/s21_matrix.o"
 	@echo "... src/matrix/s21_matrix.i"
 	@echo "... src/matrix/s21_matrix.s"

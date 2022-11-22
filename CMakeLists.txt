@@ -18,5 +18,7 @@ add_executable(s21_MultilayerPerceptron
                 src/model/reader.h
                 src/model/data.h
                 src/model/data.cc
+                src/controller/controller.cc
+                src/controller/controller.h
                 main.cpp
         )

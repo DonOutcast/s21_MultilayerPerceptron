@@ -9,6 +9,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/main.cpp" "CMakeFiles/s21_MultilayerPerceptron.dir/main.cpp.o" "gcc" "CMakeFiles/s21_MultilayerPerceptron.dir/main.cpp.o.d"
+  "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/controller/controller.cc" "CMakeFiles/s21_MultilayerPerceptron.dir/src/controller/controller.cc.o" "gcc" "CMakeFiles/s21_MultilayerPerceptron.dir/src/controller/controller.cc.o.d"
   "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/matrix/s21_matrix.cpp" "CMakeFiles/s21_MultilayerPerceptron.dir/src/matrix/s21_matrix.cpp.o" "gcc" "CMakeFiles/s21_MultilayerPerceptron.dir/src/matrix/s21_matrix.cpp.o.d"
   "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/matrix/s21_support_func.cc" "CMakeFiles/s21_MultilayerPerceptron.dir/src/matrix/s21_support_func.cc.o" "gcc" "CMakeFiles/s21_MultilayerPerceptron.dir/src/matrix/s21_support_func.cc.o.d"
   "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/model/data.cc" "CMakeFiles/s21_MultilayerPerceptron.dir/src/model/data.cc.o" "gcc" "CMakeFiles/s21_MultilayerPerceptron.dir/src/model/data.cc.o.d"

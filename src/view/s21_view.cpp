@@ -1,9 +1,18 @@
 #include "s21_view.h"
 #include "ui_s21_view.h"
 
-s21_view::s21_view(QWidget *parent) : QMainWindow(parent) , ui(new Ui::s21_view)  ,groupActionUpper_(new QActionGroup(this)) {
+s21_view::s21_view(QWidget *parent) : QMainWindow(parent) , ui(new Ui::s21_view)  ,m_controller(new s21::Controller) ,
+    groupActionUpper_(new QActionGroup(this))  {
     ui->setupUi(this);
+
+
+
+
+
+
      ui->scene->SetMainWindow(this);
+     m_controller->set_net(s21::NetworkType::MATRIX, defaultLayers);
+     this->SetController(m_controller);
      /*---группировка actions находящихся на верхнем toolBar---*/
      groupingActionUpperToolBar();
      /*-------------------------------------------------------*/
@@ -19,20 +28,26 @@ s21_view::~s21_view() {
 
 auto s21_view::Predict() -> void {
   if (!ui->scene->IsClear()) {
-//    m_controller->FeedInitValues(ui->renderingScene->VectorFromImage());
-//    m_controller->FeedForward();
-//    ui->answerLabel->setText(QString(
-//        QChar(static_cast<int>(m_controller->GetResult()) + asciiBias)));
+//      qDebug() << ui->scene->VectorFromImage();
+    m_controller->feed_init_values(ui->scene->VectorFromImage());
+      this->m_controller->feed_forward();
+    ui->answer_label->setText(QString(QChar(static_cast<int>(m_controller->get_result() + this->asciiBias))));
   } else {
     ui->answer_label->setText("");
   }
+
 }
+
+
+
+
 
 
 auto s21_view::groupingActionUpperToolBar() ->void {
   groupActionUpper_->addAction(ui->actionDownload_images);
   this->groupActionUpper_->addAction(ui->action_upload_images);
   this->groupActionUpper_->addAction(ui->actionSettings);
+  this->groupActionUpper_->addAction(ui->actionUpload_weights);
 //  groupActionUpper_->addAction(ui->act_make_gif);
 //  groupActionUpper_->addAction(ui->act_gif_360);
 //  groupActionUpper_->addAction(ui->act_screenShot);
@@ -83,9 +98,9 @@ auto s21_view::action_download_weights() -> void{
                      QFileDialog::ShowDirsOnly | QFileDialog::DontResolveSymlinks) +
                  "/";
       if (!filePath_.isEmpty()) {
-//        fileName_ = filePath_ + "weights_" +
-//                   QString::number((settingsWindow->GetLayersNumber()));
-//        m_controller->SaveWeights(fileName_.toStdString() + ".txt");
+        fileName_ = filePath_ + "weights_" +
+                   QString::number((this->GetLayersNumber()));
+        m_controller->get_weights(fileName_.toStdString() + ".txt");
       }
       ui->actionDownload_images->setIcon(QIcon(":/resource/qrc/download.png"));
 }
@@ -97,6 +112,7 @@ auto s21_view::action_upload_weights() -> void {
                                        weightsPath, QFileDialog::tr("(*.txt)"));
       if (!filePath_.isEmpty()) {
 //        m_controller->LoadWeights(filePath_.toStdString());
+        m_controller->get_weights(fileName_.toStdString() + ".txt");
       }
      ui->action_upload_images->setIcon(QIcon(":/resource/qrc/upload.png"));
 
@@ -158,6 +174,8 @@ auto s21_view::triggeredGroupActionUpper(QAction *action) -> void {
     this->action_upload_images();
   } else if (action == ui->actionSettings) {
     this->settings_on_off();
+  } else if (action == ui->actionUpload_weights) {
+      this->action_upload_weights();
   }
   //else if (action == ui->act_texture) {
 //    action_texture_triggered();
@@ -194,9 +212,9 @@ auto s21_view::closeEvent(QCloseEvent* event) -> void {
   event->accept();
 }
 
-//auto SettingsWindow::SetController(s21::Controller* controller) -> void {
-//  m_controller = controller;
-//}
+auto s21_view::SetController(s21::Controller* controller) -> void {
+  m_controller = controller;
+}
 
 auto s21_view::GetSelectionPart() -> double {
   return ui->selectonPartSpinBox->value();

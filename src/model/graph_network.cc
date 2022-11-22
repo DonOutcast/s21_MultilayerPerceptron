@@ -99,3 +99,31 @@ auto s21::Graph::set_layers(std::vector<LayersInfo> info) -> void {
 auto s21::Graph::set_layers(std::initializer_list<size_type> items) -> void {
     ;
 }
+
+auto s21::Graph::back_propagation(s21::Network::vec_double &expected_values) -> void {
+
+}
+
+auto s21::Graph::get_layers_vector() -> s21::Network::vector_info {
+    return s21::Network::vector_info();
+}
+
+auto s21::Graph::set_layers_vector(int number) -> void {
+
+}
+
+auto s21::Graph::save_weights(std::string) -> void {
+
+}
+
+auto s21::Graph::get_weights(std::string) -> bool {
+    return false;
+}
+
+auto s21::Graph::get_result() -> s21::Network::size_type {
+    return 0;
+}
+
+auto s21::Graph::get_result_vector() -> s21::Network::const_vec_double {
+    return s21::Network::const_vec_double();
+}

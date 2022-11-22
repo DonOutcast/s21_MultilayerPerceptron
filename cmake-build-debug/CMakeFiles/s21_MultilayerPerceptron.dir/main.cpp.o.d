@@ -246,4 +246,8 @@ CMakeFiles/s21_MultilayerPerceptron.dir/main.cpp.o: \
   /Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/model/../matrix/s21_matrix.h \
   /Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/model/neuron.h \
   /Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/model/reader.h \
-  /Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/model/data.h
+  /Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/model/data.h \
+  /Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/controller/controller.h \
+  /Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/controller/../model/network.h \
+  /Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/controller/../model/matrix.h \
+  /Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/controller/../model/graph_network.h

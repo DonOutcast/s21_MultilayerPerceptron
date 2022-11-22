@@ -2,7 +2,7 @@ QT       += core gui
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
-CONFIG += c++17
+CONFIG += c++17 -fsanitize=address
 
 # You can make your code fail to compile if it uses deprecated APIs.
 # In order to do so, uncomment the following line.
@@ -10,6 +10,8 @@ CONFIG += c++17
 
 SOURCES += \
     ../controller/controller.cc \
+    ../matrix/s21_matrix.cpp \
+    ../matrix/s21_support_func.cc \
     ../model/data.cc \
     ../model/graph_network.cc \
     ../model/matrix.cc \
@@ -23,6 +25,7 @@ SOURCES += \
 
 HEADERS += \
     ../controller/controller.h \
+    ../matrix/s21_matrix.h \
     ../model/data.h \
     ../model/graph_network.h \
     ../model/matrix.h \

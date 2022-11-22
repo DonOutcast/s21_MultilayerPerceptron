@@ -59,15 +59,17 @@ private:
       auto IsCrossValidation() -> bool;
       auto GetEpochNumber() -> size_t;
       auto GetSelectionPart() -> double;
-//      auto SetController(s21::Controller* controller) -> void;
+      auto SetController(s21::Controller* controller) -> void;
       auto GetLayersNumber() -> int;
 
 private:
     Ui::s21_view *ui;
-    s21::Controller*     m_controller {};
+    static constexpr int defaultLayers = 2;
+    s21::Controller*  m_controller {};
     QActionGroup *groupActionUpper_;
     QString filePath_{};
     QString fileName_{};
+    static constexpr int asciiBias = 65;
     const QString weightsPath = "../src/weights/";
     const QString bmpPath = "../src/bmp/";
     const QString emnistPath = "../src/emnist/";

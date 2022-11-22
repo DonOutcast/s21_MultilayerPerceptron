@@ -4,9 +4,10 @@
 #include "neuron.h"
 namespace s21 {
     class Graph : public Network{
+
     public:
-        Graph() = default;
-        ~Graph() = default;
+        Graph() {;}
+        ~Graph() override {;}
         using Layer = std::vector<Neuron>;
         using matrix_neuron_ = std::vector<Layer>;
         auto feed_forward() -> void override;
@@ -14,6 +15,14 @@ namespace s21 {
         auto set_layers(std::vector<LayersInfo> info) -> void override;
         auto set_layers(std::initializer_list<size_type> items) -> void override;
         auto generation_weights(size_type number_of_weights_) -> vec_double;
+
+        auto back_propagation(vec_double &expected_values) -> void override;
+        auto get_layers_vector() -> vector_info override;
+        auto set_layers_vector(int number) -> void override;
+        auto save_weights(std::string) -> void override;
+        auto get_weights(std::string) -> bool override;
+        auto get_result() -> size_type override;
+        auto get_result_vector() -> const_vec_double override;
 
 
     private:

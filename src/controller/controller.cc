@@ -1,15 +1,20 @@
 #include "controller.h"
+
+#include <utility>
+
+
  s21::Controller::~Controller()  {
     delete this->m_net_;
 }
 
-auto s21::Controller::set_net(NetworkType type, int hidden_layers) {
+auto s21::Controller::set_net(s21::NetworkType type, int hidden_layers) -> void {
     if (type != this->m_type_ || hidden_layers != this->m_hidden_layers_) {
         delete this->m_net_;
         if (this->m_type_ == s21::NetworkType::MATRIX) {
             this->m_net_ = new s21::MatrixNetwork;
-        } else {
-//            this->m_net_ = new s21::Graph;
+        }
+        else {
+            this->m_net_ = new s21::Graph;
         }
         this->m_type_ = type;
         this->m_hidden_layers_ = hidden_layers;
@@ -28,3 +33,8 @@ auto s21::Controller::feed_init_values(const vector_double &values) -> void {
 auto s21::Controller::get_result() -> size_t {
     return this->m_net_->get_result();
 }
+
+auto s21::Controller::get_weights(std::string file_name) -> bool {
+    return m_net_->get_weights(std::move(file_name));
+}
+

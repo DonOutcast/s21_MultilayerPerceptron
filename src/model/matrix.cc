@@ -9,9 +9,6 @@ auto s21::MatrixNetwork::feed_init_value(const s21::MatrixNetwork::vector_double
     for (auto i = 0; i < values.size(); i++) {
         this->m_neurons_[0][i][0] = values[i];
     }
-    for (auto j : this->m_neurons_) {
-        std::cout << j.GetRow() << std::endl;
-    }
 }
 
 auto s21::MatrixNetwork::feed_forward() -> void {
@@ -234,6 +231,7 @@ auto s21::MatrixNetwork::get_result() -> s21::Network::size_type {
     size_type result_ ;
     double max_ = this->m_neurons_.back()[0][0];
     for (auto i = 0; i < this->m_neurons_.back().GetRow(); i++) {
+        std::cout << this->m_neurons_.back()[i][0];
         if (max_ < this->m_neurons_.back()[i][0]) {
             max_ = this->m_neurons_.back()[i][0];
             result_ = i;

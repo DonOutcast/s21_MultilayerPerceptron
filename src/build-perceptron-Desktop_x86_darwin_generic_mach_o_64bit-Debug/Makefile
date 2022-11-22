@@ -53,6 +53,8 @@ OBJECTS_DIR   = ./
 ####### Files
 
 SOURCES       = ../controller/controller.cc \
+		../matrix/s21_matrix.cpp \
+		../matrix/s21_support_func.cc \
 		../model/data.cc \
 		../model/graph_network.cc \
 		../model/matrix.cc \
@@ -67,6 +69,8 @@ SOURCES       = ../controller/controller.cc \
 		moc_render_scene.cpp \
 		moc_s21_view.cpp
 OBJECTS       = controller.o \
+		s21_matrix.o \
+		s21_support_func.o \
 		data.o \
 		graph_network.o \
 		matrix.o \
@@ -339,6 +343,7 @@ DIST          = ../view/qrc/icon.png \
 		/usr/local/share/qt/mkspecs/features/yacc.prf \
 		/usr/local/share/qt/mkspecs/features/lex.prf \
 		../view/perceptron.pro ../controller/controller.h \
+		../matrix/s21_matrix.h \
 		../model/data.h \
 		../model/graph_network.h \
 		../model/matrix.h \
@@ -348,6 +353,8 @@ DIST          = ../view/qrc/icon.png \
 		../view/qcustomplot.h \
 		../view/render_scene.h \
 		../view/s21_view.h ../controller/controller.cc \
+		../matrix/s21_matrix.cpp \
+		../matrix/s21_support_func.cc \
 		../model/data.cc \
 		../model/graph_network.cc \
 		../model/matrix.cc \
@@ -934,8 +941,8 @@ distdir: FORCE
 	$(COPY_FILE) --parents $(DIST) $(DISTDIR)/
 	$(COPY_FILE) --parents ../view/resource.qrc $(DISTDIR)/
 	$(COPY_FILE) --parents /usr/local/share/qt/mkspecs/features/data/dummy.cpp $(DISTDIR)/
-	$(COPY_FILE) --parents ../controller/controller.h ../model/data.h ../model/graph_network.h ../model/matrix.h ../model/network.h ../model/neuron.h ../model/reader.h ../view/qcustomplot.h ../view/render_scene.h ../view/s21_view.h $(DISTDIR)/
-	$(COPY_FILE) --parents ../controller/controller.cc ../model/data.cc ../model/graph_network.cc ../model/matrix.cc ../model/network.cc ../model/neuron.cc ../model/reader.cc ../view/main.cpp ../view/qcustomplot.cpp ../view/render_scene.cpp ../view/s21_view.cpp $(DISTDIR)/
+	$(COPY_FILE) --parents ../controller/controller.h ../matrix/s21_matrix.h ../model/data.h ../model/graph_network.h ../model/matrix.h ../model/network.h ../model/neuron.h ../model/reader.h ../view/qcustomplot.h ../view/render_scene.h ../view/s21_view.h $(DISTDIR)/
+	$(COPY_FILE) --parents ../controller/controller.cc ../matrix/s21_matrix.cpp ../matrix/s21_support_func.cc ../model/data.cc ../model/graph_network.cc ../model/matrix.cc ../model/network.cc ../model/neuron.cc ../model/reader.cc ../view/main.cpp ../view/qcustomplot.cpp ../view/render_scene.cpp ../view/s21_view.cpp $(DISTDIR)/
 	$(COPY_FILE) --parents ../view/s21_view.ui $(DISTDIR)/
 
 
@@ -1146,6 +1153,12 @@ controller.o: ../controller/controller.cc ../controller/controller.h \
 		../model/matrix.h \
 		../model/graph_network.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o controller.o ../controller/controller.cc
+
+s21_matrix.o: ../matrix/s21_matrix.cpp ../matrix/s21_matrix.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o s21_matrix.o ../matrix/s21_matrix.cpp
+
+s21_support_func.o: ../matrix/s21_support_func.cc ../matrix/s21_matrix.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o s21_support_func.o ../matrix/s21_support_func.cc
 
 data.o: ../model/data.cc ../model/data.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o data.o ../model/data.cc

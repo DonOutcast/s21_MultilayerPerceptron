@@ -83,6 +83,12 @@
 		<Unit filename="/Users/lymondgl/Desktop/s21_MultilayerPerceptron/main.cpp">
 			<Option target="s21_MultilayerPerceptron"/>
 		</Unit>
+		<Unit filename="/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/controller/controller.cc">
+			<Option target="s21_MultilayerPerceptron"/>
+		</Unit>
+		<Unit filename="/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/controller/controller.h">
+			<Option target="s21_MultilayerPerceptron"/>
+		</Unit>
 		<Unit filename="/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/matrix/s21_matrix.cpp">
 			<Option target="s21_MultilayerPerceptron"/>
 		</Unit>

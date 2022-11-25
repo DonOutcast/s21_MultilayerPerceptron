@@ -128,7 +128,7 @@ QToolBar {
    <widget class="QGroupBox" name="groupBox_settings">
     <property name="geometry">
      <rect>
-      <x>20</x>
+      <x>0</x>
       <y>130</y>
       <width>391</width>
       <height>401</height>
@@ -194,6 +194,7 @@ QToolBar {
 	border-style: solid;
 	border-width: 4px 0px 4px 0px;
 	border-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 #30D5C8 , stop:1 #4169E1);
+	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 #30D5C8 , stop:1 #4169E1);
 }</string>
      </property>
      <property name="text">
@@ -580,6 +581,7 @@ QComboBox::item:selected {
 	border-style: solid;
 	border-width: 4px 0px 4px 0px;
 	border-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 #30D5C8 , stop:1 #4169E1);
+	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 #30D5C8 , stop:1 #4169E1);
 }</string>
      </property>
      <property name="text">
@@ -614,6 +616,7 @@ QComboBox::item:selected {
 	border-style: solid;
 	border-width: 4px 0px 4px 0px;
 	border-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 #30D5C8 , stop:1 #4169E1);
+	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 #30D5C8 , stop:1 #4169E1);
 }</string>
      </property>
      <property name="text">
@@ -694,6 +697,16 @@ QComboBox::item:selected {
      </item>
     </widget>
    </widget>
+   <widget class="QCustomPlot" name="plot" native="true">
+    <property name="geometry">
+     <rect>
+      <x>400</x>
+      <y>170</y>
+      <width>301</width>
+      <height>351</height>
+     </rect>
+    </property>
+   </widget>
   </widget>
   <widget class="QToolBar" name="toolBar">
    <property name="windowTitle">
@@ -716,6 +729,7 @@ QComboBox::item:selected {
    <addaction name="actionSettings"/>
    <addaction name="actionDownload_weights"/>
    <addaction name="actionUpload_weights"/>
+   <addaction name="actionTrain"/>
   </widget>
   <action name="actionDownload_images">
    <property name="icon">
@@ -782,12 +796,27 @@ QComboBox::item:selected {
     <string>Upload Weights</string>
    </property>
   </action>
+  <action name="actionTrain">
+   <property name="icon">
+    <iconset theme="Train" resource="resource.qrc">
+     <normaloff>:/resource/qrc/train.png</normaloff>:/resource/qrc/train.png</iconset>
+   </property>
+   <property name="text">
+    <string>Train</string>
+   </property>
+  </action>
  </widget>
  <customwidgets>
   <customwidget>
    <class>RenderScene</class>
    <extends>QWidget</extends>
    <header>render_scene.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>QCustomPlot</class>
+   <extends>QWidget</extends>
+   <header location="global">qcustomplot.h</header>
    <container>1</container>
   </customwidget>
  </customwidgets>

@@ -9,6 +9,8 @@
         <file>qrc/title.png</file>
         <file>qrc/download_on.png</file>
         <file>qrc/upload_on.png</file>
+        <file>qrc/train_on.png</file>
+        <file>qrc/train.png</file>
     </qresource>
     <qresource prefix="/resource/qrc"/>
     <qresource prefix="/">

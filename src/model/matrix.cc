@@ -193,7 +193,9 @@ auto s21::MatrixNetwork::get_weights(std::string file_name) -> bool {
     }
     std::string check_file_;
     std::getline(file_, check_file_, '\n');
-
+    if(check_file_ != "Network weights") {
+        return false;
+    }
     std::string num_;
     char c = 0;
     std::vector<size_type> topology;
@@ -211,18 +213,19 @@ auto s21::MatrixNetwork::get_weights(std::string file_name) -> bool {
         }
     }
     if (this->check_topology(topology)) {
-        for (auto & m_weight : this->m_weights_) {
-            for (size_type i = 0; i < m_weight.GetRow(); i++) {
-                for (size_type j = 0; j < m_weight.GetColumn(); j++) {
+        for (size_t layer = 0; layer <  this->m_weights_.size(); layer++) {
+            for (size_type i = 0; i < this->m_weights_[layer].GetRow(); i++) {
+                for (size_type j = 0; j < this->m_weights_[layer].GetColumn(); j++) {
                     std::getline(file_, num_, '\n');
                     double number = std::stod(num_);
-                    m_weight[i][j] = number;
+                    this->m_weights_[layer][i][j] = number;
                 }
             }
         }
     } else {
         return  false;
     }
+    std::cout << this->m_weights_[1][0][0];
     file_.close();
     return true;
 }

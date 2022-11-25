@@ -5,7 +5,19 @@ s21_view::s21_view(QWidget *parent) : QMainWindow(parent) , ui(new Ui::s21_view)
     groupActionUpper_(new QActionGroup(this))  {
     ui->setupUi(this);
 
-
+    ui->plot->setBackground(QColor(32, 32, 32));
+    ui->plot->xAxis->setSubTicks(false);
+    ui->plot->yAxis->setSubTicks(false);
+    ui->plot->xAxis->setBasePen(QPen(Qt::white));
+    ui->plot->xAxis->setTickPen(QPen(Qt::white));
+    ui->plot->yAxis->setBasePen(QPen(Qt::white));
+    ui->plot->yAxis->setTickPen(QPen(Qt::white));
+    ui->plot->xAxis->setLabelColor(Qt::white);
+    ui->plot->yAxis->setLabelColor(Qt::white);
+    ui->plot->xAxis->setTickLabelColor(Qt::white);
+    ui->plot->yAxis->setTickLabelColor(Qt::white);
+    ui->plot->yAxis->setLabel("ERRORS%");
+    ui->plot->yAxis->setRange(0, 100);
 
 
 
@@ -106,7 +118,7 @@ auto s21_view::action_download_weights() -> void{
 }
 
 auto s21_view::action_upload_weights() -> void {
-      ui->action_upload_images->setIcon(QIcon(":/resource/qrc/upload_on.png"));
+      ui->actionUpload_weights->setIcon(QIcon(":/resource/qrc/upload_on.png"));
       filePath_ =
           QFileDialog::getOpenFileName(this, QFileDialog::tr("Open file"),
                                        weightsPath, QFileDialog::tr("(*.txt)"));
@@ -114,7 +126,7 @@ auto s21_view::action_upload_weights() -> void {
 //        m_controller->LoadWeights(filePath_.toStdString());
         m_controller->get_weights(fileName_.toStdString() + ".txt");
       }
-     ui->action_upload_images->setIcon(QIcon(":/resource/qrc/upload.png"));
+     ui->actionUpload_weights->setIcon(QIcon(":/resource/qrc/upload.png"));
 
 }
 
@@ -165,6 +177,35 @@ auto s21_view::settings_on_off() -> void {
 
     }
 }
+
+auto s21_view::action_train() -> void {
+    filePath_ =QFileDialog::getOpenFileName(this, QFileDialog::tr("Open file"), emnistPath, QFileDialog::tr("(*.csv)"));
+//    if (!this->filePath_.isEmpty())
+}
+
+
+//void MainWindow::on_trainButton_clicked() {
+//  filePath =
+//      QFileDialog::getOpenFileName(this, QFileDialog::tr("Open file"),
+//                                   emnistPath, QFileDialog::tr("(*.csv)"));
+//  if (!filePath.isEmpty()) {
+//    ChangeGUIAccept(false);
+//    m_thread = std::thread([&]() {
+//      if (settingsWindow->IsCrossValidation()) {
+//        if (settingsWindow->GetKGroups() != 1) {
+//          emit trainDone(m_controller->CrossValidation(
+//              filePath.toStdString(), settingsWindow->GetKGroups()));
+//        }
+//      } else {
+//        emit trainDone(m_controller->Train(filePath.toStdString(),
+//                                           settingsWindow->GetEpochNumber()));
+//      }
+//      ChangeGUIAccept(true);
+//    });
+//    m_thread.detach();
+//  }
+//}
+
 
 auto s21_view::triggeredGroupActionUpper(QAction *action) -> void {
   if (action == ui->actionDownload_images) {

@@ -977,8 +977,10 @@ qrc_resource.cpp: ../view/resource.qrc \
 		/usr/local/share/qt/libexec/rcc \
 		../view/qrc/settings_on.png \
 		../view/qrc/sber.png \
+		../view/qrc/train_on.png \
 		../view/qrc/download.png \
 		../view/qrc/download_on.png \
+		../view/qrc/train.png \
 		../view/qrc/icon.png \
 		../view/qrc/upload_on.png \
 		../view/qrc/setting.png \
@@ -1092,6 +1094,7 @@ compiler_uic_clean:
 ui_s21_view.h: ../view/s21_view.ui \
 		/usr/local/share/qt/libexec/uic \
 		../view/render_scene.h \
+		../view/qcustomplot.h \
 		/usr/local/lib/QtWidgets.framework/Headers/QWidget \
 		/usr/local/lib/QtWidgets.framework/Headers/qwidget.h \
 		/usr/local/lib/QtGui.framework/Headers/QMouseEvent \
@@ -1131,7 +1134,10 @@ ui_s21_view.h: ../view/s21_view.ui \
 		../matrix/s21_matrix.h \
 		../model/neuron.h \
 		../model/matrix.h \
-		../model/graph_network.h
+		../model/graph_network.h \
+		/usr/local/lib/QtCore.framework/Headers/qmath.h \
+		/usr/local/lib/QtCore.framework/Headers/qnumeric.h \
+		/usr/local/lib/QtCore.framework/Headers/QtNumeric
 	/usr/local/share/qt/libexec/uic ../view/s21_view.ui -o ui_s21_view.h
 
 compiler_rez_source_make_all:
@@ -1300,19 +1306,7 @@ s21_view.o: ../view/s21_view.cpp ../view/s21_view.h \
 		../model/neuron.h \
 		../model/matrix.h \
 		../model/graph_network.h \
-		ui_s21_view.h \
-		../view/render_scene.h \
-		/usr/local/lib/QtWidgets.framework/Headers/QWidget \
-		/usr/local/lib/QtWidgets.framework/Headers/qwidget.h \
-		/usr/local/lib/QtGui.framework/Headers/QMouseEvent \
-		/usr/local/lib/QtGui.framework/Headers/qevent.h \
-		/usr/local/lib/QtGui.framework/Headers/QPainter \
-		/usr/local/lib/QtGui.framework/Headers/qpainter.h \
-		/usr/local/lib/QtGui.framework/Headers/QPaintEvent \
-		/usr/local/lib/QtGui.framework/Headers/QColor \
-		/usr/local/lib/QtGui.framework/Headers/qcolor.h \
-		/usr/local/lib/QtGui.framework/Headers/QImage \
-		/usr/local/lib/QtGui.framework/Headers/qimage.h
+		ui_s21_view.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o s21_view.o ../view/s21_view.cpp
 
 qrc_resource.o: qrc_resource.cpp 

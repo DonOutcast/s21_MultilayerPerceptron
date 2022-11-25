@@ -62,6 +62,7 @@ private:
       auto SetController(s21::Controller* controller) -> void;
       auto GetLayersNumber() -> int;
 
+
 private:
     Ui::s21_view *ui;
     static constexpr int defaultLayers = 2;

@@ -22,6 +22,7 @@
 #include <QtWidgets/QSpinBox>
 #include <QtWidgets/QToolBar>
 #include <QtWidgets/QWidget>
+#include <qcustomplot.h>
 #include "render_scene.h"
 
 QT_BEGIN_NAMESPACE
@@ -34,6 +35,7 @@ public:
     QAction *action_upload_images;
     QAction *actionDownload_weights;
     QAction *actionUpload_weights;
+    QAction *actionTrain;
     QWidget *centralwidget;
     RenderScene *scene;
     QLabel *answer_label;
@@ -53,6 +55,7 @@ public:
     QLabel *trainingLabel;
     QLabel *networkTypeLabel;
     QComboBox *epochBox;
+    QCustomPlot *plot;
     QToolBar *toolBar;
 
     void setupUi(QMainWindow *s21_view)
@@ -96,6 +99,16 @@ public:
         actionUpload_weights = new QAction(s21_view);
         actionUpload_weights->setObjectName(QString::fromUtf8("actionUpload_weights"));
         actionUpload_weights->setIcon(icon2);
+        actionTrain = new QAction(s21_view);
+        actionTrain->setObjectName(QString::fromUtf8("actionTrain"));
+        QIcon icon3;
+        QString iconThemeName = QString::fromUtf8("Train");
+        if (QIcon::hasThemeIcon(iconThemeName)) {
+            icon3 = QIcon::fromTheme(iconThemeName);
+        } else {
+            icon3.addFile(QString::fromUtf8(":/resource/qrc/train.png"), QSize(), QIcon::Normal, QIcon::Off);
+        }
+        actionTrain->setIcon(icon3);
         centralwidget = new QWidget(s21_view);
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
         scene = new RenderScene(centralwidget);
@@ -139,7 +152,7 @@ public:
 "}"));
         groupBox_settings = new QGroupBox(centralwidget);
         groupBox_settings->setObjectName(QString::fromUtf8("groupBox_settings"));
-        groupBox_settings->setGeometry(QRect(20, 130, 391, 401));
+        groupBox_settings->setGeometry(QRect(0, 130, 391, 401));
         selectionPartLabel = new QLabel(groupBox_settings);
         selectionPartLabel->setObjectName(QString::fromUtf8("selectionPartLabel"));
         selectionPartLabel->setGeometry(QRect(20, 350, 181, 41));
@@ -167,6 +180,7 @@ public:
 "	border-style: solid;\n"
 "	border-width: 4px 0px 4px 0px;\n"
 "	border-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 #30D5C8 , stop:1 #4169E1);\n"
+"	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 #30D5C8 , stop:1 #4169E1);\n"
 "}"));
         testsLabel->setAlignment(Qt::AlignCenter);
         graphTypeButton = new QRadioButton(groupBox_settings);
@@ -337,6 +351,7 @@ public:
 "	border-style: solid;\n"
 "	border-width: 4px 0px 4px 0px;\n"
 "	border-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 #30D5C8 , stop:1 #4169E1);\n"
+"	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 #30D5C8 , stop:1 #4169E1);\n"
 "}"));
         trainingLabel->setAlignment(Qt::AlignCenter);
         networkTypeLabel = new QLabel(groupBox_settings);
@@ -350,6 +365,7 @@ public:
 "	border-style: solid;\n"
 "	border-width: 4px 0px 4px 0px;\n"
 "	border-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 #30D5C8 , stop:1 #4169E1);\n"
+"	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 #30D5C8 , stop:1 #4169E1);\n"
 "}"));
         networkTypeLabel->setAlignment(Qt::AlignCenter);
         epochBox = new QComboBox(groupBox_settings);
@@ -384,6 +400,9 @@ public:
 "\n"
 ""));
         epochBox->setMaxVisibleItems(4);
+        plot = new QCustomPlot(centralwidget);
+        plot->setObjectName(QString::fromUtf8("plot"));
+        plot->setGeometry(QRect(400, 170, 301, 351));
         s21_view->setCentralWidget(centralwidget);
         toolBar = new QToolBar(s21_view);
         toolBar->setObjectName(QString::fromUtf8("toolBar"));
@@ -395,6 +414,7 @@ public:
         toolBar->addAction(actionSettings);
         toolBar->addAction(actionDownload_weights);
         toolBar->addAction(actionUpload_weights);
+        toolBar->addAction(actionTrain);
 
         retranslateUi(s21_view);
 
@@ -428,6 +448,7 @@ public:
 #if QT_CONFIG(tooltip)
         actionUpload_weights->setToolTip(QCoreApplication::translate("s21_view", "Upload Weights", nullptr));
 #endif // QT_CONFIG(tooltip)
+        actionTrain->setText(QCoreApplication::translate("s21_view", "Train", nullptr));
         answer_label->setText(QString());
         label->setText(QString());
         groupBox_settings->setTitle(QCoreApplication::translate("s21_view", "Settings", nullptr));

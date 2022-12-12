@@ -23,7 +23,7 @@ s21_view::s21_view(QWidget *parent) : QMainWindow(parent) , ui(new Ui::s21_view)
 
 
      ui->scene->SetMainWindow(this);
-     m_controller->set_net(s21::NetworkType::MATRIX, defaultLayers);
+     m_controller->set_net(s21::NetworkType::MATRIX, 4);
      this->SetController(m_controller);
      /*---группировка actions находящихся на верхнем toolBar---*/
      groupingActionUpperToolBar();
@@ -41,9 +41,13 @@ s21_view::~s21_view() {
 auto s21_view::Predict() -> void {
   if (!ui->scene->IsClear()) {
 //      qDebug() << ui->scene->VectorFromImage();
+//      qDebug() << "Befor init";
     m_controller->feed_init_values(ui->scene->VectorFromImage());
+//          qDebug() << "Befor forward";
       this->m_controller->feed_forward();
+//                qDebug() << "Befor get";
     ui->answer_label->setText(QString(QChar(static_cast<int>(m_controller->get_result() + this->asciiBias))));
+//          qDebug() << "AFter all";
   } else {
     ui->answer_label->setText("");
   }
@@ -125,8 +129,8 @@ auto s21_view::action_upload_weights() -> void {
           QFileDialog::getOpenFileName(this, QFileDialog::tr("Open file"),
                                        weightsPath, QFileDialog::tr("(*.txt)"));
       if (!filePath_.isEmpty()) {
-//        m_controller->LoadWeights(filePath_.toStdString());
-        m_controller->save_weights(fileName_.toStdString() + ".txt");
+        m_controller->load_weights(filePath_.toStdString());
+//        m_controller->save_weights(fileName_.toStdString());
       }
      ui->actionUpload_weights->setIcon(QIcon(":/resource/qrc/upload.png"));
 

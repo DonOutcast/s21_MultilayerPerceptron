@@ -24,6 +24,9 @@ auto s21::MatrixNetwork::set_layers(std::vector<LayersInfo> info) -> void {
     this->bring_to_zero_all();
     this->change_random_device();
     for (size_t i = 0; i < info.size(); ++i) {
+        this->m_topology_.emplace_back(info[i]);
+    }
+    for (size_t i = 0; i < info.size(); ++i) {
         this->m_neurons_.emplace_back(S21Matrix(info[i], 1));
         this->m_biases_.emplace_back(0);
         if (i != info.size() - 1) {
@@ -197,7 +200,6 @@ auto s21::MatrixNetwork::check_topology(const std::vector<size_type> &topology) 
 }
 
 auto s21::MatrixNetwork::get_weights(std::string file_name) -> bool {
-    std::cout << "I am here man friend " << std::endl;
     setlocale(LC_NUMERIC, "C");
     std::fstream file_;
     file_.open(file_name, std::fstream::in);
@@ -225,14 +227,6 @@ auto s21::MatrixNetwork::get_weights(std::string file_name) -> bool {
             num_ = "";
         }
     }
-    for (auto i : topology) {
-        std::cout << i << " ";
-    }
-    std::cout << std::endl;
-    for (auto j : this->m_topology_) {
-        std::cout << j << " ";
-    }
-    std::cout << std::endl;
     if (this->check_topology(topology)) {
         for (size_t layer = 0; layer <  this->m_weights_.size(); layer++) {
             for (size_type i = 0; i < this->m_weights_[layer].GetRow(); i++) {
@@ -246,21 +240,21 @@ auto s21::MatrixNetwork::get_weights(std::string file_name) -> bool {
     } else {
         return  false;
     }
-    std::cout << this->m_weights_[1][0][0];
     file_.close();
     return true;
 }
 
 auto s21::MatrixNetwork::get_result() -> s21::Network::size_type {
     size_type result_ ;
+    std::cout << "I am need sig" << std::endl;
     double max_ = this->m_neurons_.back()[0][0];
     for (auto i = 0; i < this->m_neurons_.back().GetRow(); i++) {
-        std::cout << this->m_neurons_.back()[i][0];
         if (max_ < this->m_neurons_.back()[i][0]) {
             max_ = this->m_neurons_.back()[i][0];
             result_ = i;
         }
     }
+    std::cout << "Where is a sig  "  << result_ << std::endl;
     return result_;
 }
 

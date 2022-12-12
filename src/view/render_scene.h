@@ -14,9 +14,10 @@ class RenderScene: public QWidget {
   Q_OBJECT
 
 public:
-    RenderScene() = default;
-    RenderScene(QWidget* parent = nullptr);
-    virtual ~RenderScene() override = default;
+//    RenderScene() = default;
+    explicit RenderScene(QWidget* parent = nullptr);
+//    RenderScene(QWidget* parent = nullptr);
+    ~RenderScene() override = default;
 public:
     auto VectorFromImage() -> const std::vector<double>&;
     auto GetImage() const -> const QImage&;

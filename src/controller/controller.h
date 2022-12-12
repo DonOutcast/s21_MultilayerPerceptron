@@ -20,7 +20,8 @@ namespace s21 {
         auto feed_forward() -> void;
         auto feed_init_values(const vector_double & values) -> void;
         auto get_result() -> size_t;
-        auto get_weights(std::string file_name) -> bool ;
+        auto load_weights(std::string file_name) -> bool;
+        auto save_weights(std::string file_name) -> void;
 
     private:
         Network* m_net_{};

@@ -153,21 +153,33 @@ auto s21::MatrixNetwork::save_weights(std::string file_name) -> void {
     std::fstream file_;
     file_.open(file_name, std::fstream::out);
     if (!file_.is_open()) {
-        throw std::out_of_range("Error with file opening!");
-    }
-    file_ << "Network weights" << std::endl;
-    for (auto i = 0; i < this->m_topology_.size(); i++) {
-        file_ << m_topology_[i] << ' ';
-    }
-    file_ << '\n';
-    for (auto & m_weight : this->m_weights_) {
-        for (auto i = 0; i < m_weight.GetRow(); i++) {
-            for (auto j = 0; j < m_weight.GetColumn(); j++) {
-                file_ << m_weight[i][j] << std::endl;
+//        throw std::out_of_range("Error with file opening!");
+          std::cout << "Error cant opened file" << std::endl;
+    } else {
+        file_ << "Network weights" << std::endl;
+        for (auto i = 0; i < this->m_topology_.size(); i++) {
+            file_ << m_topology_[i] << ' ';
+        }
+        file_ << '\n';
+        for (auto &m_weight: this->m_weights_) {
+            for (auto i = 0; i < m_weight.GetRow(); i++) {
+                for (auto j = 0; j < m_weight.GetColumn(); j++) {
+                    file_ << m_weight[i][j] << std::endl;
+                }
             }
         }
     }
     file_.close();
+    file_.open(file_name, std::fstream::in);
+    if (!file_.is_open()) {
+        std::cout << "Where is a file?" << std::endl;
+    } else {
+        std::string check_file_;
+        std::getline(file_, check_file_, '\n');
+        std::cout << check_file_ << std::endl;
+        file_.close();
+    }
+
 }
 
 auto s21::MatrixNetwork::check_topology(const std::vector<size_type> &topology) -> bool {
@@ -185,6 +197,7 @@ auto s21::MatrixNetwork::check_topology(const std::vector<size_type> &topology) 
 }
 
 auto s21::MatrixNetwork::get_weights(std::string file_name) -> bool {
+    std::cout << "I am here man friend " << std::endl;
     setlocale(LC_NUMERIC, "C");
     std::fstream file_;
     file_.open(file_name, std::fstream::in);
@@ -212,6 +225,14 @@ auto s21::MatrixNetwork::get_weights(std::string file_name) -> bool {
             num_ = "";
         }
     }
+    for (auto i : topology) {
+        std::cout << i << " ";
+    }
+    std::cout << std::endl;
+    for (auto j : this->m_topology_) {
+        std::cout << j << " ";
+    }
+    std::cout << std::endl;
     if (this->check_topology(topology)) {
         for (size_t layer = 0; layer <  this->m_weights_.size(); layer++) {
             for (size_type i = 0; i < this->m_weights_[layer].GetRow(); i++) {

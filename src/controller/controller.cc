@@ -34,7 +34,10 @@ auto s21::Controller::get_result() -> size_t {
     return this->m_net_->get_result();
 }
 
-auto s21::Controller::get_weights(std::string file_name) -> bool {
-    return m_net_->get_weights(std::move(file_name));
+auto s21::Controller::load_weights(std::string file_name) -> bool {
+    return this->m_net_->get_weights(std::move(file_name));
 }
 
+auto s21::Controller::save_weights(std::string file_name) -> void {
+    this->m_net_->save_weights(std::move(file_name));
+}

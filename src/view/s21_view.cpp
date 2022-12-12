@@ -60,6 +60,7 @@ auto s21_view::groupingActionUpperToolBar() ->void {
   this->groupActionUpper_->addAction(ui->action_upload_images);
   this->groupActionUpper_->addAction(ui->actionSettings);
   this->groupActionUpper_->addAction(ui->actionUpload_weights);
+  this->groupActionUpper_->addAction(ui->actionDownload_weights);
 //  groupActionUpper_->addAction(ui->act_make_gif);
 //  groupActionUpper_->addAction(ui->act_gif_360);
 //  groupActionUpper_->addAction(ui->act_screenShot);
@@ -104,7 +105,7 @@ auto s21_view::action_open_folder() -> void {
 
 
 auto s21_view::action_download_weights() -> void{
-      ui->actionDownload_images->setIcon(QIcon(":/resource/qrc/download_on.png"));
+      ui->actionDownload_weights->setIcon(QIcon(":/resource/qrc/download_on.png"));
       filePath_ = QFileDialog::getExistingDirectory(
                      this, "Open directory to save file", weightsPath,
                      QFileDialog::ShowDirsOnly | QFileDialog::DontResolveSymlinks) +
@@ -112,9 +113,10 @@ auto s21_view::action_download_weights() -> void{
       if (!filePath_.isEmpty()) {
         fileName_ = filePath_ + "weights_" +
                    QString::number((this->GetLayersNumber()));
-        m_controller->get_weights(fileName_.toStdString() + ".txt");
+        m_controller->save_weights(fileName_.toStdString() + ".txt");
+
       }
-      ui->actionDownload_images->setIcon(QIcon(":/resource/qrc/download.png"));
+      ui->actionDownload_weights->setIcon(QIcon(":/resource/qrc/download.png"));
 }
 
 auto s21_view::action_upload_weights() -> void {
@@ -124,7 +126,7 @@ auto s21_view::action_upload_weights() -> void {
                                        weightsPath, QFileDialog::tr("(*.txt)"));
       if (!filePath_.isEmpty()) {
 //        m_controller->LoadWeights(filePath_.toStdString());
-        m_controller->get_weights(fileName_.toStdString() + ".txt");
+        m_controller->save_weights(fileName_.toStdString() + ".txt");
       }
      ui->actionUpload_weights->setIcon(QIcon(":/resource/qrc/upload.png"));
 
@@ -217,6 +219,8 @@ auto s21_view::triggeredGroupActionUpper(QAction *action) -> void {
     this->settings_on_off();
   } else if (action == ui->actionUpload_weights) {
       this->action_upload_weights();
+  } else if (action == ui->actionDownload_weights) {
+      this->action_download_weights();
   }
   //else if (action == ui->act_texture) {
 //    action_texture_triggered();

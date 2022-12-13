@@ -20,6 +20,7 @@ auto s21::Controller::set_net(s21::NetworkType type, int hidden_layers) -> void 
         this->m_hidden_layers_ = hidden_layers;
         this->m_net_->set_layers_vector(this->m_hidden_layers_);
         this->m_net_->set_layers(this->m_net_->get_layers_vector());
+//        this->m_net_->set_layers(this->m_net_->GetLayersVector(this->m_hidden_layers_));
     }
 }
 

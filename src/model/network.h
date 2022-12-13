@@ -54,8 +54,8 @@ namespace s21 {
         auto CrossValidation(const std::string &fileName, const size_t k)
         -> std::vector<double>;
 
-//        auto GetLayersVector(int number) const -> std::vector<LayersInfo>;
-//        auto GetTopology() const -> const std::vector<size_t> &;
+        auto GetLayersVector(int number) const -> std::vector<LayersInfo>;
+        auto GetTopology() const -> const std::vector<size_t> &;
 
     protected:
         std::vector<size_type> m_topology_;

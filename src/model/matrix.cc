@@ -1,21 +1,30 @@
 #include "matrix.h"
 
 auto s21::MatrixNetwork::random_weight() -> double {
-    double rand = ((int)this->m_generator_() % 10000) * 0.0001;
+    double rand = ((int) this->m_generator_() % 10000) * 0.0001;
     return rand;
 }
 
 auto s21::MatrixNetwork::feed_init_value(const s21::MatrixNetwork::vector_double &values) -> void {
-    for (auto i = 0; i < values.size(); i++) {
+    for (size_t i = 0; i < values.size(); i++) {
         this->m_neurons_[0][i][0] = values[i];
     }
 }
 
 auto s21::MatrixNetwork::feed_forward() -> void {
-    for (auto i = 0; i < this->m_neurons_.size() - 1; i++) {
-        this->m_neurons_[i + 1] = this->m_weights_[i] * this->m_neurons_[i];
-        for (auto j = 0; j < this->m_neurons_[i + 1].GetRow(); j++) {
-            this->m_neurons_[i + 1](j, 0) = s21::MatrixNetwork::activate_function(this->m_neurons_[i + 1](j, 0) + this->m_biases_[i]);
+//    for (auto i = 0; i < this->m_neurons_.size() - 1; i++) {
+//        this->m_neurons_[i + 1] = this->m_weights_[i] * this->m_neurons_[i];
+//        for (auto j = 0; j < this->m_neurons_[i + 1].GetRow(); j++) {
+//            this->m_neurons_[i + 1](j, 0) = this->activate_function(
+//                    this->m_neurons_[i + 1](j, 0) + this->m_biases_[i]);
+//        }
+//    }
+
+    for (size_t i = 0; i < m_neurons_.size() - 1; i++) {
+        m_neurons_[i + 1] = m_weights_[i] * m_neurons_[i];
+        for (size_t j = 0; j < m_neurons_[i + 1].GetRow(); j++) {
+            m_neurons_[i + 1](j, 0) =
+                    activate_function(m_neurons_[i + 1](j, 0) + m_biases_[i]);
         }
     }
 }
@@ -60,7 +69,7 @@ auto s21::MatrixNetwork::activate_function_derivative(double value) -> double {
 auto s21::MatrixNetwork::init_weight_matrix(S21Matrix &matrix) -> void {
     for (auto i = 0; i < matrix.GetRow(); i++) {
         for (auto j = 0; j < matrix.GetColumn(); j++) {
-            matrix(i ,j) = this->random_weight();
+            matrix(i, j) = this->random_weight();
         }
     }
 }
@@ -75,7 +84,7 @@ auto s21::MatrixNetwork::bring_to_zero_all() -> void {
 auto s21::MatrixNetwork::clear_topology() -> void {
     if (!this->m_topology_.empty()) {
         this->m_topology_.clear();
-        if(!this->m_topology_.empty()) {
+        if (!this->m_topology_.empty()) {
             throw std::bad_alloc();
         }
     }
@@ -89,9 +98,10 @@ auto s21::MatrixNetwork::clear_biases() -> void {
         }
     }
 }
+
 auto s21::MatrixNetwork::clear_neurons() -> void {
     if (!this->m_neurons_.empty()) {
-        for (auto & m_neuron : this->m_neurons_) {
+        for (auto &m_neuron: this->m_neurons_) {
             m_neuron.clear();
         }
         this->m_neurons_.clear();
@@ -104,7 +114,7 @@ auto s21::MatrixNetwork::clear_neurons() -> void {
 
 auto s21::MatrixNetwork::change_random_device() -> void {
     std::random_device rd_;
-    std::mt19937  temp(rd_());
+    std::mt19937 temp(rd_());
     this->m_generator_ = temp;
 }
 
@@ -120,16 +130,17 @@ auto s21::MatrixNetwork::set_layers_vector(int number) -> void {
     this->m_layers_info_.emplace_back(s21::LayersInfo::OUTPUT);
 }
 
-auto s21::MatrixNetwork::get_local_grads(vector_double &local_grads, const vector_double &expected_values, size_type layer) -> void {
+auto s21::MatrixNetwork::get_local_grads(vector_double &local_grads, const vector_double &expected_values,
+                                         size_type layer) -> void {
     if (local_grads.empty()) {
         for (auto i = 0; i < this->m_neurons_.back().GetRow(); i++) {
-            double  error_ = expected_values[i] - this->m_neurons_.back()[i][0];
+            double error_ = expected_values[i] - this->m_neurons_.back()[i][0];
             local_grads.push_back(error_ * this->activate_function_derivative(this->m_neurons_.back()[i][0]));
         }
     } else {
         vector_double new_grads_;
         for (auto i = 0; i < this->m_weights_[layer].GetColumn(); i++) {
-            double  teta_ = 0.;
+            double teta_ = 0.;
             for (auto j = 0; j < this->m_weights_[layer].GetRow(); j++) {
                 teta_ += local_grads[j] * this->m_weights_[layer][j][i];
             }
@@ -141,7 +152,7 @@ auto s21::MatrixNetwork::get_local_grads(vector_double &local_grads, const vecto
 }
 
 auto s21::MatrixNetwork::back_propagation(vector_double &expected_values) -> void {
-    vector_double  local_grads_;
+    vector_double local_grads_;
     for (auto i = this->m_weights_.size() - 1; i >= 0; i--) {
         this->get_local_grads(local_grads_, expected_values, i + 1);
         for (auto j = 0; j < this->m_weights_[i].GetColumn(); j++) {
@@ -157,7 +168,7 @@ auto s21::MatrixNetwork::save_weights(std::string file_name) -> void {
     file_.open(file_name, std::fstream::out);
     if (!file_.is_open()) {
 //        throw std::out_of_range("Error with file opening!");
-          std::cout << "Error cant opened file" << std::endl;
+        std::cout << "Error cant opened file" << std::endl;
     } else {
         file_ << "Network weights" << std::endl;
         for (auto i = 0; i < this->m_topology_.size(); i++) {
@@ -208,7 +219,7 @@ auto s21::MatrixNetwork::get_weights(std::string file_name) -> bool {
     }
     std::string check_file_;
     std::getline(file_, check_file_, '\n');
-    if(check_file_ != "Network weights") {
+    if (check_file_ != "Network weights") {
         return false;
     }
     std::string num_;
@@ -228,7 +239,7 @@ auto s21::MatrixNetwork::get_weights(std::string file_name) -> bool {
         }
     }
     if (this->check_topology(topology)) {
-        for (size_t layer = 0; layer <  this->m_weights_.size(); layer++) {
+        for (size_t layer = 0; layer < this->m_weights_.size(); layer++) {
             for (size_type i = 0; i < this->m_weights_[layer].GetRow(); i++) {
                 for (size_type j = 0; j < this->m_weights_[layer].GetColumn(); j++) {
                     std::getline(file_, num_, '\n');
@@ -238,14 +249,14 @@ auto s21::MatrixNetwork::get_weights(std::string file_name) -> bool {
             }
         }
     } else {
-        return  false;
+        return false;
     }
     file_.close();
     return true;
 }
 
 auto s21::MatrixNetwork::get_result() -> s21::Network::size_type {
-    size_type result_ ;
+    size_type result_;
     std::cout << "I am need sig" << std::endl;
     double max_ = this->m_neurons_.back()[0][0];
     for (auto i = 0; i < this->m_neurons_.back().GetRow(); i++) {
@@ -254,7 +265,7 @@ auto s21::MatrixNetwork::get_result() -> s21::Network::size_type {
             result_ = i;
         }
     }
-    std::cout << "Where is a sig  "  << result_ << std::endl;
+    std::cout << "Where is a sig  " << result_ << std::endl;
     return result_;
 }
 

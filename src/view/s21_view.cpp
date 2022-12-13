@@ -23,7 +23,7 @@ s21_view::s21_view(QWidget *parent) : QMainWindow(parent) , ui(new Ui::s21_view)
 
 
      ui->scene->SetMainWindow(this);
-     m_controller->set_net(s21::NetworkType::MATRIX, 4);
+     m_controller->set_net(s21::NetworkType::MATRIX, this->GetLayersNumber());
      this->SetController(m_controller);
      /*---группировка actions находящихся на верхнем toolBar---*/
      groupingActionUpperToolBar();

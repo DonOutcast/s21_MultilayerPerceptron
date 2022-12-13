@@ -195,6 +195,34 @@ CMakeFiles/s21_MultilayerPerceptron.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/s21_MultilayerPerceptron.dir/main.cpp.s"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/lymondgl/Desktop/s21_MultilayerPerceptron/main.cpp -o CMakeFiles/s21_MultilayerPerceptron.dir/main.cpp.s
 
+CMakeFiles/s21_MultilayerPerceptron.dir/src/model/train.cpp.o: CMakeFiles/s21_MultilayerPerceptron.dir/flags.make
+CMakeFiles/s21_MultilayerPerceptron.dir/src/model/train.cpp.o: ../src/model/train.cpp
+CMakeFiles/s21_MultilayerPerceptron.dir/src/model/train.cpp.o: CMakeFiles/s21_MultilayerPerceptron.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/lymondgl/Desktop/s21_MultilayerPerceptron/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/s21_MultilayerPerceptron.dir/src/model/train.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/s21_MultilayerPerceptron.dir/src/model/train.cpp.o -MF CMakeFiles/s21_MultilayerPerceptron.dir/src/model/train.cpp.o.d -o CMakeFiles/s21_MultilayerPerceptron.dir/src/model/train.cpp.o -c /Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/model/train.cpp
+
+CMakeFiles/s21_MultilayerPerceptron.dir/src/model/train.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/s21_MultilayerPerceptron.dir/src/model/train.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/model/train.cpp > CMakeFiles/s21_MultilayerPerceptron.dir/src/model/train.cpp.i
+
+CMakeFiles/s21_MultilayerPerceptron.dir/src/model/train.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/s21_MultilayerPerceptron.dir/src/model/train.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/model/train.cpp -o CMakeFiles/s21_MultilayerPerceptron.dir/src/model/train.cpp.s
+
+CMakeFiles/s21_MultilayerPerceptron.dir/src/model/metric.cpp.o: CMakeFiles/s21_MultilayerPerceptron.dir/flags.make
+CMakeFiles/s21_MultilayerPerceptron.dir/src/model/metric.cpp.o: ../src/model/metric.cpp
+CMakeFiles/s21_MultilayerPerceptron.dir/src/model/metric.cpp.o: CMakeFiles/s21_MultilayerPerceptron.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/lymondgl/Desktop/s21_MultilayerPerceptron/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/s21_MultilayerPerceptron.dir/src/model/metric.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/s21_MultilayerPerceptron.dir/src/model/metric.cpp.o -MF CMakeFiles/s21_MultilayerPerceptron.dir/src/model/metric.cpp.o.d -o CMakeFiles/s21_MultilayerPerceptron.dir/src/model/metric.cpp.o -c /Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/model/metric.cpp
+
+CMakeFiles/s21_MultilayerPerceptron.dir/src/model/metric.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/s21_MultilayerPerceptron.dir/src/model/metric.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/model/metric.cpp > CMakeFiles/s21_MultilayerPerceptron.dir/src/model/metric.cpp.i
+
+CMakeFiles/s21_MultilayerPerceptron.dir/src/model/metric.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/s21_MultilayerPerceptron.dir/src/model/metric.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/model/metric.cpp -o CMakeFiles/s21_MultilayerPerceptron.dir/src/model/metric.cpp.s
+
 # Object files for target s21_MultilayerPerceptron
 s21_MultilayerPerceptron_OBJECTS = \
 "CMakeFiles/s21_MultilayerPerceptron.dir/src/matrix/s21_matrix.cpp.o" \
@@ -205,7 +233,9 @@ s21_MultilayerPerceptron_OBJECTS = \
 "CMakeFiles/s21_MultilayerPerceptron.dir/src/model/reader.cc.o" \
 "CMakeFiles/s21_MultilayerPerceptron.dir/src/model/data.cc.o" \
 "CMakeFiles/s21_MultilayerPerceptron.dir/src/controller/controller.cc.o" \
-"CMakeFiles/s21_MultilayerPerceptron.dir/main.cpp.o"
+"CMakeFiles/s21_MultilayerPerceptron.dir/main.cpp.o" \
+"CMakeFiles/s21_MultilayerPerceptron.dir/src/model/train.cpp.o" \
+"CMakeFiles/s21_MultilayerPerceptron.dir/src/model/metric.cpp.o"
 
 # External object files for target s21_MultilayerPerceptron
 s21_MultilayerPerceptron_EXTERNAL_OBJECTS =
@@ -219,9 +249,11 @@ s21_MultilayerPerceptron: CMakeFiles/s21_MultilayerPerceptron.dir/src/model/read
 s21_MultilayerPerceptron: CMakeFiles/s21_MultilayerPerceptron.dir/src/model/data.cc.o
 s21_MultilayerPerceptron: CMakeFiles/s21_MultilayerPerceptron.dir/src/controller/controller.cc.o
 s21_MultilayerPerceptron: CMakeFiles/s21_MultilayerPerceptron.dir/main.cpp.o
+s21_MultilayerPerceptron: CMakeFiles/s21_MultilayerPerceptron.dir/src/model/train.cpp.o
+s21_MultilayerPerceptron: CMakeFiles/s21_MultilayerPerceptron.dir/src/model/metric.cpp.o
 s21_MultilayerPerceptron: CMakeFiles/s21_MultilayerPerceptron.dir/build.make
 s21_MultilayerPerceptron: CMakeFiles/s21_MultilayerPerceptron.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/lymondgl/Desktop/s21_MultilayerPerceptron/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX executable s21_MultilayerPerceptron"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/lymondgl/Desktop/s21_MultilayerPerceptron/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Linking CXX executable s21_MultilayerPerceptron"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/s21_MultilayerPerceptron.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

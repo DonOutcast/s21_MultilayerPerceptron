@@ -21,4 +21,4 @@ add_executable(s21_MultilayerPerceptron
                 src/controller/controller.cc
                 src/controller/controller.h
                 main.cpp
-        )
+        src/model/train.cpp src/model/metric.cpp src/model/metric.h)

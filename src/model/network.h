@@ -47,6 +47,16 @@ namespace s21 {
 //        auto activate_function_derivative(double value) -> double;
         virtual auto get_layers_vector() -> vector_info = 0;
         virtual auto set_layers_vector(int number) -> void = 0;
+    public:
+//        auto TestNet(const std::string &fileName, const double DataCoef) -> Metrics;
+        auto train(const std::string &fileName, const size_t epochs)
+        -> std::vector<double>;
+        auto CrossValidation(const std::string &fileName, const size_t k)
+        -> std::vector<double>;
+
+//        auto GetLayersVector(int number) const -> std::vector<LayersInfo>;
+//        auto GetTopology() const -> const std::vector<size_t> &;
+
     protected:
         std::vector<size_type> m_topology_;
         std::mt19937  m_generator_;

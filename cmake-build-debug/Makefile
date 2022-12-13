@@ -297,6 +297,30 @@ src/model/matrix.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/s21_MultilayerPerceptron.dir/build.make CMakeFiles/s21_MultilayerPerceptron.dir/src/model/matrix.cc.s
 .PHONY : src/model/matrix.cc.s
 
+src/model/metric.o: src/model/metric.cpp.o
+.PHONY : src/model/metric.o
+
+# target to build an object file
+src/model/metric.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/s21_MultilayerPerceptron.dir/build.make CMakeFiles/s21_MultilayerPerceptron.dir/src/model/metric.cpp.o
+.PHONY : src/model/metric.cpp.o
+
+src/model/metric.i: src/model/metric.cpp.i
+.PHONY : src/model/metric.i
+
+# target to preprocess a source file
+src/model/metric.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/s21_MultilayerPerceptron.dir/build.make CMakeFiles/s21_MultilayerPerceptron.dir/src/model/metric.cpp.i
+.PHONY : src/model/metric.cpp.i
+
+src/model/metric.s: src/model/metric.cpp.s
+.PHONY : src/model/metric.s
+
+# target to generate assembly for a file
+src/model/metric.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/s21_MultilayerPerceptron.dir/build.make CMakeFiles/s21_MultilayerPerceptron.dir/src/model/metric.cpp.s
+.PHONY : src/model/metric.cpp.s
+
 src/model/neuron.o: src/model/neuron.cc.o
 .PHONY : src/model/neuron.o
 
@@ -345,6 +369,30 @@ src/model/reader.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/s21_MultilayerPerceptron.dir/build.make CMakeFiles/s21_MultilayerPerceptron.dir/src/model/reader.cc.s
 .PHONY : src/model/reader.cc.s
 
+src/model/train.o: src/model/train.cpp.o
+.PHONY : src/model/train.o
+
+# target to build an object file
+src/model/train.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/s21_MultilayerPerceptron.dir/build.make CMakeFiles/s21_MultilayerPerceptron.dir/src/model/train.cpp.o
+.PHONY : src/model/train.cpp.o
+
+src/model/train.i: src/model/train.cpp.i
+.PHONY : src/model/train.i
+
+# target to preprocess a source file
+src/model/train.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/s21_MultilayerPerceptron.dir/build.make CMakeFiles/s21_MultilayerPerceptron.dir/src/model/train.cpp.i
+.PHONY : src/model/train.cpp.i
+
+src/model/train.s: src/model/train.cpp.s
+.PHONY : src/model/train.s
+
+# target to generate assembly for a file
+src/model/train.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/s21_MultilayerPerceptron.dir/build.make CMakeFiles/s21_MultilayerPerceptron.dir/src/model/train.cpp.s
+.PHONY : src/model/train.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -375,12 +423,18 @@ help:
 	@echo "... src/model/matrix.o"
 	@echo "... src/model/matrix.i"
 	@echo "... src/model/matrix.s"
+	@echo "... src/model/metric.o"
+	@echo "... src/model/metric.i"
+	@echo "... src/model/metric.s"
 	@echo "... src/model/neuron.o"
 	@echo "... src/model/neuron.i"
 	@echo "... src/model/neuron.s"
 	@echo "... src/model/reader.o"
 	@echo "... src/model/reader.i"
 	@echo "... src/model/reader.s"
+	@echo "... src/model/train.o"
+	@echo "... src/model/train.i"
+	@echo "... src/model/train.s"
 .PHONY : help
 
 

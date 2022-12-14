@@ -5,23 +5,11 @@ s21_view::s21_view(QWidget *parent) : QMainWindow(parent) , ui(new Ui::s21_view)
     groupActionUpper_(new QActionGroup(this))  {
     ui->setupUi(this);
 
-    ui->plot->setBackground(QColor(32, 32, 32));
-    ui->plot->xAxis->setSubTicks(false);
-    ui->plot->yAxis->setSubTicks(false);
-    ui->plot->xAxis->setBasePen(QPen(Qt::white));
-    ui->plot->xAxis->setTickPen(QPen(Qt::white));
-    ui->plot->yAxis->setBasePen(QPen(Qt::white));
-    ui->plot->yAxis->setTickPen(QPen(Qt::white));
-    ui->plot->xAxis->setLabelColor(Qt::white);
-    ui->plot->yAxis->setLabelColor(Qt::white);
-    ui->plot->xAxis->setTickLabelColor(Qt::white);
-    ui->plot->yAxis->setTickLabelColor(Qt::white);
-    ui->plot->yAxis->setLabel("ERRORS%");
-    ui->plot->yAxis->setRange(0, 100);
 
 
 
 
+     ui->plot->hide();
      ui->scene->SetMainWindow(this);
      m_controller->set_net(s21::NetworkType::MATRIX, this->GetLayersNumber());
      this->SetController(m_controller);
@@ -184,10 +172,6 @@ auto s21_view::settings_on_off() -> void {
     }
 }
 
-auto s21_view::action_train() -> void {
-    filePath_ =QFileDialog::getOpenFileName(this, QFileDialog::tr("Open file"), emnistPath, QFileDialog::tr("(*.csv)"));
-//    if (!this->filePath_.isEmpty())
-}
 
 
 //void MainWindow::on_trainButton_clicked() {
@@ -290,5 +274,97 @@ auto s21_view::GetKGroups() -> size_t {
   return static_cast<size_t>(ui->kGroupsSpinBox->value());
 }
 
+auto s21_view::AddData(const QString mode, const std::vector<double> values)
+    -> void {
+  QCPBars* bars = new QCPBars(ui->plot->xAxis, ui->plot->yAxis);
+  bars->setPen(QPen(Qt::white));
+  bars->setBrush(QColor((48 + 65) / 2, (213 + 105) / 2, (200 + 225) / 2));
+  QVector<double> barValues;
+  QVector<double> barKeys;
+  for (auto& value : values) {
+    barValues.emplaceBack(value);
+  }
+  for (size_t key = 1; key <= values.size(); ++key) {
+    barKeys.emplaceBack(static_cast<double>(key));
+  }
+  ui->plot->xAxis->setRange(0, static_cast<double>(values.size()) + 0.5);
+  ui->plot->xAxis->setLabel(mode);
+  bars->addData(barKeys, barValues);
+  ui->plot->addGraph();
+  ui->plot->replot();
+}
+//  connect(this, &MainWindow::trainDone, this, &MainWindow::showTrainWindow);
+auto s21_view::showTrainWindow(const std::vector<double>& values) -> void {
+//  QString labelName =
+//      settingsWindow->IsCrossValidation() ? "K-GROUPS" : "EPOCH";
+//  trainWindow->AddData(labelName, values);
+//  trainWindow->show();
+}
 
+auto s21_view::set_configurate_plot() -> void {
+    ui->plot->setBackground(QColor(32, 32, 32));
+    ui->plot->xAxis->setSubTicks(false);
+    ui->plot->yAxis->setSubTicks(false);
+    ui->plot->xAxis->setBasePen(QPen(Qt::white));
+    ui->plot->xAxis->setTickPen(QPen(Qt::white));
+    ui->plot->yAxis->setBasePen(QPen(Qt::white));
+    ui->plot->yAxis->setTickPen(QPen(Qt::white));
+    ui->plot->xAxis->setLabelColor(Qt::white);
+    ui->plot->yAxis->setLabelColor(Qt::white);
+    ui->plot->xAxis->setTickLabelColor(Qt::white);
+    ui->plot->yAxis->setTickLabelColor(Qt::white);
+    ui->plot->yAxis->setLabel("ERRORS%");
+    ui->plot->yAxis->setRange(0, 100);
+}
 
+//void MainWindow::on_trainButton_clicked() {
+//  filePath =
+//      QFileDialog::getOpenFileName(this, QFileDialog::tr("Open file"),
+//                                   emnistPath, QFileDialog::tr("(*.csv)"));
+//  if (!filePath.isEmpty()) {
+//    ChangeGUIAccept(false);
+//    m_thread = std::thread([&]() {
+//      if (settingsWindow->IsCrossValidation()) {
+//        if (settingsWindow->GetKGroups() != 1) {
+//          emit trainDone(m_controller->CrossValidation(
+//              filePath.toStdString(), settingsWindow->GetKGroups()));
+//        }
+//      } else {
+//        emit trainDone(m_controller->Train(filePath.toStdString(),
+//                                           settingsWindow->GetEpochNumber()));
+//      }
+//      ChangeGUIAccept(true);
+//    });
+//    m_thread.detach();
+//  }
+//}
+
+auto s21_view::action_train() -> void {
+  filePath_ =
+      QFileDialog::getOpenFileName(this, QFileDialog::tr("Open file"),
+                                   emnistPath, QFileDialog::tr("(*.csv)"));
+  if (!filePath_.isEmpty()) {
+    ChangeGUIAccept(false);
+    this->m_thread_ = std::thread([&]() {
+      if (this->IsCrossValidation()) {
+        if (this->GetKGroups() != 1) {
+          emit trainDone(m_controller->cross_validation(
+              filePath_.toStdString(), this->GetKGroups()));
+        }
+      } else {
+        emit trainDone(m_controller->train_network(filePath_.toStdString(),
+                                           this->GetEpochNumber()));
+      }
+      ChangeGUIAccept(true);
+    });
+    this->m_thread_.detach();
+  }
+}
+
+auto s21_view::ChangeGUIAccept(bool accept) -> void {
+  if (accept) {
+    this->setEnabled(true);
+  } else {
+    this->setDisabled(true);
+  }
+}

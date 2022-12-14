@@ -22,7 +22,8 @@ namespace s21 {
         auto get_result() -> size_t;
         auto load_weights(std::string file_name) -> bool;
         auto save_weights(std::string file_name) -> void;
-
+        auto train_network(const std::string file_name, const size_t epochs) -> std::vector<double>;
+        auto cross_validation(const std::string &file_name, const size_t k) -> std::vector<double>;
     private:
         Network* m_net_{};
         NetworkType m_type_{};

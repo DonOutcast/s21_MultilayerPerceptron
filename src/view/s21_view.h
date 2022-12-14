@@ -34,6 +34,7 @@ public:
     s21_view(QWidget *parent = nullptr);
     ~s21_view();
     auto Predict() -> void;
+    auto ChangeGUIAccept(bool accept) -> void;
 
 private:
     auto setSlots() -> void;  // связывание сигналов со слотами
@@ -43,6 +44,11 @@ private slots:
       void triggeredGroupActionUpper(QAction *action);
       auto on_crossValidationCheckBox_stateChanged(int arg1) -> void;
 
+signals:
+   void testDone();
+   void trainDone(const std::vector<double>& values);
+
+
 private:
       auto action_open_folder() -> void;
       auto action_upload_weights() -> void;
@@ -51,7 +57,6 @@ private:
       auto action_download_images() -> void;
       auto action_settings() -> void;
       auto action_test() -> void;
-      auto action_train() -> void;
       auto settings_on_off() -> void;
 
       auto closeEvent(QCloseEvent* enevet) -> void override;
@@ -62,6 +67,13 @@ private:
       auto SetController(s21::Controller* controller) -> void;
       auto GetLayersNumber() -> int;
 
+private:
+      auto set_configurate_plot() -> void;
+      auto action_train() -> void;
+
+public:
+      auto AddData(const QString mode, const std::vector<double> values) -> void;
+      auto showTrainWindow(const std::vector<double>& values) -> void;
 
 private:
     Ui::s21_view *ui;
@@ -70,6 +82,8 @@ private:
     QActionGroup *groupActionUpper_;
     QString filePath_{};
     QString fileName_{};
+    std::thread m_thread_{};
+
     static constexpr int asciiBias = 65;
     const QString weightsPath = "../src/weights/";
     const QString bmpPath = "../src/bmp/";

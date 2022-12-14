@@ -5,7 +5,7 @@
 
 namespace s21 {
 
-    auto Network::train(const std::string& fileName, const size_t epochs)
+    auto Network::train_network(const std::string& fileName, const size_t epochs)
     -> std::vector<double> {
         Reader reader;
         std::vector<double> errors;
@@ -35,7 +35,7 @@ namespace s21 {
 
 
 
-    auto Network::CrossValidation(const std::string &fileName,
+    auto Network::cross_validation(const std::string &fileName,
                                            const size_t k) -> std::vector<double> {
         Reader reader;
         reader.open_file(fileName);

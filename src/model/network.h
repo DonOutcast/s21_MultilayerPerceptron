@@ -49,9 +49,9 @@ namespace s21 {
         virtual auto set_layers_vector(int number) -> void = 0;
     public:
 //        auto TestNet(const std::string &fileName, const double DataCoef) -> Metrics;
-        auto train(const std::string &fileName, const size_t epochs)
+        auto train_network(const std::string &fileName, const size_t epochs)
         -> std::vector<double>;
-        auto CrossValidation(const std::string &fileName, const size_t k)
+        auto cross_validation(const std::string &fileName, const size_t k)
         -> std::vector<double>;
 
         auto GetLayersVector(int number) const -> std::vector<LayersInfo>;

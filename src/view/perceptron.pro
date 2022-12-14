@@ -15,6 +15,7 @@ SOURCES += \
     ../model/data.cc \
     ../model/graph_network.cc \
     ../model/matrix.cc \
+    ../model/metric.cpp \
     ../model/network.cc \
     ../model/neuron.cc \
     ../model/reader.cc \
@@ -29,6 +30,7 @@ HEADERS += \
     ../model/data.h \
     ../model/graph_network.h \
     ../model/matrix.h \
+    ../model/metric.h \
     ../model/network.h \
     ../model/neuron.h \
     ../model/reader.h \

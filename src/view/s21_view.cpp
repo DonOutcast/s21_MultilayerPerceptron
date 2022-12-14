@@ -20,6 +20,8 @@ s21_view::s21_view(QWidget *parent) : QMainWindow(parent) , ui(new Ui::s21_view)
      this->setSlots();
 
       ui->kGroupsSpinBox->setDisabled(true);
+
+        connect(this, &s21_view::trainDone, this, &s21_view::showTrainWindow);
 }
 
 s21_view::~s21_view() {
@@ -53,6 +55,7 @@ auto s21_view::groupingActionUpperToolBar() ->void {
   this->groupActionUpper_->addAction(ui->actionSettings);
   this->groupActionUpper_->addAction(ui->actionUpload_weights);
   this->groupActionUpper_->addAction(ui->actionDownload_weights);
+  this->groupActionUpper_->addAction(ui->actionTrain);
 //  groupActionUpper_->addAction(ui->act_make_gif);
 //  groupActionUpper_->addAction(ui->act_gif_360);
 //  groupActionUpper_->addAction(ui->act_screenShot);
@@ -146,16 +149,15 @@ auto s21_view::action_download_images() -> void {
 }
 
 auto s21_view::action_upload_images() -> void {
-      ui->action_upload_images->setIcon(QIcon(":/resource/qrc/upload_on.png"));
-      filePath_ = QFileDialog::getOpenFileName(this, QFileDialog::tr("Open file"),
-                                               QDir::homePath(), QFileDialog::tr("(*.bmp)"));
-      if (!filePath_.isEmpty()) {
-        ui->scene->SetImage(filePath_);
-        Predict();
-       }
-      ui->action_upload_images->setIcon(QIcon(":/resource/qrc/upload.png"));
+    ui->action_upload_images->setIcon(QIcon(":/resource/qrc/upload_on.png"));
+    filePath_ = QFileDialog::getOpenFileName(this, QFileDialog::tr("Open file"),
+                                             QDir::homePath(), QFileDialog::tr("(*.bmp)"));
+    if (!filePath_.isEmpty()) {
+      ui->scene->SetImage(filePath_);
+      Predict();
+     }
+    ui->action_upload_images->setIcon(QIcon(":/resource/qrc/upload.png"));
 }
-
 
 auto s21_view::settings_on_off() -> void {
     if (ui->actionSettings->iconText() == "Settings_on") {
@@ -209,6 +211,8 @@ auto s21_view::triggeredGroupActionUpper(QAction *action) -> void {
       this->action_upload_weights();
   } else if (action == ui->actionDownload_weights) {
       this->action_download_weights();
+  } else if (action == ui->actionTrain) {
+      this->action_train();
   }
   //else if (action == ui->act_texture) {
 //    action_texture_triggered();
@@ -293,12 +297,15 @@ auto s21_view::AddData(const QString mode, const std::vector<double> values)
   ui->plot->addGraph();
   ui->plot->replot();
 }
-//  connect(this, &MainWindow::trainDone, this, &MainWindow::showTrainWindow);
+
 auto s21_view::showTrainWindow(const std::vector<double>& values) -> void {
-//  QString labelName =
-//      settingsWindow->IsCrossValidation() ? "K-GROUPS" : "EPOCH";
-//  trainWindow->AddData(labelName, values);
-//  trainWindow->show();
+
+  QString labelName =
+      this->IsCrossValidation() ? "K-GROUPS" : "EPOCH";
+
+  this->AddData(labelName, values);
+  this->set_configurate_plot();
+  ui->plot->show();
 }
 
 auto s21_view::set_configurate_plot() -> void {
@@ -339,7 +346,9 @@ auto s21_view::set_configurate_plot() -> void {
 //  }
 //}
 
+
 auto s21_view::action_train() -> void {
+    ui->actionTrain->setIcon(QIcon(":/resource/qrc/train_on.png"));
   filePath_ =
       QFileDialog::getOpenFileName(this, QFileDialog::tr("Open file"),
                                    emnistPath, QFileDialog::tr("(*.csv)"));
@@ -359,6 +368,7 @@ auto s21_view::action_train() -> void {
     });
     this->m_thread_.detach();
   }
+ ui->actionTrain->setIcon(QIcon(":/resource/qrc/train.png"));
 }
 
 auto s21_view::ChangeGUIAccept(bool accept) -> void {

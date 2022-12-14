@@ -58,6 +58,7 @@ SOURCES       = ../controller/controller.cc \
 		../model/data.cc \
 		../model/graph_network.cc \
 		../model/matrix.cc \
+		../model/metric.cpp \
 		../model/network.cc \
 		../model/neuron.cc \
 		../model/reader.cc \
@@ -74,6 +75,7 @@ OBJECTS       = controller.o \
 		data.o \
 		graph_network.o \
 		matrix.o \
+		metric.o \
 		network.o \
 		neuron.o \
 		reader.o \
@@ -347,6 +349,7 @@ DIST          = ../view/qrc/icon.png \
 		../model/data.h \
 		../model/graph_network.h \
 		../model/matrix.h \
+		../model/metric.h \
 		../model/network.h \
 		../model/neuron.h \
 		../model/reader.h \
@@ -358,6 +361,7 @@ DIST          = ../view/qrc/icon.png \
 		../model/data.cc \
 		../model/graph_network.cc \
 		../model/matrix.cc \
+		../model/metric.cpp \
 		../model/network.cc \
 		../model/neuron.cc \
 		../model/reader.cc \
@@ -941,8 +945,8 @@ distdir: FORCE
 	$(COPY_FILE) --parents $(DIST) $(DISTDIR)/
 	$(COPY_FILE) --parents ../view/resource.qrc $(DISTDIR)/
 	$(COPY_FILE) --parents /usr/local/share/qt/mkspecs/features/data/dummy.cpp $(DISTDIR)/
-	$(COPY_FILE) --parents ../controller/controller.h ../matrix/s21_matrix.h ../model/data.h ../model/graph_network.h ../model/matrix.h ../model/network.h ../model/neuron.h ../model/reader.h ../view/qcustomplot.h ../view/render_scene.h ../view/s21_view.h $(DISTDIR)/
-	$(COPY_FILE) --parents ../controller/controller.cc ../matrix/s21_matrix.cpp ../matrix/s21_support_func.cc ../model/data.cc ../model/graph_network.cc ../model/matrix.cc ../model/network.cc ../model/neuron.cc ../model/reader.cc ../view/main.cpp ../view/qcustomplot.cpp ../view/render_scene.cpp ../view/s21_view.cpp $(DISTDIR)/
+	$(COPY_FILE) --parents ../controller/controller.h ../matrix/s21_matrix.h ../model/data.h ../model/graph_network.h ../model/matrix.h ../model/metric.h ../model/network.h ../model/neuron.h ../model/reader.h ../view/qcustomplot.h ../view/render_scene.h ../view/s21_view.h $(DISTDIR)/
+	$(COPY_FILE) --parents ../controller/controller.cc ../matrix/s21_matrix.cpp ../matrix/s21_support_func.cc ../model/data.cc ../model/graph_network.cc ../model/matrix.cc ../model/metric.cpp ../model/network.cc ../model/neuron.cc ../model/reader.cc ../view/main.cpp ../view/qcustomplot.cpp ../view/render_scene.cpp ../view/s21_view.cpp $(DISTDIR)/
 	$(COPY_FILE) --parents ../view/s21_view.ui $(DISTDIR)/
 
 
@@ -1181,9 +1185,14 @@ matrix.o: ../model/matrix.cc ../model/matrix.h \
 		../model/neuron.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o matrix.o ../model/matrix.cc
 
+metric.o: ../model/metric.cpp ../model/metric.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o metric.o ../model/metric.cpp
+
 network.o: ../model/network.cc ../model/network.h \
 		../matrix/s21_matrix.h \
-		../model/neuron.h
+		../model/neuron.h \
+		../model/data.h \
+		../model/reader.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o network.o ../model/network.cc
 
 neuron.o: ../model/neuron.cc ../model/neuron.h \
@@ -1306,7 +1315,23 @@ s21_view.o: ../view/s21_view.cpp ../view/s21_view.h \
 		../model/neuron.h \
 		../model/matrix.h \
 		../model/graph_network.h \
-		ui_s21_view.h
+		ui_s21_view.h \
+		../view/qcustomplot.h \
+		/usr/local/lib/QtCore.framework/Headers/qmath.h \
+		/usr/local/lib/QtCore.framework/Headers/qnumeric.h \
+		/usr/local/lib/QtCore.framework/Headers/QtNumeric \
+		../view/render_scene.h \
+		/usr/local/lib/QtWidgets.framework/Headers/QWidget \
+		/usr/local/lib/QtWidgets.framework/Headers/qwidget.h \
+		/usr/local/lib/QtGui.framework/Headers/QMouseEvent \
+		/usr/local/lib/QtGui.framework/Headers/qevent.h \
+		/usr/local/lib/QtGui.framework/Headers/QPainter \
+		/usr/local/lib/QtGui.framework/Headers/qpainter.h \
+		/usr/local/lib/QtGui.framework/Headers/QPaintEvent \
+		/usr/local/lib/QtGui.framework/Headers/QColor \
+		/usr/local/lib/QtGui.framework/Headers/qcolor.h \
+		/usr/local/lib/QtGui.framework/Headers/QImage \
+		/usr/local/lib/QtGui.framework/Headers/qimage.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o s21_view.o ../view/s21_view.cpp
 
 qrc_resource.o: qrc_resource.cpp 

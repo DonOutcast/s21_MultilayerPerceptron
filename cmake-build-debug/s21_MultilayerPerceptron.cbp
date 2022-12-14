@@ -122,6 +122,9 @@
 		<Unit filename="/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/model/metric.h">
 			<Option target="s21_MultilayerPerceptron"/>
 		</Unit>
+		<Unit filename="/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/model/network.cc">
+			<Option target="s21_MultilayerPerceptron"/>
+		</Unit>
 		<Unit filename="/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/model/network.h">
 			<Option target="s21_MultilayerPerceptron"/>
 		</Unit>
@@ -135,9 +138,6 @@
 			<Option target="s21_MultilayerPerceptron"/>
 		</Unit>
 		<Unit filename="/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/model/reader.h">
-			<Option target="s21_MultilayerPerceptron"/>
-		</Unit>
-		<Unit filename="/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/model/train.cpp">
 			<Option target="s21_MultilayerPerceptron"/>
 		</Unit>
 		<Unit filename="/Users/lymondgl/Desktop/s21_MultilayerPerceptron/CMakeLists.txt">

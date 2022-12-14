@@ -9,6 +9,10 @@
 #include <iostream>
 #include "../matrix/s21_matrix.h"
 #include "neuron.h"
+#include <chrono>
+//#include "network.h"
+#include "data.h"
+#include "reader.h"
 
 namespace s21 {
 

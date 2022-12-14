@@ -16,9 +16,9 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/model/graph_network.cc" "CMakeFiles/s21_MultilayerPerceptron.dir/src/model/graph_network.cc.o" "gcc" "CMakeFiles/s21_MultilayerPerceptron.dir/src/model/graph_network.cc.o.d"
   "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/model/matrix.cc" "CMakeFiles/s21_MultilayerPerceptron.dir/src/model/matrix.cc.o" "gcc" "CMakeFiles/s21_MultilayerPerceptron.dir/src/model/matrix.cc.o.d"
   "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/model/metric.cpp" "CMakeFiles/s21_MultilayerPerceptron.dir/src/model/metric.cpp.o" "gcc" "CMakeFiles/s21_MultilayerPerceptron.dir/src/model/metric.cpp.o.d"
+  "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/model/network.cc" "CMakeFiles/s21_MultilayerPerceptron.dir/src/model/network.cc.o" "gcc" "CMakeFiles/s21_MultilayerPerceptron.dir/src/model/network.cc.o.d"
   "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/model/neuron.cc" "CMakeFiles/s21_MultilayerPerceptron.dir/src/model/neuron.cc.o" "gcc" "CMakeFiles/s21_MultilayerPerceptron.dir/src/model/neuron.cc.o.d"
   "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/model/reader.cc" "CMakeFiles/s21_MultilayerPerceptron.dir/src/model/reader.cc.o" "gcc" "CMakeFiles/s21_MultilayerPerceptron.dir/src/model/reader.cc.o.d"
-  "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/model/train.cpp" "CMakeFiles/s21_MultilayerPerceptron.dir/src/model/train.cpp.o" "gcc" "CMakeFiles/s21_MultilayerPerceptron.dir/src/model/train.cpp.o.d"
   )
 
 # Targets to which this target links.

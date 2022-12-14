@@ -6,7 +6,7 @@
 int main() {
     s21::Controller temp;
     temp.set_net(s21::NetworkType::MATRIX, 2);
-    std::cout << temp.load_weights("../2_h.txt") << std::endl;
+//    temp.cross_validation("../2_h.txt", 4);
 //    temp.save_weights("tatar.txt");
     return 0;
 }

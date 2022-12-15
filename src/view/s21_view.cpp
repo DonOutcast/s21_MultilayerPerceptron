@@ -4,6 +4,11 @@
 s21_view::s21_view(QWidget *parent) : QMainWindow(parent) , ui(new Ui::s21_view)  ,m_controller(new s21::Controller) ,
     groupActionUpper_(new QActionGroup(this))  {
     ui->setupUi(this);
+    this->setFixedSize(1275,590);
+
+    ui->groupBox_Metrics->hide();
+
+    this->set_configurate_plot();
 
 
 

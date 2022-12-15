@@ -37,8 +37,6 @@ public:
     QAction *actionUpload_weights;
     QAction *actionTrain;
     QWidget *centralwidget;
-    RenderScene *scene;
-    QLabel *answer_label;
     QLabel *label;
     QGroupBox *groupBox_settings;
     QLabel *selectionPartLabel;
@@ -56,13 +54,27 @@ public:
     QLabel *networkTypeLabel;
     QComboBox *epochBox;
     QCustomPlot *plot;
+    QGroupBox *groupBox_Metrics;
+    QLabel *tLabel;
+    QLabel *recallLabel;
+    QLabel *pLabel;
+    QLabel *aLabel;
+    QLabel *accuracyLabel;
+    QLabel *timeLabel;
+    QLabel *rLabel;
+    QLabel *measureLabel;
+    QLabel *fLabel;
+    QLabel *precisionLabel;
+    QGroupBox *groupBox;
+    RenderScene *scene;
+    QLabel *answer_label;
     QToolBar *toolBar;
 
     void setupUi(QMainWindow *s21_view)
     {
         if (s21_view->objectName().isEmpty())
             s21_view->setObjectName(QString::fromUtf8("s21_view"));
-        s21_view->resize(1103, 600);
+        s21_view->resize(1275, 590);
         s21_view->setStyleSheet(QString::fromUtf8("\n"
 "QMainWindow{\n"
 "\n"
@@ -111,32 +123,6 @@ public:
         actionTrain->setIcon(icon3);
         centralwidget = new QWidget(s21_view);
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
-        scene = new RenderScene(centralwidget);
-        scene->setObjectName(QString::fromUtf8("scene"));
-        scene->setGeometry(QRect(700, 140, 404, 404));
-        scene->setMinimumSize(QSize(402, 402));
-        scene->setMaximumSize(QSize(404, 404));
-        scene->setStyleSheet(QString::fromUtf8("QWidget {\n"
-"	background: #FFFFFF;\n"
-"	border-style: solid;\n"
-"	border-width: 2px 2px 2px 2px;\n"
-"	border-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 #30D5C8 , stop:1 #4169E1);\n"
-"}"));
-        answer_label = new QLabel(scene);
-        answer_label->setObjectName(QString::fromUtf8("answer_label"));
-        answer_label->setGeometry(QRect(320, 10, 70, 60));
-        answer_label->setMinimumSize(QSize(70, 60));
-        answer_label->setMaximumSize(QSize(70, 60));
-        QFont font1;
-        font1.setFamilies({QString::fromUtf8("Umpush")});
-        font1.setBold(true);
-        answer_label->setFont(font1);
-        answer_label->setStyleSheet(QString::fromUtf8("QLabel {\n"
-"	color: #30D5C8;\n"
-"	font-size: 72px;\n"
-"   background: rgba(255, 255, 255, 0)\n"
-"}"));
-        answer_label->setAlignment(Qt::AlignCenter);
         label = new QLabel(centralwidget);
         label->setObjectName(QString::fromUtf8("label"));
         label->setGeometry(QRect(940, 10, 151, 121));
@@ -152,16 +138,24 @@ public:
 "}"));
         groupBox_settings = new QGroupBox(centralwidget);
         groupBox_settings->setObjectName(QString::fromUtf8("groupBox_settings"));
-        groupBox_settings->setGeometry(QRect(0, 130, 391, 401));
+        groupBox_settings->setGeometry(QRect(0, 130, 391, 410));
+        groupBox_settings->setStyleSheet(QString::fromUtf8("QGroupBox {\n"
+"	font: 16pt ;\n"
+"	font-weight: bold;\n"
+"	color: #FFFFFF;\n"
+"	border-style: solid;\n"
+"	border-width: 4px 4px 4px 4px;\n"
+"	border-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:		0 #30D5C8 , stop:1 #4169E1);\n"
+"}"));
         selectionPartLabel = new QLabel(groupBox_settings);
         selectionPartLabel->setObjectName(QString::fromUtf8("selectionPartLabel"));
         selectionPartLabel->setGeometry(QRect(20, 350, 181, 41));
-        QFont font2;
-        font2.setFamilies({QString::fromUtf8("Umpush")});
-        font2.setPointSize(16);
-        font2.setBold(true);
-        font2.setItalic(false);
-        selectionPartLabel->setFont(font2);
+        QFont font1;
+        font1.setFamilies({QString::fromUtf8("Umpush")});
+        font1.setPointSize(16);
+        font1.setBold(true);
+        font1.setItalic(false);
+        selectionPartLabel->setFont(font1);
         selectionPartLabel->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	font: 16pt ;\n"
 "	font-weight: bold;\n"
@@ -172,7 +166,7 @@ public:
         testsLabel = new QLabel(groupBox_settings);
         testsLabel->setObjectName(QString::fromUtf8("testsLabel"));
         testsLabel->setGeometry(QRect(110, 300, 200, 40));
-        testsLabel->setFont(font2);
+        testsLabel->setFont(font1);
         testsLabel->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	font: 16pt ;\n"
 "	font-weight: bold;\n"
@@ -186,7 +180,7 @@ public:
         graphTypeButton = new QRadioButton(groupBox_settings);
         graphTypeButton->setObjectName(QString::fromUtf8("graphTypeButton"));
         graphTypeButton->setGeometry(QRect(270, 70, 120, 40));
-        graphTypeButton->setFont(font2);
+        graphTypeButton->setFont(font1);
         graphTypeButton->setStyleSheet(QString::fromUtf8("QRadioButton{\n"
 "	font: 16pt ;\n"
 "	font-weight: bold;\n"
@@ -211,7 +205,7 @@ public:
         epochNumberLabel = new QLabel(groupBox_settings);
         epochNumberLabel->setObjectName(QString::fromUtf8("epochNumberLabel"));
         epochNumberLabel->setGeometry(QRect(10, 210, 181, 40));
-        epochNumberLabel->setFont(font2);
+        epochNumberLabel->setFont(font1);
         epochNumberLabel->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	font: 16pt ;\n"
 "	font-weight: bold;\n"
@@ -222,7 +216,7 @@ public:
         matrixTypeButton = new QRadioButton(groupBox_settings);
         matrixTypeButton->setObjectName(QString::fromUtf8("matrixTypeButton"));
         matrixTypeButton->setGeometry(QRect(30, 70, 120, 40));
-        matrixTypeButton->setFont(font2);
+        matrixTypeButton->setFont(font1);
         matrixTypeButton->setLayoutDirection(Qt::LeftToRight);
         matrixTypeButton->setStyleSheet(QString::fromUtf8("QRadioButton{\n"
 "	font: 16pt ;\n"
@@ -249,7 +243,7 @@ public:
         hiddenLayersLabel = new QLabel(groupBox_settings);
         hiddenLayersLabel->setObjectName(QString::fromUtf8("hiddenLayersLabel"));
         hiddenLayersLabel->setGeometry(QRect(0, 110, 181, 40));
-        hiddenLayersLabel->setFont(font2);
+        hiddenLayersLabel->setFont(font1);
         hiddenLayersLabel->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	font: 16pt ;\n"
 "	font-weight: bold;\n"
@@ -259,8 +253,8 @@ public:
         hiddenLayersLabel->setAlignment(Qt::AlignCenter);
         selectonPartSpinBox = new QDoubleSpinBox(groupBox_settings);
         selectonPartSpinBox->setObjectName(QString::fromUtf8("selectonPartSpinBox"));
-        selectonPartSpinBox->setGeometry(QRect(290, 355, 101, 31));
-        selectonPartSpinBox->setFont(font2);
+        selectonPartSpinBox->setGeometry(QRect(290, 355, 91, 31));
+        selectonPartSpinBox->setFont(font1);
         selectonPartSpinBox->setStyleSheet(QString::fromUtf8("QDoubleSpinBox {\n"
 "	font: 16pt ;\n"
 "	font-weight: bold;\n"
@@ -272,8 +266,8 @@ public:
         selectonPartSpinBox->setValue(1.000000000000000);
         kGroupsSpinBox = new QSpinBox(groupBox_settings);
         kGroupsSpinBox->setObjectName(QString::fromUtf8("kGroupsSpinBox"));
-        kGroupsSpinBox->setGeometry(QRect(290, 255, 101, 31));
-        kGroupsSpinBox->setFont(font2);
+        kGroupsSpinBox->setGeometry(QRect(290, 255, 91, 31));
+        kGroupsSpinBox->setFont(font1);
         kGroupsSpinBox->setStyleSheet(QString::fromUtf8("QSpinBox {\n"
 "	font: 16pt ;\n"
 "	font-weight: bold;\n"
@@ -285,12 +279,12 @@ public:
         crossValidationCheckBox = new QCheckBox(groupBox_settings);
         crossValidationCheckBox->setObjectName(QString::fromUtf8("crossValidationCheckBox"));
         crossValidationCheckBox->setGeometry(QRect(20, 260, 151, 21));
-        QFont font3;
-        font3.setFamilies({QString::fromUtf8("Umpush")});
-        font3.setPointSize(10);
-        font3.setBold(true);
-        font3.setItalic(false);
-        crossValidationCheckBox->setFont(font3);
+        QFont font2;
+        font2.setFamilies({QString::fromUtf8("Umpush")});
+        font2.setPointSize(10);
+        font2.setBold(true);
+        font2.setItalic(false);
+        crossValidationCheckBox->setFont(font2);
         crossValidationCheckBox->setStyleSheet(QString::fromUtf8("QCheckBox {\n"
 "	font: 10pt ;\n"
 "	font-weight: bold;\n"
@@ -304,7 +298,7 @@ public:
         layersBox->addItem(QString());
         layersBox->addItem(QString());
         layersBox->setObjectName(QString::fromUtf8("layersBox"));
-        layersBox->setGeometry(QRect(290, 120, 100, 30));
+        layersBox->setGeometry(QRect(290, 120, 91, 30));
         layersBox->setLayoutDirection(Qt::LeftToRight);
         layersBox->setAutoFillBackground(false);
         layersBox->setStyleSheet(QString::fromUtf8("QComboBox {\n"
@@ -332,7 +326,7 @@ public:
         kGroupsLabel = new QLabel(groupBox_settings);
         kGroupsLabel->setObjectName(QString::fromUtf8("kGroupsLabel"));
         kGroupsLabel->setGeometry(QRect(200, 250, 81, 40));
-        kGroupsLabel->setFont(font3);
+        kGroupsLabel->setFont(font2);
         kGroupsLabel->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	font: 10pt ;\n"
 "	font-weight: bold;\n"
@@ -343,7 +337,7 @@ public:
         trainingLabel = new QLabel(groupBox_settings);
         trainingLabel->setObjectName(QString::fromUtf8("trainingLabel"));
         trainingLabel->setGeometry(QRect(100, 160, 200, 40));
-        trainingLabel->setFont(font2);
+        trainingLabel->setFont(font1);
         trainingLabel->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	font: 16pt ;\n"
 "	font-weight: bold;\n"
@@ -357,7 +351,7 @@ public:
         networkTypeLabel = new QLabel(groupBox_settings);
         networkTypeLabel->setObjectName(QString::fromUtf8("networkTypeLabel"));
         networkTypeLabel->setGeometry(QRect(100, 20, 200, 40));
-        networkTypeLabel->setFont(font2);
+        networkTypeLabel->setFont(font1);
         networkTypeLabel->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	font: 16pt ;\n"
 "	font-weight: bold;\n"
@@ -375,7 +369,7 @@ public:
         epochBox->addItem(QString());
         epochBox->addItem(QString());
         epochBox->setObjectName(QString::fromUtf8("epochBox"));
-        epochBox->setGeometry(QRect(290, 210, 100, 30));
+        epochBox->setGeometry(QRect(290, 210, 91, 30));
         epochBox->setLayoutDirection(Qt::LeftToRight);
         epochBox->setAutoFillBackground(false);
         epochBox->setStyleSheet(QString::fromUtf8("QComboBox {\n"
@@ -402,7 +396,172 @@ public:
         epochBox->setMaxVisibleItems(4);
         plot = new QCustomPlot(centralwidget);
         plot->setObjectName(QString::fromUtf8("plot"));
-        plot->setGeometry(QRect(400, 170, 301, 351));
+        plot->setGeometry(QRect(400, 139, 451, 401));
+        groupBox_Metrics = new QGroupBox(centralwidget);
+        groupBox_Metrics->setObjectName(QString::fromUtf8("groupBox_Metrics"));
+        groupBox_Metrics->setGeometry(QRect(0, 0, 861, 131));
+        groupBox_Metrics->setStyleSheet(QString::fromUtf8("QGroupBox {\n"
+"	font: 16pt ;\n"
+"	font-weight: bold;\n"
+"	color: #FFFFFF;\n"
+"	border-style: solid;\n"
+"	border-width: 4px 4px 4px 4px;\n"
+"	border-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:		0 #30D5C8 , stop:1 #4169E1);\n"
+"}"));
+        tLabel = new QLabel(groupBox_Metrics);
+        tLabel->setObjectName(QString::fromUtf8("tLabel"));
+        tLabel->setGeometry(QRect(280, 80, 211, 31));
+        tLabel->setFont(font1);
+        tLabel->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	font: 16pt ;\n"
+"	font-weight: bold;\n"
+"	color: #FFFFFF;\n"
+"	border-style: solid;\n"
+"	border-width: 4px 0px 4px 0px;\n"
+"	border-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 #30D5C8 , stop:1 #4169E1);\n"
+"	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 #30D5C8 , stop:1 #4169E1);\n"
+"}"));
+        tLabel->setAlignment(Qt::AlignCenter);
+        recallLabel = new QLabel(groupBox_Metrics);
+        recallLabel->setObjectName(QString::fromUtf8("recallLabel"));
+        recallLabel->setGeometry(QRect(490, 30, 51, 31));
+        recallLabel->setFont(font1);
+        recallLabel->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	font: 16pt ;\n"
+"	font-weight: bold;\n"
+"	color: #FFFFFF;\n"
+"}"));
+        recallLabel->setAlignment(Qt::AlignCenter);
+        pLabel = new QLabel(groupBox_Metrics);
+        pLabel->setObjectName(QString::fromUtf8("pLabel"));
+        pLabel->setGeometry(QRect(10, 80, 211, 31));
+        pLabel->setFont(font1);
+        pLabel->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	font: 16pt ;\n"
+"	font-weight: bold;\n"
+"	color: #FFFFFF;\n"
+"	border-style: solid;\n"
+"	border-width: 4px 0px 4px 0px;\n"
+"	border-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 #30D5C8 , stop:1 #4169E1);\n"
+"	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 #30D5C8 , stop:1 #4169E1);\n"
+"}"));
+        pLabel->setAlignment(Qt::AlignCenter);
+        aLabel = new QLabel(groupBox_Metrics);
+        aLabel->setObjectName(QString::fromUtf8("aLabel"));
+        aLabel->setGeometry(QRect(10, 30, 211, 31));
+        aLabel->setFont(font1);
+        aLabel->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	font: 16pt ;\n"
+"	font-weight: bold;\n"
+"	color: #FFFFFF;\n"
+"	border-style: solid;\n"
+"	border-width: 4px 0px 4px 0px;\n"
+"	border-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 #30D5C8 , stop:1 #4169E1);\n"
+"	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 #30D5C8 , stop:1 #4169E1);\n"
+"}"));
+        aLabel->setAlignment(Qt::AlignCenter);
+        accuracyLabel = new QLabel(groupBox_Metrics);
+        accuracyLabel->setObjectName(QString::fromUtf8("accuracyLabel"));
+        accuracyLabel->setGeometry(QRect(220, 30, 51, 31));
+        accuracyLabel->setFont(font1);
+        accuracyLabel->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	font: 16pt ;\n"
+"	font-weight: bold;\n"
+"	color: #FFFFFF;\n"
+"}"));
+        accuracyLabel->setAlignment(Qt::AlignCenter);
+        timeLabel = new QLabel(groupBox_Metrics);
+        timeLabel->setObjectName(QString::fromUtf8("timeLabel"));
+        timeLabel->setGeometry(QRect(760, 30, 51, 31));
+        timeLabel->setFont(font1);
+        timeLabel->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	font: 16pt ;\n"
+"	font-weight: bold;\n"
+"	color: #FFFFFF;\n"
+"}"));
+        timeLabel->setAlignment(Qt::AlignCenter);
+        rLabel = new QLabel(groupBox_Metrics);
+        rLabel->setObjectName(QString::fromUtf8("rLabel"));
+        rLabel->setGeometry(QRect(280, 30, 211, 31));
+        rLabel->setFont(font1);
+        rLabel->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	font: 16pt ;\n"
+"	font-weight: bold;\n"
+"	color: #FFFFFF;\n"
+"	border-style: solid;\n"
+"	border-width: 4px 0px 4px 0px;\n"
+"	border-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 #30D5C8 , stop:1 #4169E1);\n"
+"	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 #30D5C8 , stop:1 #4169E1);\n"
+"}"));
+        rLabel->setAlignment(Qt::AlignCenter);
+        measureLabel = new QLabel(groupBox_Metrics);
+        measureLabel->setObjectName(QString::fromUtf8("measureLabel"));
+        measureLabel->setGeometry(QRect(490, 80, 51, 31));
+        measureLabel->setFont(font1);
+        measureLabel->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	font: 16pt ;\n"
+"	font-weight: bold;\n"
+"	color: #FFFFFF;\n"
+"}"));
+        measureLabel->setAlignment(Qt::AlignCenter);
+        fLabel = new QLabel(groupBox_Metrics);
+        fLabel->setObjectName(QString::fromUtf8("fLabel"));
+        fLabel->setGeometry(QRect(550, 30, 211, 31));
+        fLabel->setFont(font1);
+        fLabel->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	font: 16pt ;\n"
+"	font-weight: bold;\n"
+"	color: #FFFFFF;\n"
+"	border-style: solid;\n"
+"	border-width: 4px 0px 4px 0px;\n"
+"	border-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 #30D5C8 , stop:1 #4169E1);\n"
+"	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 #30D5C8 , stop:1 #4169E1);\n"
+"}"));
+        fLabel->setAlignment(Qt::AlignCenter);
+        precisionLabel = new QLabel(groupBox_Metrics);
+        precisionLabel->setObjectName(QString::fromUtf8("precisionLabel"));
+        precisionLabel->setGeometry(QRect(220, 80, 51, 31));
+        precisionLabel->setFont(font1);
+        precisionLabel->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	font: 16pt ;\n"
+"	font-weight: bold;\n"
+"	color: #FFFFFF;\n"
+"}"));
+        precisionLabel->setAlignment(Qt::AlignCenter);
+        groupBox = new QGroupBox(centralwidget);
+        groupBox->setObjectName(QString::fromUtf8("groupBox"));
+        groupBox->setGeometry(QRect(860, 130, 410, 410));
+        groupBox->setStyleSheet(QString::fromUtf8("QGroupBox {\n"
+"	border-style: solid;\n"
+"	border-width: 4px 4px 4px 4px;\n"
+"	border-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 #30D5C8 , stop:1 #4169E1);\n"
+"}"));
+        scene = new RenderScene(groupBox);
+        scene->setObjectName(QString::fromUtf8("scene"));
+        scene->setGeometry(QRect(5, 5, 404, 404));
+        scene->setMinimumSize(QSize(402, 402));
+        scene->setMaximumSize(QSize(404, 404));
+        scene->setStyleSheet(QString::fromUtf8("QWidget#answer_label {\n"
+"	background: #FFFFFF;\n"
+"	border-style: solid;\n"
+"	border-width: 4px 4px 4px 4px;\n"
+"	border-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 #30D5C8 , stop:1 #4169E1);\n"
+"}"));
+        answer_label = new QLabel(scene);
+        answer_label->setObjectName(QString::fromUtf8("answer_label"));
+        answer_label->setGeometry(QRect(320, 10, 70, 60));
+        answer_label->setMinimumSize(QSize(70, 60));
+        answer_label->setMaximumSize(QSize(70, 60));
+        QFont font3;
+        font3.setFamilies({QString::fromUtf8("Umpush")});
+        font3.setBold(true);
+        answer_label->setFont(font3);
+        answer_label->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	color: #30D5C8;\n"
+"	font-size: 72px;\n"
+"   background: rgba(255, 255, 255, 0)\n"
+"}"));
+        answer_label->setAlignment(Qt::AlignCenter);
         s21_view->setCentralWidget(centralwidget);
         toolBar = new QToolBar(s21_view);
         toolBar->setObjectName(QString::fromUtf8("toolBar"));
@@ -449,7 +608,6 @@ public:
         actionUpload_weights->setToolTip(QCoreApplication::translate("s21_view", "Upload Weights", nullptr));
 #endif // QT_CONFIG(tooltip)
         actionTrain->setText(QCoreApplication::translate("s21_view", "Train", nullptr));
-        answer_label->setText(QString());
         label->setText(QString());
         groupBox_settings->setTitle(QCoreApplication::translate("s21_view", "Settings", nullptr));
         selectionPartLabel->setText(QCoreApplication::translate("s21_view", "SELECTION PART", nullptr));
@@ -473,6 +631,19 @@ public:
         epochBox->setItemText(3, QCoreApplication::translate("s21_view", "4", nullptr));
         epochBox->setItemText(4, QCoreApplication::translate("s21_view", "5", nullptr));
 
+        groupBox_Metrics->setTitle(QCoreApplication::translate("s21_view", "Metrics", nullptr));
+        tLabel->setText(QCoreApplication::translate("s21_view", "TIME", nullptr));
+        recallLabel->setText(QCoreApplication::translate("s21_view", "0", nullptr));
+        pLabel->setText(QCoreApplication::translate("s21_view", "PRECISION", nullptr));
+        aLabel->setText(QCoreApplication::translate("s21_view", "AVERAGE ACCURACY", nullptr));
+        accuracyLabel->setText(QCoreApplication::translate("s21_view", "0", nullptr));
+        timeLabel->setText(QCoreApplication::translate("s21_view", "0", nullptr));
+        rLabel->setText(QCoreApplication::translate("s21_view", "RECALL", nullptr));
+        measureLabel->setText(QCoreApplication::translate("s21_view", "0", nullptr));
+        fLabel->setText(QCoreApplication::translate("s21_view", "F-MEASURE", nullptr));
+        precisionLabel->setText(QCoreApplication::translate("s21_view", "0", nullptr));
+        groupBox->setTitle(QString());
+        answer_label->setText(QString());
         toolBar->setWindowTitle(QCoreApplication::translate("s21_view", "toolBar", nullptr));
     } // retranslateUi
 

@@ -24,7 +24,10 @@ namespace s21 {
         auto save_weights(std::string file_name) -> void;
         auto train_network(const std::string file_name, const size_t epochs) -> std::vector<double>;
         auto cross_validation(const std::string &file_name, const size_t k) -> std::vector<double>;
+        auto get_metrics(const std::string& fileName, const double datasetUsage)
+        -> Metrics;
     private:
+        Metrics m_metric_{};
         Network* m_net_{};
         NetworkType m_type_{};
         int m_hidden_layers_{};

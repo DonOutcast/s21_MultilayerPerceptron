@@ -13,6 +13,7 @@
 //#include "network.h"
 #include "data.h"
 #include "reader.h"
+#include "metric.h"
 
 namespace s21 {
 
@@ -49,10 +50,12 @@ namespace s21 {
         virtual auto set_layers(std::initializer_list<size_type> items) -> void = 0;
 //        auto activate_function(double  value) -> double;
 //        auto activate_function_derivative(double value) -> double;
-        virtual auto get_layers_vector() -> vector_info = 0;
-        virtual auto set_layers_vector(int number) -> void = 0;
+//        virtual auto get_layers_vector() -> vector_info = 0;
+//        virtual auto set_layers_vector(int number) -> void = 0;
+        auto get_layers_vector() -> vector_info;
+        auto set_layers_vector(int number) -> void;
     public:
-//        auto TestNet(const std::string &fileName, const double DataCoef) -> Metrics;
+        auto test_net(const std::string &fileName, const double DataCoef) -> Metrics;
         auto train_network(const std::string &fileName, const size_t epochs)
         -> std::vector<double>;
         auto cross_validation(const std::string &fileName, const size_t k)
@@ -64,6 +67,7 @@ namespace s21 {
     protected:
         std::vector<size_type> m_topology_;
         std::mt19937  m_generator_;
+        vector_info m_layers_info_;
     };
 
 

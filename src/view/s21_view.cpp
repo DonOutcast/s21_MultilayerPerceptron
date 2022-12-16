@@ -27,6 +27,7 @@ s21_view::s21_view(QWidget *parent) : QMainWindow(parent) , ui(new Ui::s21_view)
       ui->kGroupsSpinBox->setDisabled(true);
 
         connect(this, &s21_view::trainDone, this, &s21_view::showTrainWindow);
+//        connect(this, &s21_view::testDone, this, &s21_view::showTestWindow);
 }
 
 s21_view::~s21_view() {
@@ -61,6 +62,7 @@ auto s21_view::groupingActionUpperToolBar() ->void {
   this->groupActionUpper_->addAction(ui->actionUpload_weights);
   this->groupActionUpper_->addAction(ui->actionDownload_weights);
   this->groupActionUpper_->addAction(ui->actionTrain);
+  this->groupActionUpper_->addAction(ui->actionTest);
 //  groupActionUpper_->addAction(ui->act_make_gif);
 //  groupActionUpper_->addAction(ui->act_gif_360);
 //  groupActionUpper_->addAction(ui->act_screenShot);
@@ -218,6 +220,8 @@ auto s21_view::triggeredGroupActionUpper(QAction *action) -> void {
       this->action_download_weights();
   } else if (action == ui->actionTrain) {
       this->action_train();
+  } else if (action == ui->actionTest) {
+      this->action_test();
   }
   //else if (action == ui->act_texture) {
 //    action_texture_triggered();
@@ -383,3 +387,60 @@ auto s21_view::ChangeGUIAccept(bool accept) -> void {
     this->setDisabled(true);
   }
 }
+
+auto s21_view::action_test() -> void {
+   ui->actionTest->setIcon(QIcon(":/resource/qrc/test.png"));
+  if (this->GetSelectionPart() != 0.) {
+    filePath_ =
+        QFileDialog::getOpenFileName(this, QFileDialog::tr("Open file"),
+                                     emnistPath, QFileDialog::tr("(*.csv)"));
+    ChangeGUIAccept(false);
+    if (!filePath_.isEmpty()) {
+      m_thread_ = std::thread([&]() {
+        m_metrics_ = m_controller->get_metrics(
+            filePath_.toStdString(), this->GetSelectionPart());
+        this->SetAccuracy(m_metrics_.get_accuracy());
+        this->SetPrecison(m_metrics_.get_precision());
+        this->SetRecall(m_metrics_.get_recall());
+        this->SetMeasure(m_metrics_.get_f_measure());
+        this->SetTime(m_metrics_.get_ed_time());
+        ChangeGUIAccept(true);
+        emit testDone();
+      });
+      m_thread_.detach();
+    }
+    ui->groupBox_Metrics->show();
+  }
+
+ ui->actionTest->setIcon(QIcon(":/resource/qrc/test_on.png"));
+}
+
+
+//void MainWindow::showTestWindow() { testWindow->show(); }
+
+
+
+auto s21_view::SetAccuracy(const double accuracy) -> void {
+  ui->accuracyLabel->setText(QString::number(accuracy * 100, 'g', 2) + " %");
+}
+
+auto s21_view::SetPrecison(const double precision) -> void {
+  ui->precisionLabel->setText(QString::number(precision * 100, 'g', 2) + " %");
+}
+
+auto s21_view::SetRecall(const double recall) -> void {
+  ui->recallLabel->setText(QString::number(recall * 100, 'g', 2) + " %");
+}
+
+auto s21_view::SetMeasure(const double measure) -> void {
+  ui->measureLabel->setText(QString::number(measure * 100, 'g', 2) + " %");
+}
+
+auto s21_view::SetTime(const double time) -> void {
+  ui->timeLabel->setText(QString::number(time, 'g', 2) + " s");
+}
+
+
+
+
+

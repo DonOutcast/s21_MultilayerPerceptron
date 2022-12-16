@@ -36,6 +36,7 @@ public:
     QAction *actionDownload_weights;
     QAction *actionUpload_weights;
     QAction *actionTrain;
+    QAction *actionTest;
     QWidget *centralwidget;
     QLabel *label;
     QGroupBox *groupBox_settings;
@@ -121,6 +122,16 @@ public:
             icon3.addFile(QString::fromUtf8(":/resource/qrc/train.png"), QSize(), QIcon::Normal, QIcon::Off);
         }
         actionTrain->setIcon(icon3);
+        actionTest = new QAction(s21_view);
+        actionTest->setObjectName(QString::fromUtf8("actionTest"));
+        QIcon icon4;
+        iconThemeName = QString::fromUtf8("Test");
+        if (QIcon::hasThemeIcon(iconThemeName)) {
+            icon4 = QIcon::fromTheme(iconThemeName);
+        } else {
+            icon4.addFile(QString::fromUtf8(":/resource/qrc/test.png"), QSize(), QIcon::Normal, QIcon::Off);
+        }
+        actionTest->setIcon(icon4);
         centralwidget = new QWidget(s21_view);
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
         label = new QLabel(centralwidget);
@@ -574,6 +585,7 @@ public:
         toolBar->addAction(actionDownload_weights);
         toolBar->addAction(actionUpload_weights);
         toolBar->addAction(actionTrain);
+        toolBar->addAction(actionTest);
 
         retranslateUi(s21_view);
 
@@ -608,6 +620,10 @@ public:
         actionUpload_weights->setToolTip(QCoreApplication::translate("s21_view", "Upload Weights", nullptr));
 #endif // QT_CONFIG(tooltip)
         actionTrain->setText(QCoreApplication::translate("s21_view", "Train", nullptr));
+        actionTest->setText(QCoreApplication::translate("s21_view", "Test", nullptr));
+#if QT_CONFIG(tooltip)
+        actionTest->setToolTip(QCoreApplication::translate("s21_view", "Test", nullptr));
+#endif // QT_CONFIG(tooltip)
         label->setText(QString());
         groupBox_settings->setTitle(QCoreApplication::translate("s21_view", "Settings", nullptr));
         selectionPartLabel->setText(QCoreApplication::translate("s21_view", "SELECTION PART", nullptr));

@@ -1113,6 +1113,7 @@ QComboBox::item:selected {
    <addaction name="actionDownload_weights"/>
    <addaction name="actionUpload_weights"/>
    <addaction name="actionTrain"/>
+   <addaction name="actionTest"/>
   </widget>
   <action name="actionDownload_images">
    <property name="icon">
@@ -1186,6 +1187,18 @@ QComboBox::item:selected {
    </property>
    <property name="text">
     <string>Train</string>
+   </property>
+  </action>
+  <action name="actionTest">
+   <property name="icon">
+    <iconset theme="Test" resource="resource.qrc">
+     <normaloff>:/resource/qrc/test.png</normaloff>:/resource/qrc/test.png</iconset>
+   </property>
+   <property name="text">
+    <string>Test</string>
+   </property>
+   <property name="toolTip">
+    <string>Test</string>
    </property>
   </action>
  </widget>

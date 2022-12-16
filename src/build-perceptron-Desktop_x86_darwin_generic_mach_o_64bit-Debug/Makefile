@@ -984,11 +984,13 @@ qrc_resource.cpp: ../view/resource.qrc \
 		../view/qrc/train_on.png \
 		../view/qrc/download.png \
 		../view/qrc/download_on.png \
+		../view/qrc/test_on.png \
 		../view/qrc/train.png \
 		../view/qrc/icon.png \
 		../view/qrc/upload_on.png \
 		../view/qrc/setting.png \
 		../view/qrc/upload.png \
+		../view/qrc/test.png \
 		../view/qrc/title.png \
 		../view/qrc/settings_on.png
 	/usr/local/share/qt/libexec/rcc -name resource ../view/resource.qrc -o qrc_resource.cpp
@@ -1049,6 +1051,8 @@ moc_render_scene.cpp: ../view/render_scene.h \
 		../model/network.h \
 		../matrix/s21_matrix.h \
 		../model/neuron.h \
+		../model/data.h \
+		../model/reader.h \
 		../model/matrix.h \
 		../model/graph_network.h \
 		moc_predefs.h \
@@ -1082,6 +1086,8 @@ moc_s21_view.cpp: ../view/s21_view.h \
 		../model/network.h \
 		../matrix/s21_matrix.h \
 		../model/neuron.h \
+		../model/data.h \
+		../model/reader.h \
 		../model/matrix.h \
 		../model/graph_network.h \
 		moc_predefs.h \
@@ -1137,6 +1143,8 @@ ui_s21_view.h: ../view/s21_view.ui \
 		../model/network.h \
 		../matrix/s21_matrix.h \
 		../model/neuron.h \
+		../model/data.h \
+		../model/reader.h \
 		../model/matrix.h \
 		../model/graph_network.h \
 		/usr/local/lib/QtCore.framework/Headers/qmath.h \
@@ -1160,6 +1168,8 @@ controller.o: ../controller/controller.cc ../controller/controller.h \
 		../model/network.h \
 		../matrix/s21_matrix.h \
 		../model/neuron.h \
+		../model/data.h \
+		../model/reader.h \
 		../model/matrix.h \
 		../model/graph_network.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o controller.o ../controller/controller.cc
@@ -1176,13 +1186,17 @@ data.o: ../model/data.cc ../model/data.h
 graph_network.o: ../model/graph_network.cc ../model/graph_network.h \
 		../model/network.h \
 		../matrix/s21_matrix.h \
-		../model/neuron.h
+		../model/neuron.h \
+		../model/data.h \
+		../model/reader.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o graph_network.o ../model/graph_network.cc
 
 matrix.o: ../model/matrix.cc ../model/matrix.h \
 		../model/network.h \
 		../matrix/s21_matrix.h \
-		../model/neuron.h
+		../model/neuron.h \
+		../model/data.h \
+		../model/reader.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o matrix.o ../model/matrix.cc
 
 metric.o: ../model/metric.cpp ../model/metric.h
@@ -1197,7 +1211,9 @@ network.o: ../model/network.cc ../model/network.h \
 
 neuron.o: ../model/neuron.cc ../model/neuron.h \
 		../model/network.h \
-		../matrix/s21_matrix.h
+		../matrix/s21_matrix.h \
+		../model/data.h \
+		../model/reader.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o neuron.o ../model/neuron.cc
 
 reader.o: ../model/reader.cc ../model/reader.h \
@@ -1231,6 +1247,8 @@ main.o: ../view/main.cpp ../view/s21_view.h \
 		../model/network.h \
 		../matrix/s21_matrix.h \
 		../model/neuron.h \
+		../model/data.h \
+		../model/reader.h \
 		../model/matrix.h \
 		../model/graph_network.h \
 		/usr/local/lib/QtWidgets.framework/Headers/QApplication \
@@ -1282,6 +1300,8 @@ render_scene.o: ../view/render_scene.cpp ../view/render_scene.h \
 		../model/network.h \
 		../matrix/s21_matrix.h \
 		../model/neuron.h \
+		../model/data.h \
+		../model/reader.h \
 		../model/matrix.h \
 		../model/graph_network.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o render_scene.o ../view/render_scene.cpp
@@ -1313,25 +1333,11 @@ s21_view.o: ../view/s21_view.cpp ../view/s21_view.h \
 		../model/network.h \
 		../matrix/s21_matrix.h \
 		../model/neuron.h \
+		../model/data.h \
+		../model/reader.h \
 		../model/matrix.h \
 		../model/graph_network.h \
-		ui_s21_view.h \
-		../view/qcustomplot.h \
-		/usr/local/lib/QtCore.framework/Headers/qmath.h \
-		/usr/local/lib/QtCore.framework/Headers/qnumeric.h \
-		/usr/local/lib/QtCore.framework/Headers/QtNumeric \
-		../view/render_scene.h \
-		/usr/local/lib/QtWidgets.framework/Headers/QWidget \
-		/usr/local/lib/QtWidgets.framework/Headers/qwidget.h \
-		/usr/local/lib/QtGui.framework/Headers/QMouseEvent \
-		/usr/local/lib/QtGui.framework/Headers/qevent.h \
-		/usr/local/lib/QtGui.framework/Headers/QPainter \
-		/usr/local/lib/QtGui.framework/Headers/qpainter.h \
-		/usr/local/lib/QtGui.framework/Headers/QPaintEvent \
-		/usr/local/lib/QtGui.framework/Headers/QColor \
-		/usr/local/lib/QtGui.framework/Headers/qcolor.h \
-		/usr/local/lib/QtGui.framework/Headers/QImage \
-		/usr/local/lib/QtGui.framework/Headers/qimage.h
+		ui_s21_view.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o s21_view.o ../view/s21_view.cpp
 
 qrc_resource.o: qrc_resource.cpp 

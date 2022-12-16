@@ -118,11 +118,11 @@ auto s21::MatrixNetwork::change_random_device() -> void {
     this->m_generator_ = temp;
 }
 
-auto s21::MatrixNetwork::get_layers_vector() -> s21::MatrixNetwork::vector_info {
+auto s21::Network::get_layers_vector() -> s21::MatrixNetwork::vector_info {
     return this->m_layers_info_;
 }
 
-auto s21::MatrixNetwork::set_layers_vector(int number) -> void {
+auto s21::Network::set_layers_vector(int number) -> void {
     this->m_layers_info_.emplace_back(s21::LayersInfo::INPUT);
     for (auto i = 0; i < number; i++) {
         this->m_layers_info_.emplace_back(s21::LayersInfo::HIDDEN);

@@ -50,3 +50,8 @@ auto s21::Controller::train_network(const std::string file_name, const size_t ep
 auto s21::Controller::cross_validation(const std::string &file_name, const size_t k) -> std::vector<double> {
     return this->m_net_->cross_validation(file_name,k);
 }
+
+auto s21::Controller::get_metrics(const std::string& fileName,
+                            const double datasetUsage) -> Metrics {
+    return m_net_->test_net(fileName, datasetUsage);
+}

@@ -75,6 +75,13 @@ public:
       auto AddData(const QString mode, const std::vector<double> values) -> void;
       auto showTrainWindow(const std::vector<double>& values) -> void;
 
+public:
+      auto SetAccuracy(const double accuracy) -> void;
+      auto SetPrecison(const double precision) -> void;
+      auto SetRecall(const double recall) -> void;
+      auto SetMeasure(const double measure) -> void;
+      auto SetTime(const double time) -> void;
+
 private:
     Ui::s21_view *ui;
     static constexpr int defaultLayers = 2;
@@ -83,6 +90,7 @@ private:
     QString filePath_{};
     QString fileName_{};
     std::thread m_thread_{};
+    s21::Metrics m_metrics_{};
 
     static constexpr int asciiBias = 65;
     const QString weightsPath = "../src/weights/";

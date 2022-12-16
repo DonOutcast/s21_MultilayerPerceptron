@@ -5,6 +5,53 @@
 
 namespace s21 {
 
+    auto Network::test_net(const std::string& fileName,
+                                   const double datasetUsage) -> Metrics {
+        Reader reader;
+        Metrics metrics;
+        reader.open_file(fileName);
+        const int fileSize = reader.get_file_size();
+
+        int dataSize = static_cast<int>(fileSize * datasetUsage);
+        int tp = 0, fp = 0, tn = 0, fn = 0;
+        auto start = std::chrono::high_resolution_clock::now();
+
+        for (int i = 0; i < dataSize; i++) {
+            s21::Data data = reader.get_data();
+            if (reader.is_open()) {
+                this->feed_init_value(data.m_input_);
+                this->feed_forward();
+                std::vector<double> res = this->get_result_vector();
+                int answer = this->get_result();
+                if (data.m_result_ == answer + 1) metrics.set_accuracy(1);
+                for (int j = 0; j < 26; j++) {
+                    if (j == answer) {
+                        if (res[j] > 0.5)
+                            tp++;
+                        else
+                            fp++;
+                    } else {
+                        if (res[j] > 0.5)
+                            fn++;
+                        else
+                            tn++;
+                    }
+                }
+            }
+        }
+
+        auto stop = std::chrono::high_resolution_clock::now();
+        auto duration =
+                std::chrono::duration_cast<std::chrono::seconds>(stop - start);
+        metrics.set_ed_time(duration.count());
+
+        metrics.Calculate(tp, fp, tn, fn, dataSize);
+        reader.close_file();
+        return metrics;
+    }
+
+
+
     auto Network::train_network(const std::string& fileName, const size_t epochs)
     -> std::vector<double> {
         Reader reader;

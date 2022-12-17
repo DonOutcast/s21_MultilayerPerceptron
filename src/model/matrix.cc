@@ -4,13 +4,13 @@ auto s21::MatrixNetwork::random_weight() -> double {
     double rand = ((int) this->m_generator_() % 10000) * 0.0001;
     return rand;
 }
-//
+
 auto s21::MatrixNetwork::feed_init_value(const s21::MatrixNetwork::vector_double &values) -> void {
     for (size_t i = 0; i < values.size(); i++) {
         this->m_neurons_[0][i][0] = values[i];
     }
 }
-//
+
 auto s21::MatrixNetwork::feed_forward() -> void {
     for (auto i = 0; i < this->m_neurons_.size() - 1; i++) {
         this->m_neurons_[i + 1] = this->m_weights_[i] * this->m_neurons_[i];
@@ -19,16 +19,8 @@ auto s21::MatrixNetwork::feed_forward() -> void {
                     this->m_neurons_[i + 1](j, 0) + this->m_biases_[i]);
         }
     }
-//
-//    for (size_t i = 0; i < m_neurons_.size() - 1; i++) {
-//        m_neurons_[i + 1] = m_weights_[i] * m_neurons_[i];
-//        for (size_t j = 0; j < m_neurons_[i + 1].GetRow(); j++) {
-//            m_neurons_[i + 1](j, 0) =
-//                    activate_function(m_neurons_[i + 1](j, 0) + m_biases_[i]);
-//        }
-//    }
 }
-//
+
 auto s21::MatrixNetwork::set_layers(std::vector<LayersInfo> info) -> void {
     this->bring_to_zero_all();
     this->change_random_device();
@@ -268,20 +260,8 @@ auto s21::MatrixNetwork::change_random_device() -> void {
 //}
 namespace s21 {
 
-    auto Network::GetLayersVector(int number) const
-    -> std::vector<LayersInfo> {
-        std::vector<LayersInfo> resultVector;
-        resultVector.emplace_back(LayersInfo::INPUT);
-        for (int i = 0; i < number; ++i) {
-            resultVector.emplace_back(LayersInfo::HIDDEN);
-        }
-        resultVector.emplace_back(LayersInfo::OUTPUT);
-        return resultVector;
-    }
 
-    auto Network::GetTopology() const -> const std::vector<size_t> & {
-        return m_topology_;
-    }
+
 
 //    auto MatrixNetwork::set_layers(std::vector<LayersInfo> info) -> void {
 //        m_topology_.clear();
@@ -373,13 +353,6 @@ namespace s21 {
 //        }
 //    }
 
-/**
- * @brief Получение локальных градиентов слоя
- * @param LocalGrads текущий вектор локальных градиентов
- * @param ExpectedValues Ожидаемые значения для выходных нейронов
- * @param layer индекс слоя матрицы весов, для которого вычисляются локальные
- * градиенты
- */
     auto MatrixNetwork::get_local_grads(std::vector<double> &LocalGrads,
                                       const std::vector<double> &ExpectedValues,
                                       size_t layer) -> void {
@@ -410,11 +383,6 @@ namespace s21 {
         }
     }
 
-/**
- * @brief Изменение весов пропорциоеально разнице ожидаемых и актуальных
- * значений
- * @param ExpectedValues ожидаемый результат feedForward для входных значений
- */
     auto MatrixNetwork::back_propagation(std::vector<double> &ExpectedValues)
     -> void {
         std::vector<double> localGrads;
@@ -448,18 +416,6 @@ namespace s21 {
         file.close();
     }
 
-    auto MatrixNetwork::check_topology(const std::vector<size_t> &topology) -> bool {
-        bool res = true;
-        if (topology.size() != m_topology_.size()) {
-            res = false;
-        } else {
-            for (int i = 0; i < topology.size(); i++) {
-                if (m_topology_[i] != topology[i]) res = false;
-            }
-        }
-        return res;
-    }
-
     auto MatrixNetwork::get_weights(std::string filename) -> bool {
         setlocale(LC_NUMERIC, "C");
         std::fstream file;
@@ -469,7 +425,6 @@ namespace s21 {
         std::string checkFile;
         std::getline(file, checkFile, '\n');
         if (checkFile != "Network weights") return false;
-
         std::string num;
         char c = 0;
         std::vector<size_t> topology;
@@ -501,10 +456,6 @@ namespace s21 {
         return true;
     }
 
-//    void MatrixNetwork::() {
-//        std::cout << "resu/lt matrix:\n";
-//        m_neurons.back().show();
-//    }
 
     auto MatrixNetwork::get_result()-> size_t {
         size_t res = 0;

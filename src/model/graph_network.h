@@ -17,13 +17,11 @@ namespace s21 {
         auto generation_weights(size_type number_of_weights_) -> vec_double;
 
         auto back_propagation(vec_double &expected_values) -> void override;
-//        auto get_layers_vector() -> vector_info override;
-//        auto set_layers_vector(int number) -> void override;
         auto save_weights(std::string) -> void override;
         auto get_weights(std::string) -> bool override;
         auto get_result() -> size_type override;
         auto get_result_vector() -> const_vec_double override;
-        auto check_topology(const std::vector<size_t> &topology) -> bool;
+//        auto check_topology(const std::vector<size_t> &topology) -> bool;
         auto get_local_gards(std::vector<double> &LocalGrads,
                                     const std::vector<double> &ExpectedValues,
                                     size_t layer) -> void;
@@ -40,11 +38,11 @@ namespace s21 {
 //        auto change_random_device() -> void;
 //
 //        auto added_neuron_to_m_neurons() -> void;
-//
-//        auto bring_to_zero_all() -> void;
-//        auto clear_topology() -> void;
-//        auto clear_neurons() -> void;
-//        auto clear_biases() -> void;
+        auto change_random_device() -> void;
+        auto bring_to_zero_all() -> void;
+        auto clear_topology() -> void;
+        auto clear_neurons() -> void;
+        auto clear_biases() -> void;
     };
 
 

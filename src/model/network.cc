@@ -145,3 +145,20 @@ auto s21::Network::set_layers_vector(int number) -> void {
     }
     this->m_layers_info_.emplace_back(s21::LayersInfo::OUTPUT);
 }
+
+auto s21::Network::get_topology() const -> const std::vector<size_t> & {
+    return m_topology_;
+}
+
+
+auto s21::Network::check_topology(const std::vector<size_t> &topology) -> bool {
+    bool res = true;
+    if (topology.size() != m_topology_.size()) {
+        res = false;
+    } else {
+        for (int i = 0; i < topology.size(); i++) {
+            if (m_topology_[i] != topology[i]) res = false;
+        }
+    }
+    return res;
+}

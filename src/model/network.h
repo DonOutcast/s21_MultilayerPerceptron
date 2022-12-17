@@ -10,7 +10,6 @@
 #include "../matrix/s21_matrix.h"
 #include "neuron.h"
 #include <chrono>
-//#include "network.h"
 #include "data.h"
 #include "reader.h"
 #include "metric.h"
@@ -61,8 +60,8 @@ namespace s21 {
         auto cross_validation(const std::string &fileName, const size_t k)
         -> std::vector<double>;
 
-        auto GetLayersVector(int number) const -> std::vector<LayersInfo>;
-        auto GetTopology() const -> const std::vector<size_t> &;
+        auto get_topology() const -> const std::vector<size_t> &;
+        auto check_topology(const std::vector<size_type> &topology) -> bool;
 
     protected:
         std::vector<size_type> m_topology_;

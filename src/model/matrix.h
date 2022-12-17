@@ -8,9 +8,6 @@ namespace s21 {
         ~MatrixNetwork() override {;}
         using s21_matrix = std::vector<S21Matrix>;
         using vector_double = std::vector<double>;
-        using Layer = std::vector<Neuron>;
-        using vector_info = std::vector<LayersInfo>;
-
         auto feed_init_value(const vector_double &values) -> void override;
         auto feed_forward() -> void override;
         auto set_layers(std::initializer_list<size_type> items) -> void override;
@@ -43,7 +40,7 @@ namespace s21 {
 
         auto get_local_grads(vector_double &local_grads, const vector_double &expected_values, size_type layer) -> void;
 
-        auto check_topology(const std::vector<size_type> &topology) -> bool;
+//        auto check_topology(const std::vector<size_type> &topology) -> bool;
 
 
     };

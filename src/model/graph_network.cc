@@ -1,16 +1,6 @@
 #include "graph_network.h"
 
-namespace s21 {
-//
-//    void Neuron::SetWeights(const std::vector<double> &w) { m_weights = w; }
-//
-//    double &Neuron::GetWeight(size_t index) { return m_weights[index]; }
-//
-//    void Neuron::SetValue(double value) { m_value = value; }
-//
-//    double Neuron::get_value() -> double {}() { return m_value; }
-
-    std::vector<double> Graph::generation_weights(size_t nOfWeights) {
+    std::vector<double> s21::Graph::generation_weights(size_t nOfWeights) {
         std::vector<double> weights(nOfWeights);
         for (size_t i = 0; i < nOfWeights; i++) {
             weights[i] = ((int)m_generator_() % 10000) * 0.0001;
@@ -18,22 +8,12 @@ namespace s21 {
         return weights;
     }
 
-    auto Graph::set_layers(std::vector<LayersInfo> info) -> void {
-        m_topology_.clear();
-        for (int i = 0; i < m_neurons_.size(); i++) {
-            m_neurons_[i].clear();
-        }
-        m_neurons_.clear();
-        m_biases_.clear();
+    auto s21::Graph::set_layers(std::vector<LayersInfo> info) -> void {
+        this->bring_to_zero_all();
+        this->change_random_device();
         for (size_t i = 0; i < info.size(); ++i) {
             m_topology_.emplace_back(info[i]);
         }
-
-        std::random_device rd;
-        std::mt19937 temp(rd());
-        m_generator_ = temp;
-// count of neuron for slot
-//
         for (int i = 0; i < m_topology_.size(); i++) {
             m_neurons_.push_back(Layer());
             m_biases_.push_back(0);
@@ -46,21 +26,9 @@ namespace s21 {
         }
     }
 
-    auto Graph::set_layers(std::initializer_list<size_t> items) -> void {
-        m_topology_.clear();
-        for (int i = 0; i < m_neurons_.size(); i++) {
-            m_neurons_[i].clear();
-        }
-        m_neurons_.clear();
-        m_biases_.clear();
-
-        std::vector<size_t> temp_v(items);
-        m_topology_ = temp_v;
-
-        std::random_device rd;
-        std::mt19937 temp(rd());
-        m_generator_ = temp;
-
+    auto s21::Graph::set_layers(std::initializer_list<size_t> items) -> void {
+         this->bring_to_zero_all();
+         this->change_random_device();
         for (int i = 0; i < m_topology_.size(); i++) {
             m_neurons_.push_back(Layer());
             m_biases_.push_back(0);
@@ -73,12 +41,12 @@ namespace s21 {
         }
     }
 
-    void Graph::feed_init_value(const std::vector<double> &vals) {
+    void s21::Graph::feed_init_value(const std::vector<double> &vals) {
         for (size_t i = 0; i < m_neurons_[0].size(); i++) {
             m_neurons_[0][i].set_value(vals[i]);
         }
     }
-    auto Graph::feed_forward() -> void {
+    auto s21::Graph::feed_forward() -> void {
         for (size_t layer = 0; layer < m_neurons_.size() - 1; layer++) {
             for (size_t i = 0; i < m_neurons_[layer + 1].size(); i++) {
                 double sum = 0.;
@@ -91,15 +59,15 @@ namespace s21 {
         }
     }
 
-    auto Graph::activate_functions_sigmoid(double value) -> double {
+    auto s21::Graph::activate_functions_sigmoid(double value) -> double {
         return 1.0 / (1.0 + exp(-value));
     }
 
-    auto Graph::activate_function_derivative(double value) -> double {
+    auto s21::Graph::activate_function_derivative(double value) -> double {
         return value * (1 - value);
     }
 
-    void Graph::get_local_gards(std::vector<double> &LocalGrads,
+    void s21::Graph::get_local_gards(std::vector<double> &LocalGrads,
                                      const std::vector<double> &ExpectedValues,
                                      size_t layer) {
         if (layer == m_neurons_.size() - 1) {
@@ -129,7 +97,7 @@ namespace s21 {
         }
     }
 
-    auto Graph::back_propagation(vec_double &expected_values) -> void {
+    auto s21::Graph::back_propagation(vec_double &expected_values) -> void {
         std::vector<double> localGrads;
         // #pragma omp parallel for
         for (int i = m_neurons_.size() - 2; i >= 0; i--) {
@@ -144,7 +112,7 @@ namespace s21 {
         }
     }
 
-    auto Graph::save_weights(std::string filename) -> void {
+    auto s21::Graph::save_weights(std::string filename) -> void {
         std::fstream file;
         file.open(filename, file.out);
         file << "Network weights" << std::endl;
@@ -162,19 +130,19 @@ namespace s21 {
         file.close();
     }
 
-    auto Graph::check_topology(const std::vector<size_t> &topology) -> bool {
-        bool res = true;
-        if (topology.size() != m_topology_.size()) {
-            res = false;
-        } else {
-            for (int i = 0; i < topology.size(); i++) {
-                if (m_topology_[i] != topology[i]) res = false;
-            }
-        }
-        return res;
-    }
+//    auto s21::Graph::check_topology(const std::vector<size_t> &topology) -> bool {
+//        bool res = true;
+//        if (topology.size() != m_topology_.size()) {
+//            res = false;
+//        } else {
+//            for (int i = 0; i < topology.size(); i++) {
+//                if (m_topology_[i] != topology[i]) res = false;
+//            }
+//        }
+//        return res;
+//    }
 
-    auto Graph::get_weights(std::string filename) -> bool {
+    auto s21::Graph::get_weights(std::string filename) -> bool {
         std::fstream file;
         file.open(filename, file.in);
         /// сделать обработку ошибок
@@ -216,10 +184,7 @@ namespace s21 {
         file.close();
         return true;
     }
-
-//    auto Graph::ShowResult() -> void {}
-
-    auto Graph::get_result()-> size_type {
+    auto s21::Graph::get_result()-> size_type {
         size_t res = 0;
         double max = m_neurons_.back()[0].get_value();
         for (int i = 0; i < m_neurons_.back().size(); i++) {
@@ -231,7 +196,7 @@ namespace s21 {
         return res;
     }
 
-    auto Graph::get_result_vector() -> const_vec_double {
+    auto s21::Graph::get_result_vector() -> const_vec_double {
         std::vector<double> res(m_topology_.back());
         for (int i = 0; i < res.size(); i++) {
             res[i] = m_neurons_.back()[i].get_value();
@@ -239,6 +204,44 @@ namespace s21 {
         return res;
     }
 
+    auto s21::Graph::bring_to_zero_all() -> void {
+        this->clear_topology();
+        this->clear_neurons();
+        this->clear_biases();
+    }
 
+    auto s21::Graph::clear_topology() -> void {
+        if (!this->m_topology_.empty()) {
+            this->m_topology_.clear();
+            if (!this->m_topology_.empty()) {
+                throw std::bad_alloc();
+            }
+        }
+    }
 
-}  // namespace s21
+    auto s21::Graph::clear_biases() -> void {
+        if (!this->m_biases_.empty()) {
+            this->m_biases_.clear();
+            if (!this->m_biases_.empty()) {
+                throw std::bad_alloc();
+            }
+        }
+    }
+
+    auto s21::Graph::clear_neurons() -> void {
+        if (!this->m_neurons_.empty()) {
+            for (auto &m_neuron: this->m_neurons_) {
+                m_neuron.clear();
+            }
+            this->m_neurons_.clear();
+            if (!this->m_neurons_.empty()) {
+                throw std::bad_alloc();
+            }
+        }
+    }
+
+auto s21::Graph::change_random_device() -> void {
+    std::random_device rd_;
+    std::mt19937 temp(rd_());
+    this->m_generator_ = temp;
+}

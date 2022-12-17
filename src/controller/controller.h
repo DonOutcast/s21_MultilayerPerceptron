@@ -1,11 +1,11 @@
 #ifndef SRC_CONTROLLER_CONTROLLER_H
 #define SRC_CONTROLLER_CONTROLLER_H
 
-#include "../model/network.h"
-//#include <QString>
-#include "../model/matrix.h"
-#include "../model/graph_network.h"
-
+//#include "../model/network.h"
+////#include <QString>
+//#include "../model/matrix.h"
+//#include "../model/graph_network.h"
+#include "../model/facade.h"
 namespace s21 {
 
     class Controller {
@@ -27,6 +27,7 @@ namespace s21 {
         auto get_metrics(const std::string& fileName, const double datasetUsage)
         -> Metrics;
     private:
+//        Facade * m_facade_;
         Metrics m_metric_{};
         Network* m_net_{};
         NetworkType m_type_{};

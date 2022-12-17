@@ -9,17 +9,12 @@ namespace s21 {
         using s21_matrix = std::vector<S21Matrix>;
         using vector_double = std::vector<double>;
         using Layer = std::vector<Neuron>;
-        using matrix_neuron_ = std::vector<Layer>;
         using vector_info = std::vector<LayersInfo>;
 
         auto feed_init_value(const vector_double &values) -> void override;
         auto feed_forward() -> void override;
         auto set_layers(std::initializer_list<size_type> items) -> void override;
         auto set_layers(std::vector<LayersInfo> info) -> void override;
-
-//        auto get_layers_vector() -> vector_info override;
-//        auto set_layers_vector(int number) -> void override;
-
         auto back_propagation(vector_double &values) -> void override;
 
         auto save_weights(std::string file_name) -> void override;
@@ -33,7 +28,6 @@ namespace s21 {
         s21_matrix m_neurons_;
         s21_matrix m_weights_;
         vector_double m_biases_;
-        vector_info m_layers_info_;
         static constexpr double step_ = 0.08;
 
         auto random_weight() -> double;

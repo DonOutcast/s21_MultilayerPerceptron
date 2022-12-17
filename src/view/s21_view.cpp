@@ -9,14 +9,12 @@ s21_view::s21_view(QWidget *parent) : QMainWindow(parent) , ui(new Ui::s21_view)
     ui->groupBox_Metrics->hide();
 
     this->set_configurate_plot();
-
-
-
-
-
      ui->plot->hide();
      ui->scene->SetMainWindow(this);
-     m_controller->set_net(s21::NetworkType::MATRIX, this->GetLayersNumber());
+
+//     m_controller->set_net(s21::NetworkType::MATRIX, defaultLayers_);
+    this->change_net_type();
+//     this->closeEvent();
      this->SetController(m_controller);
      /*---группировка actions находящихся на верхнем toolBar---*/
      groupingActionUpperToolBar();
@@ -179,6 +177,7 @@ auto s21_view::settings_on_off() -> void {
      ui->groupBox_settings->show();
 
     }
+    this->change_net_type();
 }
 
 
@@ -223,23 +222,6 @@ auto s21_view::triggeredGroupActionUpper(QAction *action) -> void {
   } else if (action == ui->actionTest) {
       this->action_test();
   }
-  //else if (action == ui->act_texture) {
-//    action_texture_triggered();
-//  } else if (action == ui->act_info) {
-//    action_info_triggered();
-//  } else if (action == ui->act_delete_models) {
-//    action_delete_models();
-//  } else if (action == ui->act_screenShot) {
-//    action_screenshot();
-//  } else if (action == ui->act_make_gif) {
-//    action_make_gif();
-//  } else if (action == ui->act_gif_360) {
-//    action_make_gif_360();
-//  } else if (action == ui->act_shade) {
-//    action_shade();
-//  } else if (action == ui->act_axis_rotate) {
-//    action_axis_rotate();
-//  }
 }
 
 
@@ -247,14 +229,26 @@ auto s21_view::GetLayersNumber() -> int {
   return ui->layersBox->currentText().toInt();
 }
 
+auto s21_view::change_net_type() -> void {
+      s21::NetworkType netType;
+    if (ui->matrixTypeButton->isChecked()) {
+      netType = s21::NetworkType::MATRIX;
+      qDebug() << "Hello World Matrix";
+    } else {
+      netType = s21::NetworkType::GRAPH;
+      qDebug() << "Hello World Graph";
+    }
+   m_controller->set_net(netType, ui->layersBox->currentText().toInt());
+}
+
 auto s21_view::closeEvent(QCloseEvent* event) -> void {
-//  s21::NetworkType netType;
+  s21::NetworkType netType;
   if (ui->matrixTypeButton->isChecked()) {
-//    netType = s21::NetworkType::MATRIX;
+    netType = s21::NetworkType::MATRIX;
   } else {
-//    netType = s21::NetworkType::GRAPH;
+    netType = s21::NetworkType::GRAPH;
   }
-//  m_controller->SetNet(netType, ui->layersBox->currentText().toInt());
+  m_controller->set_net(netType, ui->layersBox->currentText().toInt());
   event->accept();
 }
 
@@ -357,27 +351,36 @@ auto s21_view::set_configurate_plot() -> void {
 
 
 auto s21_view::action_train() -> void {
-    ui->actionTrain->setIcon(QIcon(":/resource/qrc/train_on.png"));
-  filePath_ =
-      QFileDialog::getOpenFileName(this, QFileDialog::tr("Open file"),
-                                   emnistPath, QFileDialog::tr("(*.csv)"));
-  if (!filePath_.isEmpty()) {
-    ChangeGUIAccept(false);
-    this->m_thread_ = std::thread([&]() {
-      if (this->IsCrossValidation()) {
-        if (this->GetKGroups() != 1) {
-          emit trainDone(m_controller->cross_validation(
-              filePath_.toStdString(), this->GetKGroups()));
-        }
-      } else {
-        emit trainDone(m_controller->train_network(filePath_.toStdString(),
-                                           this->GetEpochNumber()));
+    qDebug() << ui->actionTrain->iconText();
+    if (ui->actionTrain->iconText() == "Train") {
+        ui->actionTrain->setIcon(QIcon(":/resource/qrc/train_on.png"));
+        ui->actionTrain->setIconText("Train_on");
+        ui->plot->show();
+      filePath_ =
+          QFileDialog::getOpenFileName(this, QFileDialog::tr("Open file"),
+                                       emnistPath, QFileDialog::tr("(*.csv)"));
+
+      if (!filePath_.isEmpty()) {
+        ChangeGUIAccept(false);
+        this->m_thread_ = std::thread([&]() {
+          if (this->IsCrossValidation()) {
+            if (this->GetKGroups() != 1) {
+              emit trainDone(m_controller->cross_validation(
+                  filePath_.toStdString(), this->GetKGroups()));
+            }
+          } else {
+            emit trainDone(m_controller->train_network(filePath_.toStdString(),
+                                               this->GetEpochNumber()));
+          }
+          ChangeGUIAccept(true);
+        });
+        this->m_thread_.detach();
       }
-      ChangeGUIAccept(true);
-    });
-    this->m_thread_.detach();
-  }
- ui->actionTrain->setIcon(QIcon(":/resource/qrc/train.png"));
+    } else {
+        ui->actionTrain->setIcon(QIcon(":/resource/qrc/train.png"));
+        ui->plot->hide();
+        ui->actionTrain->setIconText("Train");
+    }
 }
 
 auto s21_view::ChangeGUIAccept(bool accept) -> void {
@@ -389,30 +392,38 @@ auto s21_view::ChangeGUIAccept(bool accept) -> void {
 }
 
 auto s21_view::action_test() -> void {
-   ui->actionTest->setIcon(QIcon(":/resource/qrc/test.png"));
-  if (this->GetSelectionPart() != 0.) {
-    filePath_ =
-        QFileDialog::getOpenFileName(this, QFileDialog::tr("Open file"),
-                                     emnistPath, QFileDialog::tr("(*.csv)"));
-    ChangeGUIAccept(false);
-    if (!filePath_.isEmpty()) {
-      m_thread_ = std::thread([&]() {
-        m_metrics_ = m_controller->get_metrics(
-            filePath_.toStdString(), this->GetSelectionPart());
-        this->SetAccuracy(m_metrics_.get_accuracy());
-        this->SetPrecison(m_metrics_.get_precision());
-        this->SetRecall(m_metrics_.get_recall());
-        this->SetMeasure(m_metrics_.get_f_measure());
-        this->SetTime(m_metrics_.get_ed_time());
-        ChangeGUIAccept(true);
-        emit testDone();
-      });
-      m_thread_.detach();
-    }
-    ui->groupBox_Metrics->show();
-  }
+    if (ui->actionTest->iconText() == "Test") {
+        ui->actionTest->setIconText("Test_on");
+        ui->actionTest->setIcon(QIcon(":/resource/qrc/test_on.png"));
+        ui->groupBox_Metrics->show();
+        if (this->GetSelectionPart() != 0.) {
+          filePath_ =
+              QFileDialog::getOpenFileName(this, QFileDialog::tr("Open file"),
+                                           emnistPath, QFileDialog::tr("(*.csv)"));
 
- ui->actionTest->setIcon(QIcon(":/resource/qrc/test_on.png"));
+          if (!filePath_.isEmpty()) {
+             ChangeGUIAccept(false);
+            m_thread_ = std::thread([&]() {
+              m_metrics_ = m_controller->get_metrics(
+                  filePath_.toStdString(), this->GetSelectionPart());
+              this->SetAccuracy(m_metrics_.get_accuracy());
+              this->SetPrecison(m_metrics_.get_precision());
+              this->SetRecall(m_metrics_.get_recall());
+              this->SetMeasure(m_metrics_.get_f_measure());
+              this->SetTime(m_metrics_.get_ed_time());
+              ChangeGUIAccept(true);
+              emit testDone();
+            });
+            m_thread_.detach();
+          }
+        }
+
+    } else {
+         ui->actionTest->setIcon(QIcon(":/resource/qrc/test.png"));
+         ui->groupBox_Metrics->hide();
+         ui->actionTest->setIconText("Test");
+    }
+
 }
 
 

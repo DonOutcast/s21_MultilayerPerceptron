@@ -23,4 +23,7 @@ add_executable(s21_MultilayerPerceptron
                 main.cpp
                 src/model/network.cc
                 src/model/metric.cpp
-                src/model/metric.h)
+                src/model/metric.h
+                src/model/facade.cc
+                src/model/facade.h
+        )

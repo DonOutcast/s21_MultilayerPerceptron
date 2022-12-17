@@ -249,6 +249,30 @@ src/model/data.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/s21_MultilayerPerceptron.dir/build.make CMakeFiles/s21_MultilayerPerceptron.dir/src/model/data.cc.s
 .PHONY : src/model/data.cc.s
 
+src/model/facade.o: src/model/facade.cc.o
+.PHONY : src/model/facade.o
+
+# target to build an object file
+src/model/facade.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/s21_MultilayerPerceptron.dir/build.make CMakeFiles/s21_MultilayerPerceptron.dir/src/model/facade.cc.o
+.PHONY : src/model/facade.cc.o
+
+src/model/facade.i: src/model/facade.cc.i
+.PHONY : src/model/facade.i
+
+# target to preprocess a source file
+src/model/facade.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/s21_MultilayerPerceptron.dir/build.make CMakeFiles/s21_MultilayerPerceptron.dir/src/model/facade.cc.i
+.PHONY : src/model/facade.cc.i
+
+src/model/facade.s: src/model/facade.cc.s
+.PHONY : src/model/facade.s
+
+# target to generate assembly for a file
+src/model/facade.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/s21_MultilayerPerceptron.dir/build.make CMakeFiles/s21_MultilayerPerceptron.dir/src/model/facade.cc.s
+.PHONY : src/model/facade.cc.s
+
 src/model/graph_network.o: src/model/graph_network.cc.o
 .PHONY : src/model/graph_network.o
 
@@ -417,6 +441,9 @@ help:
 	@echo "... src/model/data.o"
 	@echo "... src/model/data.i"
 	@echo "... src/model/data.s"
+	@echo "... src/model/facade.o"
+	@echo "... src/model/facade.i"
+	@echo "... src/model/facade.s"
 	@echo "... src/model/graph_network.o"
 	@echo "... src/model/graph_network.i"
 	@echo "... src/model/graph_network.s"

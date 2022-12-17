@@ -244,4 +244,7 @@ CMakeFiles/s21_MultilayerPerceptron.dir/src/model/matrix.cc.o: \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk/usr/include/c++/v1/vector \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk/usr/include/c++/v1/iostream \
   /Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/model/../matrix/s21_matrix.h \
-  /Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/model/neuron.h
+  /Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/model/neuron.h \
+  /Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/model/data.h \
+  /Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/model/reader.h \
+  /Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/model/metric.h

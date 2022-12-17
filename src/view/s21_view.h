@@ -60,6 +60,7 @@ private:
       auto settings_on_off() -> void;
 
       auto closeEvent(QCloseEvent* enevet) -> void override;
+      auto change_net_type() -> void ;
       auto GetKGroups() -> size_t;
       auto IsCrossValidation() -> bool;
       auto GetEpochNumber() -> size_t;
@@ -84,7 +85,7 @@ public:
 
 private:
     Ui::s21_view *ui;
-    static constexpr int defaultLayers = 2;
+
     s21::Controller*  m_controller {};
     QActionGroup *groupActionUpper_;
     QString filePath_{};
@@ -92,6 +93,7 @@ private:
     std::thread m_thread_{};
     s21::Metrics m_metrics_{};
 
+    static constexpr int defaultLayers_ = 2;
     static constexpr int asciiBias = 65;
     const QString weightsPath = "../src/weights/";
     const QString bmpPath = "../src/bmp/";

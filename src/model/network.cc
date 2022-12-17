@@ -133,3 +133,15 @@ namespace s21 {
     }
 
 }
+
+auto s21::Network::get_layers_vector() -> s21::Network::vector_info {
+    return this->m_layers_info_;
+}
+
+auto s21::Network::set_layers_vector(int number) -> void {
+    this->m_layers_info_.emplace_back(s21::LayersInfo::INPUT);
+    for (auto i = 0; i < number; i++) {
+        this->m_layers_info_.emplace_back(s21::LayersInfo::HIDDEN);
+    }
+    this->m_layers_info_.emplace_back(s21::LayersInfo::OUTPUT);
+}

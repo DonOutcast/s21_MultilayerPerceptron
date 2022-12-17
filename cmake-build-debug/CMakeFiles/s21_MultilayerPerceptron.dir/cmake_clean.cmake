@@ -9,6 +9,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/s21_MultilayerPerceptron.dir/src/matrix/s21_support_func.cc.o.d"
   "CMakeFiles/s21_MultilayerPerceptron.dir/src/model/data.cc.o"
   "CMakeFiles/s21_MultilayerPerceptron.dir/src/model/data.cc.o.d"
+  "CMakeFiles/s21_MultilayerPerceptron.dir/src/model/facade.cc.o"
+  "CMakeFiles/s21_MultilayerPerceptron.dir/src/model/facade.cc.o.d"
   "CMakeFiles/s21_MultilayerPerceptron.dir/src/model/graph_network.cc.o"
   "CMakeFiles/s21_MultilayerPerceptron.dir/src/model/graph_network.cc.o.d"
   "CMakeFiles/s21_MultilayerPerceptron.dir/src/model/matrix.cc.o"

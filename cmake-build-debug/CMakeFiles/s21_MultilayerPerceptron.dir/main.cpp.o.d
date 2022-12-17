@@ -245,9 +245,11 @@ CMakeFiles/s21_MultilayerPerceptron.dir/main.cpp.o: \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk/usr/include/c++/v1/iostream \
   /Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/model/../matrix/s21_matrix.h \
   /Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/model/neuron.h \
-  /Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/model/reader.h \
   /Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/model/data.h \
+  /Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/model/reader.h \
+  /Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/model/metric.h \
   /Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/controller/controller.h \
-  /Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/controller/../model/network.h \
-  /Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/controller/../model/matrix.h \
-  /Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/controller/../model/graph_network.h
+  /Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/controller/../model/facade.h \
+  /Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/model/../model/network.h \
+  /Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/model/../model/matrix.h \
+  /Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/model/../model/graph_network.h

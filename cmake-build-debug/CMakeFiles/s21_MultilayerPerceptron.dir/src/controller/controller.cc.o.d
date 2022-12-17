@@ -1,7 +1,8 @@
 CMakeFiles/s21_MultilayerPerceptron.dir/src/controller/controller.cc.o: \
   /Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/controller/controller.cc \
   /Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/controller/controller.h \
-  /Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/controller/../model/network.h \
+  /Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/controller/../model/facade.h \
+  /Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/controller/../model/../model/network.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk/usr/include/c++/v1/cmath \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk/usr/include/c++/v1/__config \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk/usr/include/pthread.h \
@@ -245,5 +246,9 @@ CMakeFiles/s21_MultilayerPerceptron.dir/src/controller/controller.cc.o: \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk/usr/include/c++/v1/iostream \
   /Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/controller/../model/../matrix/s21_matrix.h \
   /Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/controller/../model/neuron.h \
-  /Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/controller/../model/matrix.h \
-  /Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/controller/../model/graph_network.h
+  /Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/controller/../model/network.h \
+  /Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/controller/../model/data.h \
+  /Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/controller/../model/reader.h \
+  /Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/controller/../model/metric.h \
+  /Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/controller/../model/../model/matrix.h \
+  /Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/controller/../model/../model/graph_network.h

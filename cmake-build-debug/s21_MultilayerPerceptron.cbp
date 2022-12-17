@@ -104,6 +104,12 @@
 		<Unit filename="/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/model/data.h">
 			<Option target="s21_MultilayerPerceptron"/>
 		</Unit>
+		<Unit filename="/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/model/facade.cc">
+			<Option target="s21_MultilayerPerceptron"/>
+		</Unit>
+		<Unit filename="/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/model/facade.h">
+			<Option target="s21_MultilayerPerceptron"/>
+		</Unit>
 		<Unit filename="/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/model/graph_network.cc">
 			<Option target="s21_MultilayerPerceptron"/>
 		</Unit>

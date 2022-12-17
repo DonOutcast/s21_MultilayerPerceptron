@@ -8,6 +8,8 @@
 }
 
 auto s21::Controller::set_net(s21::NetworkType type, int hidden_layers) -> void {
+//    this->m_facade_->set_net(type, hidden_layers);
+    std::cout << "This is a layers in your : " << hidden_layers << std::endl;
     if (type != this->m_type_ || hidden_layers != this->m_hidden_layers_) {
         delete this->m_net_;
         if (this->m_type_ == s21::NetworkType::MATRIX) {
@@ -26,13 +28,16 @@ auto s21::Controller::set_net(s21::NetworkType type, int hidden_layers) -> void 
 
 auto s21::Controller::feed_forward() -> void {
     this->m_net_->feed_forward();
+//      this->m_facade_->feed_forward();
 }
 auto s21::Controller::feed_init_values(const vector_double &values) -> void {
     this->m_net_->feed_init_value(values);
+//       this->m_facade_->feed_init_values(values);
 }
 
 auto s21::Controller::get_result() -> size_t {
     return this->m_net_->get_result();
+
 }
 
 auto s21::Controller::load_weights(std::string file_name) -> bool {

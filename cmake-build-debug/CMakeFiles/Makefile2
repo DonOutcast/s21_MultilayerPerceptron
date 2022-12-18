@@ -54,10 +54,10 @@ RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/lymondgl/Desktop/s21_MultilayerPerceptron
+CMAKE_SOURCE_DIR = /Users/lymondgl/s21_MultilayerPerceptron
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/lymondgl/Desktop/s21_MultilayerPerceptron/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/lymondgl/s21_MultilayerPerceptron/cmake-build-debug
 
 #=============================================================================
 # Directory level rules for the build root directory
@@ -81,14 +81,14 @@ clean: CMakeFiles/s21_MultilayerPerceptron.dir/clean
 CMakeFiles/s21_MultilayerPerceptron.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/s21_MultilayerPerceptron.dir/build.make CMakeFiles/s21_MultilayerPerceptron.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/s21_MultilayerPerceptron.dir/build.make CMakeFiles/s21_MultilayerPerceptron.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/lymondgl/Desktop/s21_MultilayerPerceptron/cmake-build-debug/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13 "Built target s21_MultilayerPerceptron"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/lymondgl/s21_MultilayerPerceptron/cmake-build-debug/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13 "Built target s21_MultilayerPerceptron"
 .PHONY : CMakeFiles/s21_MultilayerPerceptron.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/s21_MultilayerPerceptron.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/lymondgl/Desktop/s21_MultilayerPerceptron/cmake-build-debug/CMakeFiles 13
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/lymondgl/s21_MultilayerPerceptron/cmake-build-debug/CMakeFiles 13
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/s21_MultilayerPerceptron.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/lymondgl/Desktop/s21_MultilayerPerceptron/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/lymondgl/s21_MultilayerPerceptron/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/s21_MultilayerPerceptron.dir/rule
 
 # Convenience name for target.

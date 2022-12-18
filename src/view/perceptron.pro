@@ -13,10 +13,9 @@ SOURCES += \
     ../matrix/s21_matrix.cpp \
     ../matrix/s21_support_func.cc \
     ../model/data.cc \
-    ../model/facade.cc \
     ../model/graph_network.cc \
     ../model/matrix.cc \
-    ../model/metric.cpp \
+    ../model/metric.cc \
     ../model/network.cc \
     ../model/neuron.cc \
     ../model/reader.cc \
@@ -29,7 +28,6 @@ HEADERS += \
     ../controller/controller.h \
     ../matrix/s21_matrix.h \
     ../model/data.h \
-    ../model/facade.h \
     ../model/graph_network.h \
     ../model/matrix.h \
     ../model/metric.h \

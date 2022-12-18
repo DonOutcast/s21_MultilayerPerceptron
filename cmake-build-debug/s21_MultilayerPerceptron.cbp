@@ -8,38 +8,38 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/Users/lymondgl/Desktop/s21_MultilayerPerceptron/cmake-build-debug"/>
+				<Option working_dir="/Users/lymondgl/s21_MultilayerPerceptron/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j6 -f &quot;/Users/lymondgl/Desktop/s21_MultilayerPerceptron/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j6 -f &quot;/Users/lymondgl/Desktop/s21_MultilayerPerceptron/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j6 -f &quot;/Users/lymondgl/Desktop/s21_MultilayerPerceptron/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j6 -f &quot;/Users/lymondgl/Desktop/s21_MultilayerPerceptron/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j6 -f &quot;/Users/lymondgl/s21_MultilayerPerceptron/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j6 -f &quot;/Users/lymondgl/s21_MultilayerPerceptron/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j6 -f &quot;/Users/lymondgl/s21_MultilayerPerceptron/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j6 -f &quot;/Users/lymondgl/s21_MultilayerPerceptron/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/Users/lymondgl/Desktop/s21_MultilayerPerceptron/cmake-build-debug"/>
+				<Option working_dir="/Users/lymondgl/s21_MultilayerPerceptron/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j6 -f &quot;/Users/lymondgl/Desktop/s21_MultilayerPerceptron/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j6 -f &quot;/Users/lymondgl/Desktop/s21_MultilayerPerceptron/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j6 -f &quot;/Users/lymondgl/Desktop/s21_MultilayerPerceptron/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j6 -f &quot;/Users/lymondgl/Desktop/s21_MultilayerPerceptron/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j6 -f &quot;/Users/lymondgl/s21_MultilayerPerceptron/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j6 -f &quot;/Users/lymondgl/s21_MultilayerPerceptron/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j6 -f &quot;/Users/lymondgl/s21_MultilayerPerceptron/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j6 -f &quot;/Users/lymondgl/s21_MultilayerPerceptron/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/Users/lymondgl/Desktop/s21_MultilayerPerceptron/cmake-build-debug"/>
+				<Option working_dir="/Users/lymondgl/s21_MultilayerPerceptron/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j6 -f &quot;/Users/lymondgl/Desktop/s21_MultilayerPerceptron/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j6 -f &quot;/Users/lymondgl/Desktop/s21_MultilayerPerceptron/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j6 -f &quot;/Users/lymondgl/Desktop/s21_MultilayerPerceptron/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j6 -f &quot;/Users/lymondgl/Desktop/s21_MultilayerPerceptron/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j6 -f &quot;/Users/lymondgl/s21_MultilayerPerceptron/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j6 -f &quot;/Users/lymondgl/s21_MultilayerPerceptron/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j6 -f &quot;/Users/lymondgl/s21_MultilayerPerceptron/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j6 -f &quot;/Users/lymondgl/s21_MultilayerPerceptron/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="s21_MultilayerPerceptron">
-				<Option output="/Users/lymondgl/Desktop/s21_MultilayerPerceptron/cmake-build-debug/s21_MultilayerPerceptron" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/lymondgl/Desktop/s21_MultilayerPerceptron/cmake-build-debug"/>
+				<Option output="/Users/lymondgl/s21_MultilayerPerceptron/cmake-build-debug/s21_MultilayerPerceptron" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/lymondgl/s21_MultilayerPerceptron/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -52,15 +52,15 @@
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j6 -f &quot;/Users/lymondgl/Desktop/s21_MultilayerPerceptron/cmake-build-debug/Makefile&quot;  VERBOSE=1 s21_MultilayerPerceptron"/>
-					<CompileFile command="/usr/bin/make -j6 -f &quot;/Users/lymondgl/Desktop/s21_MultilayerPerceptron/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j6 -f &quot;/Users/lymondgl/Desktop/s21_MultilayerPerceptron/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j6 -f &quot;/Users/lymondgl/Desktop/s21_MultilayerPerceptron/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j6 -f &quot;/Users/lymondgl/s21_MultilayerPerceptron/cmake-build-debug/Makefile&quot;  VERBOSE=1 s21_MultilayerPerceptron"/>
+					<CompileFile command="/usr/bin/make -j6 -f &quot;/Users/lymondgl/s21_MultilayerPerceptron/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j6 -f &quot;/Users/lymondgl/s21_MultilayerPerceptron/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j6 -f &quot;/Users/lymondgl/s21_MultilayerPerceptron/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="s21_MultilayerPerceptron/fast">
-				<Option output="/Users/lymondgl/Desktop/s21_MultilayerPerceptron/cmake-build-debug/s21_MultilayerPerceptron" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/lymondgl/Desktop/s21_MultilayerPerceptron/cmake-build-debug"/>
+				<Option output="/Users/lymondgl/s21_MultilayerPerceptron/cmake-build-debug/s21_MultilayerPerceptron" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/lymondgl/s21_MultilayerPerceptron/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -73,80 +73,80 @@
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j6 -f &quot;/Users/lymondgl/Desktop/s21_MultilayerPerceptron/cmake-build-debug/Makefile&quot;  VERBOSE=1 s21_MultilayerPerceptron/fast"/>
-					<CompileFile command="/usr/bin/make -j6 -f &quot;/Users/lymondgl/Desktop/s21_MultilayerPerceptron/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j6 -f &quot;/Users/lymondgl/Desktop/s21_MultilayerPerceptron/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j6 -f &quot;/Users/lymondgl/Desktop/s21_MultilayerPerceptron/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j6 -f &quot;/Users/lymondgl/s21_MultilayerPerceptron/cmake-build-debug/Makefile&quot;  VERBOSE=1 s21_MultilayerPerceptron/fast"/>
+					<CompileFile command="/usr/bin/make -j6 -f &quot;/Users/lymondgl/s21_MultilayerPerceptron/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j6 -f &quot;/Users/lymondgl/s21_MultilayerPerceptron/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j6 -f &quot;/Users/lymondgl/s21_MultilayerPerceptron/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Users/lymondgl/Desktop/s21_MultilayerPerceptron/main.cpp">
+		<Unit filename="/Users/lymondgl/s21_MultilayerPerceptron/main.cpp">
 			<Option target="s21_MultilayerPerceptron"/>
 		</Unit>
-		<Unit filename="/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/controller/controller.cc">
+		<Unit filename="/Users/lymondgl/s21_MultilayerPerceptron/src/controller/controller.cc">
 			<Option target="s21_MultilayerPerceptron"/>
 		</Unit>
-		<Unit filename="/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/controller/controller.h">
+		<Unit filename="/Users/lymondgl/s21_MultilayerPerceptron/src/controller/controller.h">
 			<Option target="s21_MultilayerPerceptron"/>
 		</Unit>
-		<Unit filename="/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/matrix/s21_matrix.cpp">
+		<Unit filename="/Users/lymondgl/s21_MultilayerPerceptron/src/matrix/s21_matrix.cpp">
 			<Option target="s21_MultilayerPerceptron"/>
 		</Unit>
-		<Unit filename="/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/matrix/s21_matrix.h">
+		<Unit filename="/Users/lymondgl/s21_MultilayerPerceptron/src/matrix/s21_matrix.h">
 			<Option target="s21_MultilayerPerceptron"/>
 		</Unit>
-		<Unit filename="/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/matrix/s21_support_func.cc">
+		<Unit filename="/Users/lymondgl/s21_MultilayerPerceptron/src/matrix/s21_support_func.cc">
 			<Option target="s21_MultilayerPerceptron"/>
 		</Unit>
-		<Unit filename="/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/model/data.cc">
+		<Unit filename="/Users/lymondgl/s21_MultilayerPerceptron/src/model/data.cc">
 			<Option target="s21_MultilayerPerceptron"/>
 		</Unit>
-		<Unit filename="/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/model/data.h">
+		<Unit filename="/Users/lymondgl/s21_MultilayerPerceptron/src/model/data.h">
 			<Option target="s21_MultilayerPerceptron"/>
 		</Unit>
-		<Unit filename="/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/model/facade.cc">
+		<Unit filename="/Users/lymondgl/s21_MultilayerPerceptron/src/model/facade.cc">
 			<Option target="s21_MultilayerPerceptron"/>
 		</Unit>
-		<Unit filename="/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/model/facade.h">
+		<Unit filename="/Users/lymondgl/s21_MultilayerPerceptron/src/model/facade.h">
 			<Option target="s21_MultilayerPerceptron"/>
 		</Unit>
-		<Unit filename="/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/model/graph_network.cc">
+		<Unit filename="/Users/lymondgl/s21_MultilayerPerceptron/src/model/graph_network.cc">
 			<Option target="s21_MultilayerPerceptron"/>
 		</Unit>
-		<Unit filename="/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/model/graph_network.h">
+		<Unit filename="/Users/lymondgl/s21_MultilayerPerceptron/src/model/graph_network.h">
 			<Option target="s21_MultilayerPerceptron"/>
 		</Unit>
-		<Unit filename="/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/model/matrix.cc">
+		<Unit filename="/Users/lymondgl/s21_MultilayerPerceptron/src/model/matrix.cc">
 			<Option target="s21_MultilayerPerceptron"/>
 		</Unit>
-		<Unit filename="/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/model/matrix.h">
+		<Unit filename="/Users/lymondgl/s21_MultilayerPerceptron/src/model/matrix.h">
 			<Option target="s21_MultilayerPerceptron"/>
 		</Unit>
-		<Unit filename="/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/model/metric.cpp">
+		<Unit filename="/Users/lymondgl/s21_MultilayerPerceptron/src/model/metric.cpp">
 			<Option target="s21_MultilayerPerceptron"/>
 		</Unit>
-		<Unit filename="/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/model/metric.h">
+		<Unit filename="/Users/lymondgl/s21_MultilayerPerceptron/src/model/metric.h">
 			<Option target="s21_MultilayerPerceptron"/>
 		</Unit>
-		<Unit filename="/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/model/network.cc">
+		<Unit filename="/Users/lymondgl/s21_MultilayerPerceptron/src/model/network.cc">
 			<Option target="s21_MultilayerPerceptron"/>
 		</Unit>
-		<Unit filename="/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/model/network.h">
+		<Unit filename="/Users/lymondgl/s21_MultilayerPerceptron/src/model/network.h">
 			<Option target="s21_MultilayerPerceptron"/>
 		</Unit>
-		<Unit filename="/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/model/neuron.cc">
+		<Unit filename="/Users/lymondgl/s21_MultilayerPerceptron/src/model/neuron.cc">
 			<Option target="s21_MultilayerPerceptron"/>
 		</Unit>
-		<Unit filename="/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/model/neuron.h">
+		<Unit filename="/Users/lymondgl/s21_MultilayerPerceptron/src/model/neuron.h">
 			<Option target="s21_MultilayerPerceptron"/>
 		</Unit>
-		<Unit filename="/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/model/reader.cc">
+		<Unit filename="/Users/lymondgl/s21_MultilayerPerceptron/src/model/reader.cc">
 			<Option target="s21_MultilayerPerceptron"/>
 		</Unit>
-		<Unit filename="/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/model/reader.h">
+		<Unit filename="/Users/lymondgl/s21_MultilayerPerceptron/src/model/reader.h">
 			<Option target="s21_MultilayerPerceptron"/>
 		</Unit>
-		<Unit filename="/Users/lymondgl/Desktop/s21_MultilayerPerceptron/CMakeLists.txt">
+		<Unit filename="/Users/lymondgl/s21_MultilayerPerceptron/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>

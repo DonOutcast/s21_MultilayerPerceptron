@@ -37,7 +37,7 @@ MOVE          = mv -f
 TAR           = tar -cf
 COMPRESS      = gzip -9f
 DISTNAME      = perceptron1.0.0
-DISTDIR = /Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/build-perceptron-Desktop_x86_darwin_generic_mach_o_64bit-Debug/.tmp/perceptron1.0.0
+DISTDIR = /Users/lymondgl/s21_MultilayerPerceptron/src/build-perceptron-Desktop_x86_darwin_generic_mach_o_64bit-Debug/.tmp/perceptron1.0.0
 LINK          = /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++
 LFLAGS        = -stdlib=libc++ -headerpad_max_install_names $(EXPORT_ARCH_ARGS) -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11 -Wl,-rpath,@executable_path/../Frameworks -Wl,-rpath,/usr/local/lib
 LIBS          = $(SUBLIBS) -F/usr/local/lib -framework QtWidgets -framework QtGui -framework AppKit -framework ImageIO -framework Metal -framework QtCore -framework DiskArbitration -framework IOKit -framework AGL -framework OpenGL   
@@ -56,10 +56,9 @@ SOURCES       = ../controller/controller.cc \
 		../matrix/s21_matrix.cpp \
 		../matrix/s21_support_func.cc \
 		../model/data.cc \
-		../model/facade.cc \
 		../model/graph_network.cc \
 		../model/matrix.cc \
-		../model/metric.cpp \
+		../model/metric.cc \
 		../model/network.cc \
 		../model/neuron.cc \
 		../model/reader.cc \
@@ -74,7 +73,6 @@ OBJECTS       = controller.o \
 		s21_matrix.o \
 		s21_support_func.o \
 		data.o \
-		facade.o \
 		graph_network.o \
 		matrix.o \
 		metric.o \
@@ -349,7 +347,6 @@ DIST          = ../view/qrc/icon.png \
 		../view/perceptron.pro ../controller/controller.h \
 		../matrix/s21_matrix.h \
 		../model/data.h \
-		../model/facade.h \
 		../model/graph_network.h \
 		../model/matrix.h \
 		../model/metric.h \
@@ -362,10 +359,9 @@ DIST          = ../view/qrc/icon.png \
 		../matrix/s21_matrix.cpp \
 		../matrix/s21_support_func.cc \
 		../model/data.cc \
-		../model/facade.cc \
 		../model/graph_network.cc \
 		../model/matrix.cc \
-		../model/metric.cpp \
+		../model/metric.cc \
 		../model/network.cc \
 		../model/neuron.cc \
 		../model/reader.cc \
@@ -381,12 +377,12 @@ TARGET        = perceptron.app/Contents/MacOS/perceptron
 EXPORT_QMAKE_MAC_SDK = macosx
 EXPORT_QMAKE_MAC_SDK_VERSION = 12.1
 EXPORT_QMAKE_XCODE_DEVELOPER_PATH = /Applications/Xcode.app/Contents/Developer
-EXPORT__QMAKE_STASH_ = /Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/build-perceptron-Desktop_x86_darwin_generic_mach_o_64bit-Debug/.qmake.stash
+EXPORT__QMAKE_STASH_ = /Users/lymondgl/s21_MultilayerPerceptron/src/build-perceptron-Desktop_x86_darwin_generic_mach_o_64bit-Debug/.qmake.stash
 EXPORT_VALID_ARCHS = x86_64
 EXPORT_DEFAULT_ARCHS = x86_64
 EXPORT_ARCHS = $(filter $(EXPORT_VALID_ARCHS), $(if $(ARCHS), $(ARCHS), $(if $(EXPORT_DEFAULT_ARCHS), $(EXPORT_DEFAULT_ARCHS), $(EXPORT_VALID_ARCHS))))
 EXPORT_ARCH_ARGS = $(foreach arch, $(if $(EXPORT_ARCHS), $(EXPORT_ARCHS), $(EXPORT_VALID_ARCHS)), -arch $(arch))
-EXPORT__PRO_FILE_ = /Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/view/perceptron.pro
+EXPORT__PRO_FILE_ = /Users/lymondgl/s21_MultilayerPerceptron/src/view/perceptron.pro
 
 
 include /usr/local/share/qt/mkspecs/features/mac/sdk.mk
@@ -949,8 +945,8 @@ distdir: FORCE
 	$(COPY_FILE) --parents $(DIST) $(DISTDIR)/
 	$(COPY_FILE) --parents ../view/resource.qrc $(DISTDIR)/
 	$(COPY_FILE) --parents /usr/local/share/qt/mkspecs/features/data/dummy.cpp $(DISTDIR)/
-	$(COPY_FILE) --parents ../controller/controller.h ../matrix/s21_matrix.h ../model/data.h ../model/facade.h ../model/graph_network.h ../model/matrix.h ../model/metric.h ../model/network.h ../model/neuron.h ../model/reader.h ../view/qcustomplot.h ../view/render_scene.h ../view/s21_view.h $(DISTDIR)/
-	$(COPY_FILE) --parents ../controller/controller.cc ../matrix/s21_matrix.cpp ../matrix/s21_support_func.cc ../model/data.cc ../model/facade.cc ../model/graph_network.cc ../model/matrix.cc ../model/metric.cpp ../model/network.cc ../model/neuron.cc ../model/reader.cc ../view/main.cpp ../view/qcustomplot.cpp ../view/render_scene.cpp ../view/s21_view.cpp $(DISTDIR)/
+	$(COPY_FILE) --parents ../controller/controller.h ../matrix/s21_matrix.h ../model/data.h ../model/graph_network.h ../model/matrix.h ../model/metric.h ../model/network.h ../model/neuron.h ../model/reader.h ../view/qcustomplot.h ../view/render_scene.h ../view/s21_view.h $(DISTDIR)/
+	$(COPY_FILE) --parents ../controller/controller.cc ../matrix/s21_matrix.cpp ../matrix/s21_support_func.cc ../model/data.cc ../model/graph_network.cc ../model/matrix.cc ../model/metric.cc ../model/network.cc ../model/neuron.cc ../model/reader.cc ../view/main.cpp ../view/qcustomplot.cpp ../view/render_scene.cpp ../view/s21_view.cpp $(DISTDIR)/
 	$(COPY_FILE) --parents ../view/s21_view.ui $(DISTDIR)/
 
 
@@ -1014,7 +1010,7 @@ moc_qcustomplot.cpp: ../view/qcustomplot.h \
 		/usr/local/lib/QtCore.framework/Headers/QtNumeric \
 		moc_predefs.h \
 		/usr/local/share/qt/libexec/moc
-	/usr/local/share/qt/libexec/moc $(DEFINES) --include /Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/build-perceptron-Desktop_x86_darwin_generic_mach_o_64bit-Debug/moc_predefs.h -I/usr/local/share/qt/mkspecs/macx-clang -I/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/view -I/usr/local/lib/QtWidgets.framework/Headers -I/usr/local/lib/QtGui.framework/Headers -I/usr/local/lib/QtCore.framework/Headers -I. -I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk/usr/include/c++/v1 -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/13.0.0/include -I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -F/usr/local/lib ../view/qcustomplot.h -o moc_qcustomplot.cpp
+	/usr/local/share/qt/libexec/moc $(DEFINES) --include /Users/lymondgl/s21_MultilayerPerceptron/src/build-perceptron-Desktop_x86_darwin_generic_mach_o_64bit-Debug/moc_predefs.h -I/usr/local/share/qt/mkspecs/macx-clang -I/Users/lymondgl/s21_MultilayerPerceptron/src/view -I/usr/local/lib/QtWidgets.framework/Headers -I/usr/local/lib/QtGui.framework/Headers -I/usr/local/lib/QtCore.framework/Headers -I. -I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk/usr/include/c++/v1 -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/13.0.0/include -I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -F/usr/local/lib ../view/qcustomplot.h -o moc_qcustomplot.cpp
 
 moc_render_scene.cpp: ../view/render_scene.h \
 		/usr/local/lib/QtWidgets.framework/Headers/QWidget \
@@ -1052,7 +1048,6 @@ moc_render_scene.cpp: ../view/render_scene.h \
 		/usr/local/lib/QtWidgets.framework/Headers/QMessageBox \
 		/usr/local/lib/QtWidgets.framework/Headers/qmessagebox.h \
 		../controller/controller.h \
-		../model/facade.h \
 		../model/network.h \
 		../matrix/s21_matrix.h \
 		../model/neuron.h \
@@ -1063,7 +1058,7 @@ moc_render_scene.cpp: ../view/render_scene.h \
 		../model/graph_network.h \
 		moc_predefs.h \
 		/usr/local/share/qt/libexec/moc
-	/usr/local/share/qt/libexec/moc $(DEFINES) --include /Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/build-perceptron-Desktop_x86_darwin_generic_mach_o_64bit-Debug/moc_predefs.h -I/usr/local/share/qt/mkspecs/macx-clang -I/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/view -I/usr/local/lib/QtWidgets.framework/Headers -I/usr/local/lib/QtGui.framework/Headers -I/usr/local/lib/QtCore.framework/Headers -I. -I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk/usr/include/c++/v1 -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/13.0.0/include -I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -F/usr/local/lib ../view/render_scene.h -o moc_render_scene.cpp
+	/usr/local/share/qt/libexec/moc $(DEFINES) --include /Users/lymondgl/s21_MultilayerPerceptron/src/build-perceptron-Desktop_x86_darwin_generic_mach_o_64bit-Debug/moc_predefs.h -I/usr/local/share/qt/mkspecs/macx-clang -I/Users/lymondgl/s21_MultilayerPerceptron/src/view -I/usr/local/lib/QtWidgets.framework/Headers -I/usr/local/lib/QtGui.framework/Headers -I/usr/local/lib/QtCore.framework/Headers -I. -I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk/usr/include/c++/v1 -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/13.0.0/include -I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -F/usr/local/lib ../view/render_scene.h -o moc_render_scene.cpp
 
 moc_s21_view.cpp: ../view/s21_view.h \
 		/usr/local/lib/QtWidgets.framework/Headers/QMainWindow \
@@ -1089,7 +1084,6 @@ moc_s21_view.cpp: ../view/s21_view.h \
 		/usr/local/lib/QtWidgets.framework/Headers/QMessageBox \
 		/usr/local/lib/QtWidgets.framework/Headers/qmessagebox.h \
 		../controller/controller.h \
-		../model/facade.h \
 		../model/network.h \
 		../matrix/s21_matrix.h \
 		../model/neuron.h \
@@ -1100,7 +1094,7 @@ moc_s21_view.cpp: ../view/s21_view.h \
 		../model/graph_network.h \
 		moc_predefs.h \
 		/usr/local/share/qt/libexec/moc
-	/usr/local/share/qt/libexec/moc $(DEFINES) --include /Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/build-perceptron-Desktop_x86_darwin_generic_mach_o_64bit-Debug/moc_predefs.h -I/usr/local/share/qt/mkspecs/macx-clang -I/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/view -I/usr/local/lib/QtWidgets.framework/Headers -I/usr/local/lib/QtGui.framework/Headers -I/usr/local/lib/QtCore.framework/Headers -I. -I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk/usr/include/c++/v1 -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/13.0.0/include -I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -F/usr/local/lib ../view/s21_view.h -o moc_s21_view.cpp
+	/usr/local/share/qt/libexec/moc $(DEFINES) --include /Users/lymondgl/s21_MultilayerPerceptron/src/build-perceptron-Desktop_x86_darwin_generic_mach_o_64bit-Debug/moc_predefs.h -I/usr/local/share/qt/mkspecs/macx-clang -I/Users/lymondgl/s21_MultilayerPerceptron/src/view -I/usr/local/lib/QtWidgets.framework/Headers -I/usr/local/lib/QtGui.framework/Headers -I/usr/local/lib/QtCore.framework/Headers -I. -I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk/usr/include/c++/v1 -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/13.0.0/include -I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -F/usr/local/lib ../view/s21_view.h -o moc_s21_view.cpp
 
 compiler_moc_objc_header_make_all:
 compiler_moc_objc_header_clean:
@@ -1148,7 +1142,6 @@ ui_s21_view.h: ../view/s21_view.ui \
 		/usr/local/lib/QtWidgets.framework/Headers/QMessageBox \
 		/usr/local/lib/QtWidgets.framework/Headers/qmessagebox.h \
 		../controller/controller.h \
-		../model/facade.h \
 		../model/network.h \
 		../matrix/s21_matrix.h \
 		../model/neuron.h \
@@ -1175,7 +1168,6 @@ compiler_clean: compiler_rcc_clean compiler_moc_predefs_clean compiler_moc_heade
 ####### Compile
 
 controller.o: ../controller/controller.cc ../controller/controller.h \
-		../model/facade.h \
 		../model/network.h \
 		../matrix/s21_matrix.h \
 		../model/neuron.h \
@@ -1195,17 +1187,6 @@ s21_support_func.o: ../matrix/s21_support_func.cc ../matrix/s21_matrix.h
 data.o: ../model/data.cc ../model/data.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o data.o ../model/data.cc
 
-facade.o: ../model/facade.cc ../model/facade.h \
-		../model/network.h \
-		../matrix/s21_matrix.h \
-		../model/neuron.h \
-		../model/data.h \
-		../model/reader.h \
-		../model/metric.h \
-		../model/matrix.h \
-		../model/graph_network.h
-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o facade.o ../model/facade.cc
-
 graph_network.o: ../model/graph_network.cc ../model/graph_network.h \
 		../model/network.h \
 		../matrix/s21_matrix.h \
@@ -1224,8 +1205,8 @@ matrix.o: ../model/matrix.cc ../model/matrix.h \
 		../model/metric.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o matrix.o ../model/matrix.cc
 
-metric.o: ../model/metric.cpp ../model/metric.h
-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o metric.o ../model/metric.cpp
+metric.o: ../model/metric.cc ../model/metric.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o metric.o ../model/metric.cc
 
 network.o: ../model/network.cc ../model/network.h \
 		../matrix/s21_matrix.h \
@@ -1271,7 +1252,6 @@ main.o: ../view/main.cpp ../view/s21_view.h \
 		/usr/local/lib/QtWidgets.framework/Headers/QMessageBox \
 		/usr/local/lib/QtWidgets.framework/Headers/qmessagebox.h \
 		../controller/controller.h \
-		../model/facade.h \
 		../model/network.h \
 		../matrix/s21_matrix.h \
 		../model/neuron.h \
@@ -1326,7 +1306,6 @@ render_scene.o: ../view/render_scene.cpp ../view/render_scene.h \
 		/usr/local/lib/QtWidgets.framework/Headers/QMessageBox \
 		/usr/local/lib/QtWidgets.framework/Headers/qmessagebox.h \
 		../controller/controller.h \
-		../model/facade.h \
 		../model/network.h \
 		../matrix/s21_matrix.h \
 		../model/neuron.h \
@@ -1361,7 +1340,6 @@ s21_view.o: ../view/s21_view.cpp ../view/s21_view.h \
 		/usr/local/lib/QtWidgets.framework/Headers/QMessageBox \
 		/usr/local/lib/QtWidgets.framework/Headers/qmessagebox.h \
 		../controller/controller.h \
-		../model/facade.h \
 		../model/network.h \
 		../matrix/s21_matrix.h \
 		../model/neuron.h \

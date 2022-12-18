@@ -7,7 +7,7 @@
         "-I",
         "/Volumes/Qt Creator/Qt Creator.app/Contents/Resources/cplusplus/wrappedQtHeaders/QtCore",
         "-I",
-        "/private/var/folders/zz/zyxvpxvq6csfxvn_n003vsjc00yycb/T/QtCreator-GrAMGv/clang-uiheader-XNyrKv",
+        "/private/var/folders/zz/zyxvpxvq6csfxvn_n003vsjc00yycb/T/QtCreator-lueTag/clang-uiheader-mLeSwd",
         "-nostdinc",
         "-nostdinc++",
         "-pipe",
@@ -29,7 +29,7 @@
         "-DQT_GUI_LIB",
         "-DQT_CORE_LIB",
         "-I",
-        "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/view",
+        "/Users/lymondgl/s21_MultilayerPerceptron/src/view",
         "-I",
         "/usr/local/lib/QtWidgets.framework/Headers",
         "-I",
@@ -37,7 +37,7 @@
         "-I",
         "/usr/local/lib/QtCore.framework/Headers",
         "-I",
-        "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/build-perceptron-Desktop_x86_darwin_generic_mach_o_64bit-Debug",
+        "/Users/lymondgl/s21_MultilayerPerceptron/src/build-perceptron-Desktop_x86_darwin_generic_mach_o_64bit-Debug",
         "-I",
         "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk/System/Library/Frameworks/OpenGL.framework/Headers",
         "-I",
@@ -66,10 +66,10 @@
         "-Wno-unknown-pragmas",
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
-        "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/controller/controller.cc"
+        "/Users/lymondgl/s21_MultilayerPerceptron/src/controller/controller.cc"
     ],
-    "directory": "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/build-perceptron-Desktop_x86_darwin_generic_mach_o_64bit-Debug/.qtc_clangd",
-    "file": "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/controller/controller.cc"
+    "directory": "/Users/lymondgl/s21_MultilayerPerceptron/src/build-perceptron-Desktop_x86_darwin_generic_mach_o_64bit-Debug/.qtc_clangd",
+    "file": "/Users/lymondgl/s21_MultilayerPerceptron/src/controller/controller.cc"
 },
 {
     "arguments": [
@@ -79,7 +79,7 @@
         "-I",
         "/Volumes/Qt Creator/Qt Creator.app/Contents/Resources/cplusplus/wrappedQtHeaders/QtCore",
         "-I",
-        "/private/var/folders/zz/zyxvpxvq6csfxvn_n003vsjc00yycb/T/QtCreator-GrAMGv/clang-uiheader-XNyrKv",
+        "/private/var/folders/zz/zyxvpxvq6csfxvn_n003vsjc00yycb/T/QtCreator-lueTag/clang-uiheader-mLeSwd",
         "-nostdinc",
         "-nostdinc++",
         "-pipe",
@@ -101,7 +101,7 @@
         "-DQT_GUI_LIB",
         "-DQT_CORE_LIB",
         "-I",
-        "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/view",
+        "/Users/lymondgl/s21_MultilayerPerceptron/src/view",
         "-I",
         "/usr/local/lib/QtWidgets.framework/Headers",
         "-I",
@@ -109,7 +109,7 @@
         "-I",
         "/usr/local/lib/QtCore.framework/Headers",
         "-I",
-        "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/build-perceptron-Desktop_x86_darwin_generic_mach_o_64bit-Debug",
+        "/Users/lymondgl/s21_MultilayerPerceptron/src/build-perceptron-Desktop_x86_darwin_generic_mach_o_64bit-Debug",
         "-I",
         "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk/System/Library/Frameworks/OpenGL.framework/Headers",
         "-I",
@@ -138,10 +138,10 @@
         "-Wno-unknown-pragmas",
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
-        "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/matrix/s21_matrix.cpp"
+        "/Users/lymondgl/s21_MultilayerPerceptron/src/matrix/s21_matrix.cpp"
     ],
-    "directory": "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/build-perceptron-Desktop_x86_darwin_generic_mach_o_64bit-Debug/.qtc_clangd",
-    "file": "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/matrix/s21_matrix.cpp"
+    "directory": "/Users/lymondgl/s21_MultilayerPerceptron/src/build-perceptron-Desktop_x86_darwin_generic_mach_o_64bit-Debug/.qtc_clangd",
+    "file": "/Users/lymondgl/s21_MultilayerPerceptron/src/matrix/s21_matrix.cpp"
 },
 {
     "arguments": [
@@ -151,7 +151,7 @@
         "-I",
         "/Volumes/Qt Creator/Qt Creator.app/Contents/Resources/cplusplus/wrappedQtHeaders/QtCore",
         "-I",
-        "/private/var/folders/zz/zyxvpxvq6csfxvn_n003vsjc00yycb/T/QtCreator-GrAMGv/clang-uiheader-XNyrKv",
+        "/private/var/folders/zz/zyxvpxvq6csfxvn_n003vsjc00yycb/T/QtCreator-lueTag/clang-uiheader-mLeSwd",
         "-nostdinc",
         "-nostdinc++",
         "-pipe",
@@ -173,7 +173,7 @@
         "-DQT_GUI_LIB",
         "-DQT_CORE_LIB",
         "-I",
-        "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/view",
+        "/Users/lymondgl/s21_MultilayerPerceptron/src/view",
         "-I",
         "/usr/local/lib/QtWidgets.framework/Headers",
         "-I",
@@ -181,7 +181,7 @@
         "-I",
         "/usr/local/lib/QtCore.framework/Headers",
         "-I",
-        "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/build-perceptron-Desktop_x86_darwin_generic_mach_o_64bit-Debug",
+        "/Users/lymondgl/s21_MultilayerPerceptron/src/build-perceptron-Desktop_x86_darwin_generic_mach_o_64bit-Debug",
         "-I",
         "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk/System/Library/Frameworks/OpenGL.framework/Headers",
         "-I",
@@ -210,10 +210,10 @@
         "-Wno-unknown-pragmas",
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
-        "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/matrix/s21_support_func.cc"
+        "/Users/lymondgl/s21_MultilayerPerceptron/src/matrix/s21_support_func.cc"
     ],
-    "directory": "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/build-perceptron-Desktop_x86_darwin_generic_mach_o_64bit-Debug/.qtc_clangd",
-    "file": "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/matrix/s21_support_func.cc"
+    "directory": "/Users/lymondgl/s21_MultilayerPerceptron/src/build-perceptron-Desktop_x86_darwin_generic_mach_o_64bit-Debug/.qtc_clangd",
+    "file": "/Users/lymondgl/s21_MultilayerPerceptron/src/matrix/s21_support_func.cc"
 },
 {
     "arguments": [
@@ -223,7 +223,7 @@
         "-I",
         "/Volumes/Qt Creator/Qt Creator.app/Contents/Resources/cplusplus/wrappedQtHeaders/QtCore",
         "-I",
-        "/private/var/folders/zz/zyxvpxvq6csfxvn_n003vsjc00yycb/T/QtCreator-GrAMGv/clang-uiheader-XNyrKv",
+        "/private/var/folders/zz/zyxvpxvq6csfxvn_n003vsjc00yycb/T/QtCreator-lueTag/clang-uiheader-mLeSwd",
         "-nostdinc",
         "-nostdinc++",
         "-pipe",
@@ -245,7 +245,7 @@
         "-DQT_GUI_LIB",
         "-DQT_CORE_LIB",
         "-I",
-        "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/view",
+        "/Users/lymondgl/s21_MultilayerPerceptron/src/view",
         "-I",
         "/usr/local/lib/QtWidgets.framework/Headers",
         "-I",
@@ -253,7 +253,7 @@
         "-I",
         "/usr/local/lib/QtCore.framework/Headers",
         "-I",
-        "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/build-perceptron-Desktop_x86_darwin_generic_mach_o_64bit-Debug",
+        "/Users/lymondgl/s21_MultilayerPerceptron/src/build-perceptron-Desktop_x86_darwin_generic_mach_o_64bit-Debug",
         "-I",
         "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk/System/Library/Frameworks/OpenGL.framework/Headers",
         "-I",
@@ -282,10 +282,10 @@
         "-Wno-unknown-pragmas",
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
-        "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/model/data.cc"
+        "/Users/lymondgl/s21_MultilayerPerceptron/src/model/data.cc"
     ],
-    "directory": "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/build-perceptron-Desktop_x86_darwin_generic_mach_o_64bit-Debug/.qtc_clangd",
-    "file": "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/model/data.cc"
+    "directory": "/Users/lymondgl/s21_MultilayerPerceptron/src/build-perceptron-Desktop_x86_darwin_generic_mach_o_64bit-Debug/.qtc_clangd",
+    "file": "/Users/lymondgl/s21_MultilayerPerceptron/src/model/data.cc"
 },
 {
     "arguments": [
@@ -295,7 +295,7 @@
         "-I",
         "/Volumes/Qt Creator/Qt Creator.app/Contents/Resources/cplusplus/wrappedQtHeaders/QtCore",
         "-I",
-        "/private/var/folders/zz/zyxvpxvq6csfxvn_n003vsjc00yycb/T/QtCreator-GrAMGv/clang-uiheader-XNyrKv",
+        "/private/var/folders/zz/zyxvpxvq6csfxvn_n003vsjc00yycb/T/QtCreator-lueTag/clang-uiheader-mLeSwd",
         "-nostdinc",
         "-nostdinc++",
         "-pipe",
@@ -317,7 +317,7 @@
         "-DQT_GUI_LIB",
         "-DQT_CORE_LIB",
         "-I",
-        "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/view",
+        "/Users/lymondgl/s21_MultilayerPerceptron/src/view",
         "-I",
         "/usr/local/lib/QtWidgets.framework/Headers",
         "-I",
@@ -325,7 +325,7 @@
         "-I",
         "/usr/local/lib/QtCore.framework/Headers",
         "-I",
-        "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/build-perceptron-Desktop_x86_darwin_generic_mach_o_64bit-Debug",
+        "/Users/lymondgl/s21_MultilayerPerceptron/src/build-perceptron-Desktop_x86_darwin_generic_mach_o_64bit-Debug",
         "-I",
         "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk/System/Library/Frameworks/OpenGL.framework/Headers",
         "-I",
@@ -354,10 +354,10 @@
         "-Wno-unknown-pragmas",
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
-        "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/model/facade.cc"
+        "/Users/lymondgl/s21_MultilayerPerceptron/src/model/graph_network.cc"
     ],
-    "directory": "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/build-perceptron-Desktop_x86_darwin_generic_mach_o_64bit-Debug/.qtc_clangd",
-    "file": "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/model/facade.cc"
+    "directory": "/Users/lymondgl/s21_MultilayerPerceptron/src/build-perceptron-Desktop_x86_darwin_generic_mach_o_64bit-Debug/.qtc_clangd",
+    "file": "/Users/lymondgl/s21_MultilayerPerceptron/src/model/graph_network.cc"
 },
 {
     "arguments": [
@@ -367,7 +367,7 @@
         "-I",
         "/Volumes/Qt Creator/Qt Creator.app/Contents/Resources/cplusplus/wrappedQtHeaders/QtCore",
         "-I",
-        "/private/var/folders/zz/zyxvpxvq6csfxvn_n003vsjc00yycb/T/QtCreator-GrAMGv/clang-uiheader-XNyrKv",
+        "/private/var/folders/zz/zyxvpxvq6csfxvn_n003vsjc00yycb/T/QtCreator-lueTag/clang-uiheader-mLeSwd",
         "-nostdinc",
         "-nostdinc++",
         "-pipe",
@@ -389,7 +389,7 @@
         "-DQT_GUI_LIB",
         "-DQT_CORE_LIB",
         "-I",
-        "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/view",
+        "/Users/lymondgl/s21_MultilayerPerceptron/src/view",
         "-I",
         "/usr/local/lib/QtWidgets.framework/Headers",
         "-I",
@@ -397,7 +397,7 @@
         "-I",
         "/usr/local/lib/QtCore.framework/Headers",
         "-I",
-        "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/build-perceptron-Desktop_x86_darwin_generic_mach_o_64bit-Debug",
+        "/Users/lymondgl/s21_MultilayerPerceptron/src/build-perceptron-Desktop_x86_darwin_generic_mach_o_64bit-Debug",
         "-I",
         "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk/System/Library/Frameworks/OpenGL.framework/Headers",
         "-I",
@@ -426,10 +426,10 @@
         "-Wno-unknown-pragmas",
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
-        "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/model/graph_network.cc"
+        "/Users/lymondgl/s21_MultilayerPerceptron/src/model/matrix.cc"
     ],
-    "directory": "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/build-perceptron-Desktop_x86_darwin_generic_mach_o_64bit-Debug/.qtc_clangd",
-    "file": "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/model/graph_network.cc"
+    "directory": "/Users/lymondgl/s21_MultilayerPerceptron/src/build-perceptron-Desktop_x86_darwin_generic_mach_o_64bit-Debug/.qtc_clangd",
+    "file": "/Users/lymondgl/s21_MultilayerPerceptron/src/model/matrix.cc"
 },
 {
     "arguments": [
@@ -439,7 +439,7 @@
         "-I",
         "/Volumes/Qt Creator/Qt Creator.app/Contents/Resources/cplusplus/wrappedQtHeaders/QtCore",
         "-I",
-        "/private/var/folders/zz/zyxvpxvq6csfxvn_n003vsjc00yycb/T/QtCreator-GrAMGv/clang-uiheader-XNyrKv",
+        "/private/var/folders/zz/zyxvpxvq6csfxvn_n003vsjc00yycb/T/QtCreator-lueTag/clang-uiheader-mLeSwd",
         "-nostdinc",
         "-nostdinc++",
         "-pipe",
@@ -461,7 +461,7 @@
         "-DQT_GUI_LIB",
         "-DQT_CORE_LIB",
         "-I",
-        "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/view",
+        "/Users/lymondgl/s21_MultilayerPerceptron/src/view",
         "-I",
         "/usr/local/lib/QtWidgets.framework/Headers",
         "-I",
@@ -469,7 +469,7 @@
         "-I",
         "/usr/local/lib/QtCore.framework/Headers",
         "-I",
-        "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/build-perceptron-Desktop_x86_darwin_generic_mach_o_64bit-Debug",
+        "/Users/lymondgl/s21_MultilayerPerceptron/src/build-perceptron-Desktop_x86_darwin_generic_mach_o_64bit-Debug",
         "-I",
         "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk/System/Library/Frameworks/OpenGL.framework/Headers",
         "-I",
@@ -498,10 +498,10 @@
         "-Wno-unknown-pragmas",
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
-        "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/model/matrix.cc"
+        "/Users/lymondgl/s21_MultilayerPerceptron/src/model/metric.cc"
     ],
-    "directory": "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/build-perceptron-Desktop_x86_darwin_generic_mach_o_64bit-Debug/.qtc_clangd",
-    "file": "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/model/matrix.cc"
+    "directory": "/Users/lymondgl/s21_MultilayerPerceptron/src/build-perceptron-Desktop_x86_darwin_generic_mach_o_64bit-Debug/.qtc_clangd",
+    "file": "/Users/lymondgl/s21_MultilayerPerceptron/src/model/metric.cc"
 },
 {
     "arguments": [
@@ -511,7 +511,7 @@
         "-I",
         "/Volumes/Qt Creator/Qt Creator.app/Contents/Resources/cplusplus/wrappedQtHeaders/QtCore",
         "-I",
-        "/private/var/folders/zz/zyxvpxvq6csfxvn_n003vsjc00yycb/T/QtCreator-GrAMGv/clang-uiheader-XNyrKv",
+        "/private/var/folders/zz/zyxvpxvq6csfxvn_n003vsjc00yycb/T/QtCreator-lueTag/clang-uiheader-mLeSwd",
         "-nostdinc",
         "-nostdinc++",
         "-pipe",
@@ -533,7 +533,7 @@
         "-DQT_GUI_LIB",
         "-DQT_CORE_LIB",
         "-I",
-        "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/view",
+        "/Users/lymondgl/s21_MultilayerPerceptron/src/view",
         "-I",
         "/usr/local/lib/QtWidgets.framework/Headers",
         "-I",
@@ -541,7 +541,7 @@
         "-I",
         "/usr/local/lib/QtCore.framework/Headers",
         "-I",
-        "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/build-perceptron-Desktop_x86_darwin_generic_mach_o_64bit-Debug",
+        "/Users/lymondgl/s21_MultilayerPerceptron/src/build-perceptron-Desktop_x86_darwin_generic_mach_o_64bit-Debug",
         "-I",
         "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk/System/Library/Frameworks/OpenGL.framework/Headers",
         "-I",
@@ -570,10 +570,10 @@
         "-Wno-unknown-pragmas",
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
-        "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/model/metric.cpp"
+        "/Users/lymondgl/s21_MultilayerPerceptron/src/model/network.cc"
     ],
-    "directory": "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/build-perceptron-Desktop_x86_darwin_generic_mach_o_64bit-Debug/.qtc_clangd",
-    "file": "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/model/metric.cpp"
+    "directory": "/Users/lymondgl/s21_MultilayerPerceptron/src/build-perceptron-Desktop_x86_darwin_generic_mach_o_64bit-Debug/.qtc_clangd",
+    "file": "/Users/lymondgl/s21_MultilayerPerceptron/src/model/network.cc"
 },
 {
     "arguments": [
@@ -583,7 +583,7 @@
         "-I",
         "/Volumes/Qt Creator/Qt Creator.app/Contents/Resources/cplusplus/wrappedQtHeaders/QtCore",
         "-I",
-        "/private/var/folders/zz/zyxvpxvq6csfxvn_n003vsjc00yycb/T/QtCreator-GrAMGv/clang-uiheader-XNyrKv",
+        "/private/var/folders/zz/zyxvpxvq6csfxvn_n003vsjc00yycb/T/QtCreator-lueTag/clang-uiheader-mLeSwd",
         "-nostdinc",
         "-nostdinc++",
         "-pipe",
@@ -605,7 +605,7 @@
         "-DQT_GUI_LIB",
         "-DQT_CORE_LIB",
         "-I",
-        "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/view",
+        "/Users/lymondgl/s21_MultilayerPerceptron/src/view",
         "-I",
         "/usr/local/lib/QtWidgets.framework/Headers",
         "-I",
@@ -613,7 +613,7 @@
         "-I",
         "/usr/local/lib/QtCore.framework/Headers",
         "-I",
-        "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/build-perceptron-Desktop_x86_darwin_generic_mach_o_64bit-Debug",
+        "/Users/lymondgl/s21_MultilayerPerceptron/src/build-perceptron-Desktop_x86_darwin_generic_mach_o_64bit-Debug",
         "-I",
         "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk/System/Library/Frameworks/OpenGL.framework/Headers",
         "-I",
@@ -642,10 +642,10 @@
         "-Wno-unknown-pragmas",
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
-        "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/model/network.cc"
+        "/Users/lymondgl/s21_MultilayerPerceptron/src/model/neuron.cc"
     ],
-    "directory": "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/build-perceptron-Desktop_x86_darwin_generic_mach_o_64bit-Debug/.qtc_clangd",
-    "file": "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/model/network.cc"
+    "directory": "/Users/lymondgl/s21_MultilayerPerceptron/src/build-perceptron-Desktop_x86_darwin_generic_mach_o_64bit-Debug/.qtc_clangd",
+    "file": "/Users/lymondgl/s21_MultilayerPerceptron/src/model/neuron.cc"
 },
 {
     "arguments": [
@@ -655,7 +655,7 @@
         "-I",
         "/Volumes/Qt Creator/Qt Creator.app/Contents/Resources/cplusplus/wrappedQtHeaders/QtCore",
         "-I",
-        "/private/var/folders/zz/zyxvpxvq6csfxvn_n003vsjc00yycb/T/QtCreator-GrAMGv/clang-uiheader-XNyrKv",
+        "/private/var/folders/zz/zyxvpxvq6csfxvn_n003vsjc00yycb/T/QtCreator-lueTag/clang-uiheader-mLeSwd",
         "-nostdinc",
         "-nostdinc++",
         "-pipe",
@@ -677,7 +677,7 @@
         "-DQT_GUI_LIB",
         "-DQT_CORE_LIB",
         "-I",
-        "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/view",
+        "/Users/lymondgl/s21_MultilayerPerceptron/src/view",
         "-I",
         "/usr/local/lib/QtWidgets.framework/Headers",
         "-I",
@@ -685,7 +685,7 @@
         "-I",
         "/usr/local/lib/QtCore.framework/Headers",
         "-I",
-        "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/build-perceptron-Desktop_x86_darwin_generic_mach_o_64bit-Debug",
+        "/Users/lymondgl/s21_MultilayerPerceptron/src/build-perceptron-Desktop_x86_darwin_generic_mach_o_64bit-Debug",
         "-I",
         "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk/System/Library/Frameworks/OpenGL.framework/Headers",
         "-I",
@@ -714,10 +714,10 @@
         "-Wno-unknown-pragmas",
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
-        "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/model/neuron.cc"
+        "/Users/lymondgl/s21_MultilayerPerceptron/src/model/reader.cc"
     ],
-    "directory": "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/build-perceptron-Desktop_x86_darwin_generic_mach_o_64bit-Debug/.qtc_clangd",
-    "file": "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/model/neuron.cc"
+    "directory": "/Users/lymondgl/s21_MultilayerPerceptron/src/build-perceptron-Desktop_x86_darwin_generic_mach_o_64bit-Debug/.qtc_clangd",
+    "file": "/Users/lymondgl/s21_MultilayerPerceptron/src/model/reader.cc"
 },
 {
     "arguments": [
@@ -727,7 +727,7 @@
         "-I",
         "/Volumes/Qt Creator/Qt Creator.app/Contents/Resources/cplusplus/wrappedQtHeaders/QtCore",
         "-I",
-        "/private/var/folders/zz/zyxvpxvq6csfxvn_n003vsjc00yycb/T/QtCreator-GrAMGv/clang-uiheader-XNyrKv",
+        "/private/var/folders/zz/zyxvpxvq6csfxvn_n003vsjc00yycb/T/QtCreator-lueTag/clang-uiheader-mLeSwd",
         "-nostdinc",
         "-nostdinc++",
         "-pipe",
@@ -749,7 +749,7 @@
         "-DQT_GUI_LIB",
         "-DQT_CORE_LIB",
         "-I",
-        "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/view",
+        "/Users/lymondgl/s21_MultilayerPerceptron/src/view",
         "-I",
         "/usr/local/lib/QtWidgets.framework/Headers",
         "-I",
@@ -757,7 +757,7 @@
         "-I",
         "/usr/local/lib/QtCore.framework/Headers",
         "-I",
-        "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/build-perceptron-Desktop_x86_darwin_generic_mach_o_64bit-Debug",
+        "/Users/lymondgl/s21_MultilayerPerceptron/src/build-perceptron-Desktop_x86_darwin_generic_mach_o_64bit-Debug",
         "-I",
         "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk/System/Library/Frameworks/OpenGL.framework/Headers",
         "-I",
@@ -786,10 +786,10 @@
         "-Wno-unknown-pragmas",
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
-        "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/model/reader.cc"
+        "/Users/lymondgl/s21_MultilayerPerceptron/src/view/main.cpp"
     ],
-    "directory": "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/build-perceptron-Desktop_x86_darwin_generic_mach_o_64bit-Debug/.qtc_clangd",
-    "file": "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/model/reader.cc"
+    "directory": "/Users/lymondgl/s21_MultilayerPerceptron/src/build-perceptron-Desktop_x86_darwin_generic_mach_o_64bit-Debug/.qtc_clangd",
+    "file": "/Users/lymondgl/s21_MultilayerPerceptron/src/view/main.cpp"
 },
 {
     "arguments": [
@@ -799,7 +799,7 @@
         "-I",
         "/Volumes/Qt Creator/Qt Creator.app/Contents/Resources/cplusplus/wrappedQtHeaders/QtCore",
         "-I",
-        "/private/var/folders/zz/zyxvpxvq6csfxvn_n003vsjc00yycb/T/QtCreator-GrAMGv/clang-uiheader-XNyrKv",
+        "/private/var/folders/zz/zyxvpxvq6csfxvn_n003vsjc00yycb/T/QtCreator-lueTag/clang-uiheader-mLeSwd",
         "-nostdinc",
         "-nostdinc++",
         "-pipe",
@@ -821,7 +821,7 @@
         "-DQT_GUI_LIB",
         "-DQT_CORE_LIB",
         "-I",
-        "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/view",
+        "/Users/lymondgl/s21_MultilayerPerceptron/src/view",
         "-I",
         "/usr/local/lib/QtWidgets.framework/Headers",
         "-I",
@@ -829,7 +829,7 @@
         "-I",
         "/usr/local/lib/QtCore.framework/Headers",
         "-I",
-        "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/build-perceptron-Desktop_x86_darwin_generic_mach_o_64bit-Debug",
+        "/Users/lymondgl/s21_MultilayerPerceptron/src/build-perceptron-Desktop_x86_darwin_generic_mach_o_64bit-Debug",
         "-I",
         "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk/System/Library/Frameworks/OpenGL.framework/Headers",
         "-I",
@@ -858,10 +858,10 @@
         "-Wno-unknown-pragmas",
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
-        "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/view/main.cpp"
+        "/Users/lymondgl/s21_MultilayerPerceptron/src/view/qcustomplot.cpp"
     ],
-    "directory": "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/build-perceptron-Desktop_x86_darwin_generic_mach_o_64bit-Debug/.qtc_clangd",
-    "file": "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/view/main.cpp"
+    "directory": "/Users/lymondgl/s21_MultilayerPerceptron/src/build-perceptron-Desktop_x86_darwin_generic_mach_o_64bit-Debug/.qtc_clangd",
+    "file": "/Users/lymondgl/s21_MultilayerPerceptron/src/view/qcustomplot.cpp"
 },
 {
     "arguments": [
@@ -871,7 +871,7 @@
         "-I",
         "/Volumes/Qt Creator/Qt Creator.app/Contents/Resources/cplusplus/wrappedQtHeaders/QtCore",
         "-I",
-        "/private/var/folders/zz/zyxvpxvq6csfxvn_n003vsjc00yycb/T/QtCreator-GrAMGv/clang-uiheader-XNyrKv",
+        "/private/var/folders/zz/zyxvpxvq6csfxvn_n003vsjc00yycb/T/QtCreator-lueTag/clang-uiheader-mLeSwd",
         "-nostdinc",
         "-nostdinc++",
         "-pipe",
@@ -893,7 +893,7 @@
         "-DQT_GUI_LIB",
         "-DQT_CORE_LIB",
         "-I",
-        "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/view",
+        "/Users/lymondgl/s21_MultilayerPerceptron/src/view",
         "-I",
         "/usr/local/lib/QtWidgets.framework/Headers",
         "-I",
@@ -901,7 +901,7 @@
         "-I",
         "/usr/local/lib/QtCore.framework/Headers",
         "-I",
-        "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/build-perceptron-Desktop_x86_darwin_generic_mach_o_64bit-Debug",
+        "/Users/lymondgl/s21_MultilayerPerceptron/src/build-perceptron-Desktop_x86_darwin_generic_mach_o_64bit-Debug",
         "-I",
         "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk/System/Library/Frameworks/OpenGL.framework/Headers",
         "-I",
@@ -930,10 +930,10 @@
         "-Wno-unknown-pragmas",
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
-        "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/view/qcustomplot.cpp"
+        "/Users/lymondgl/s21_MultilayerPerceptron/src/view/render_scene.cpp"
     ],
-    "directory": "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/build-perceptron-Desktop_x86_darwin_generic_mach_o_64bit-Debug/.qtc_clangd",
-    "file": "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/view/qcustomplot.cpp"
+    "directory": "/Users/lymondgl/s21_MultilayerPerceptron/src/build-perceptron-Desktop_x86_darwin_generic_mach_o_64bit-Debug/.qtc_clangd",
+    "file": "/Users/lymondgl/s21_MultilayerPerceptron/src/view/render_scene.cpp"
 },
 {
     "arguments": [
@@ -943,7 +943,7 @@
         "-I",
         "/Volumes/Qt Creator/Qt Creator.app/Contents/Resources/cplusplus/wrappedQtHeaders/QtCore",
         "-I",
-        "/private/var/folders/zz/zyxvpxvq6csfxvn_n003vsjc00yycb/T/QtCreator-GrAMGv/clang-uiheader-XNyrKv",
+        "/private/var/folders/zz/zyxvpxvq6csfxvn_n003vsjc00yycb/T/QtCreator-lueTag/clang-uiheader-mLeSwd",
         "-nostdinc",
         "-nostdinc++",
         "-pipe",
@@ -965,7 +965,7 @@
         "-DQT_GUI_LIB",
         "-DQT_CORE_LIB",
         "-I",
-        "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/view",
+        "/Users/lymondgl/s21_MultilayerPerceptron/src/view",
         "-I",
         "/usr/local/lib/QtWidgets.framework/Headers",
         "-I",
@@ -973,7 +973,7 @@
         "-I",
         "/usr/local/lib/QtCore.framework/Headers",
         "-I",
-        "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/build-perceptron-Desktop_x86_darwin_generic_mach_o_64bit-Debug",
+        "/Users/lymondgl/s21_MultilayerPerceptron/src/build-perceptron-Desktop_x86_darwin_generic_mach_o_64bit-Debug",
         "-I",
         "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk/System/Library/Frameworks/OpenGL.framework/Headers",
         "-I",
@@ -1002,10 +1002,10 @@
         "-Wno-unknown-pragmas",
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
-        "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/view/render_scene.cpp"
+        "/Users/lymondgl/s21_MultilayerPerceptron/src/view/s21_view.cpp"
     ],
-    "directory": "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/build-perceptron-Desktop_x86_darwin_generic_mach_o_64bit-Debug/.qtc_clangd",
-    "file": "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/view/render_scene.cpp"
+    "directory": "/Users/lymondgl/s21_MultilayerPerceptron/src/build-perceptron-Desktop_x86_darwin_generic_mach_o_64bit-Debug/.qtc_clangd",
+    "file": "/Users/lymondgl/s21_MultilayerPerceptron/src/view/s21_view.cpp"
 },
 {
     "arguments": [
@@ -1015,7 +1015,7 @@
         "-I",
         "/Volumes/Qt Creator/Qt Creator.app/Contents/Resources/cplusplus/wrappedQtHeaders/QtCore",
         "-I",
-        "/private/var/folders/zz/zyxvpxvq6csfxvn_n003vsjc00yycb/T/QtCreator-GrAMGv/clang-uiheader-XNyrKv",
+        "/private/var/folders/zz/zyxvpxvq6csfxvn_n003vsjc00yycb/T/QtCreator-lueTag/clang-uiheader-mLeSwd",
         "-nostdinc",
         "-nostdinc++",
         "-pipe",
@@ -1037,7 +1037,7 @@
         "-DQT_GUI_LIB",
         "-DQT_CORE_LIB",
         "-I",
-        "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/view",
+        "/Users/lymondgl/s21_MultilayerPerceptron/src/view",
         "-I",
         "/usr/local/lib/QtWidgets.framework/Headers",
         "-I",
@@ -1045,79 +1045,7 @@
         "-I",
         "/usr/local/lib/QtCore.framework/Headers",
         "-I",
-        "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/build-perceptron-Desktop_x86_darwin_generic_mach_o_64bit-Debug",
-        "-I",
-        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk/System/Library/Frameworks/OpenGL.framework/Headers",
-        "-I",
-        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk/System/Library/Frameworks/AGL.framework/Headers",
-        "-I",
-        "/usr/local/share/qt/mkspecs/macx-clang",
-        "-F",
-        "/usr/local/lib",
-        "-F",
-        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks",
-        "-isystem",
-        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1",
-        "-isystem",
-        "/Volumes/Qt Creator/Qt Creator.app/Contents/Resources/libexec/clang/lib/clang/14.0.0/include",
-        "-isystem",
-        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include",
-        "-isystem",
-        "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include",
-        "-fmessage-length=0",
-        "-fdiagnostics-show-note-include-stack",
-        "-fretain-comments-from-system-headers",
-        "-fmacro-backtrace-limit=0",
-        "-ferror-limit=1000",
-        "-x",
-        "c++",
-        "-Wno-unknown-pragmas",
-        "-Wno-unknown-warning-option",
-        "-Wno-documentation-unknown-command",
-        "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/view/s21_view.cpp"
-    ],
-    "directory": "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/build-perceptron-Desktop_x86_darwin_generic_mach_o_64bit-Debug/.qtc_clangd",
-    "file": "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/view/s21_view.cpp"
-},
-{
-    "arguments": [
-        "clang",
-        "-I",
-        "/Volumes/Qt Creator/Qt Creator.app/Contents/Resources/cplusplus/wrappedQtHeaders",
-        "-I",
-        "/Volumes/Qt Creator/Qt Creator.app/Contents/Resources/cplusplus/wrappedQtHeaders/QtCore",
-        "-I",
-        "/private/var/folders/zz/zyxvpxvq6csfxvn_n003vsjc00yycb/T/QtCreator-GrAMGv/clang-uiheader-XNyrKv",
-        "-nostdinc",
-        "-nostdinc++",
-        "-pipe",
-        "-stdlib=libc++",
-        "-g",
-        "-std=gnu++1z",
-        "-isysroot",
-        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk",
-        "-mmacosx-version-min=11",
-        "-Wall",
-        "-Wextra",
-        "-fPIC",
-        "-fsyntax-only",
-        "-m64",
-        "--target=x86_64-apple-darwin20.6.0",
-        "-DQ_CREATOR_RUN",
-        "-DQT_QML_DEBUG",
-        "-DQT_WIDGETS_LIB",
-        "-DQT_GUI_LIB",
-        "-DQT_CORE_LIB",
-        "-I",
-        "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/view",
-        "-I",
-        "/usr/local/lib/QtWidgets.framework/Headers",
-        "-I",
-        "/usr/local/lib/QtGui.framework/Headers",
-        "-I",
-        "/usr/local/lib/QtCore.framework/Headers",
-        "-I",
-        "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/build-perceptron-Desktop_x86_darwin_generic_mach_o_64bit-Debug",
+        "/Users/lymondgl/s21_MultilayerPerceptron/src/build-perceptron-Desktop_x86_darwin_generic_mach_o_64bit-Debug",
         "-I",
         "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk/System/Library/Frameworks/OpenGL.framework/Headers",
         "-I",
@@ -1146,10 +1074,10 @@
         "-Wno-unknown-pragmas",
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
-        "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/controller/controller.h"
+        "/Users/lymondgl/s21_MultilayerPerceptron/src/controller/controller.h"
     ],
-    "directory": "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/build-perceptron-Desktop_x86_darwin_generic_mach_o_64bit-Debug/.qtc_clangd",
-    "file": "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/controller/controller.h"
+    "directory": "/Users/lymondgl/s21_MultilayerPerceptron/src/build-perceptron-Desktop_x86_darwin_generic_mach_o_64bit-Debug/.qtc_clangd",
+    "file": "/Users/lymondgl/s21_MultilayerPerceptron/src/controller/controller.h"
 },
 {
     "arguments": [
@@ -1159,7 +1087,7 @@
         "-I",
         "/Volumes/Qt Creator/Qt Creator.app/Contents/Resources/cplusplus/wrappedQtHeaders/QtCore",
         "-I",
-        "/private/var/folders/zz/zyxvpxvq6csfxvn_n003vsjc00yycb/T/QtCreator-GrAMGv/clang-uiheader-XNyrKv",
+        "/private/var/folders/zz/zyxvpxvq6csfxvn_n003vsjc00yycb/T/QtCreator-lueTag/clang-uiheader-mLeSwd",
         "-nostdinc",
         "-nostdinc++",
         "-pipe",
@@ -1181,7 +1109,7 @@
         "-DQT_GUI_LIB",
         "-DQT_CORE_LIB",
         "-I",
-        "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/view",
+        "/Users/lymondgl/s21_MultilayerPerceptron/src/view",
         "-I",
         "/usr/local/lib/QtWidgets.framework/Headers",
         "-I",
@@ -1189,7 +1117,7 @@
         "-I",
         "/usr/local/lib/QtCore.framework/Headers",
         "-I",
-        "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/build-perceptron-Desktop_x86_darwin_generic_mach_o_64bit-Debug",
+        "/Users/lymondgl/s21_MultilayerPerceptron/src/build-perceptron-Desktop_x86_darwin_generic_mach_o_64bit-Debug",
         "-I",
         "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk/System/Library/Frameworks/OpenGL.framework/Headers",
         "-I",
@@ -1218,10 +1146,10 @@
         "-Wno-unknown-pragmas",
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
-        "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/matrix/s21_matrix.h"
+        "/Users/lymondgl/s21_MultilayerPerceptron/src/matrix/s21_matrix.h"
     ],
-    "directory": "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/build-perceptron-Desktop_x86_darwin_generic_mach_o_64bit-Debug/.qtc_clangd",
-    "file": "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/matrix/s21_matrix.h"
+    "directory": "/Users/lymondgl/s21_MultilayerPerceptron/src/build-perceptron-Desktop_x86_darwin_generic_mach_o_64bit-Debug/.qtc_clangd",
+    "file": "/Users/lymondgl/s21_MultilayerPerceptron/src/matrix/s21_matrix.h"
 },
 {
     "arguments": [
@@ -1231,7 +1159,7 @@
         "-I",
         "/Volumes/Qt Creator/Qt Creator.app/Contents/Resources/cplusplus/wrappedQtHeaders/QtCore",
         "-I",
-        "/private/var/folders/zz/zyxvpxvq6csfxvn_n003vsjc00yycb/T/QtCreator-GrAMGv/clang-uiheader-XNyrKv",
+        "/private/var/folders/zz/zyxvpxvq6csfxvn_n003vsjc00yycb/T/QtCreator-lueTag/clang-uiheader-mLeSwd",
         "-nostdinc",
         "-nostdinc++",
         "-pipe",
@@ -1253,7 +1181,7 @@
         "-DQT_GUI_LIB",
         "-DQT_CORE_LIB",
         "-I",
-        "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/view",
+        "/Users/lymondgl/s21_MultilayerPerceptron/src/view",
         "-I",
         "/usr/local/lib/QtWidgets.framework/Headers",
         "-I",
@@ -1261,7 +1189,7 @@
         "-I",
         "/usr/local/lib/QtCore.framework/Headers",
         "-I",
-        "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/build-perceptron-Desktop_x86_darwin_generic_mach_o_64bit-Debug",
+        "/Users/lymondgl/s21_MultilayerPerceptron/src/build-perceptron-Desktop_x86_darwin_generic_mach_o_64bit-Debug",
         "-I",
         "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk/System/Library/Frameworks/OpenGL.framework/Headers",
         "-I",
@@ -1290,10 +1218,10 @@
         "-Wno-unknown-pragmas",
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
-        "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/model/data.h"
+        "/Users/lymondgl/s21_MultilayerPerceptron/src/model/data.h"
     ],
-    "directory": "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/build-perceptron-Desktop_x86_darwin_generic_mach_o_64bit-Debug/.qtc_clangd",
-    "file": "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/model/data.h"
+    "directory": "/Users/lymondgl/s21_MultilayerPerceptron/src/build-perceptron-Desktop_x86_darwin_generic_mach_o_64bit-Debug/.qtc_clangd",
+    "file": "/Users/lymondgl/s21_MultilayerPerceptron/src/model/data.h"
 },
 {
     "arguments": [
@@ -1303,7 +1231,7 @@
         "-I",
         "/Volumes/Qt Creator/Qt Creator.app/Contents/Resources/cplusplus/wrappedQtHeaders/QtCore",
         "-I",
-        "/private/var/folders/zz/zyxvpxvq6csfxvn_n003vsjc00yycb/T/QtCreator-GrAMGv/clang-uiheader-XNyrKv",
+        "/private/var/folders/zz/zyxvpxvq6csfxvn_n003vsjc00yycb/T/QtCreator-lueTag/clang-uiheader-mLeSwd",
         "-nostdinc",
         "-nostdinc++",
         "-pipe",
@@ -1325,7 +1253,7 @@
         "-DQT_GUI_LIB",
         "-DQT_CORE_LIB",
         "-I",
-        "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/view",
+        "/Users/lymondgl/s21_MultilayerPerceptron/src/view",
         "-I",
         "/usr/local/lib/QtWidgets.framework/Headers",
         "-I",
@@ -1333,7 +1261,7 @@
         "-I",
         "/usr/local/lib/QtCore.framework/Headers",
         "-I",
-        "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/build-perceptron-Desktop_x86_darwin_generic_mach_o_64bit-Debug",
+        "/Users/lymondgl/s21_MultilayerPerceptron/src/build-perceptron-Desktop_x86_darwin_generic_mach_o_64bit-Debug",
         "-I",
         "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk/System/Library/Frameworks/OpenGL.framework/Headers",
         "-I",
@@ -1362,10 +1290,10 @@
         "-Wno-unknown-pragmas",
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
-        "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/model/facade.h"
+        "/Users/lymondgl/s21_MultilayerPerceptron/src/model/graph_network.h"
     ],
-    "directory": "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/build-perceptron-Desktop_x86_darwin_generic_mach_o_64bit-Debug/.qtc_clangd",
-    "file": "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/model/facade.h"
+    "directory": "/Users/lymondgl/s21_MultilayerPerceptron/src/build-perceptron-Desktop_x86_darwin_generic_mach_o_64bit-Debug/.qtc_clangd",
+    "file": "/Users/lymondgl/s21_MultilayerPerceptron/src/model/graph_network.h"
 },
 {
     "arguments": [
@@ -1375,7 +1303,7 @@
         "-I",
         "/Volumes/Qt Creator/Qt Creator.app/Contents/Resources/cplusplus/wrappedQtHeaders/QtCore",
         "-I",
-        "/private/var/folders/zz/zyxvpxvq6csfxvn_n003vsjc00yycb/T/QtCreator-GrAMGv/clang-uiheader-XNyrKv",
+        "/private/var/folders/zz/zyxvpxvq6csfxvn_n003vsjc00yycb/T/QtCreator-lueTag/clang-uiheader-mLeSwd",
         "-nostdinc",
         "-nostdinc++",
         "-pipe",
@@ -1397,7 +1325,7 @@
         "-DQT_GUI_LIB",
         "-DQT_CORE_LIB",
         "-I",
-        "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/view",
+        "/Users/lymondgl/s21_MultilayerPerceptron/src/view",
         "-I",
         "/usr/local/lib/QtWidgets.framework/Headers",
         "-I",
@@ -1405,7 +1333,7 @@
         "-I",
         "/usr/local/lib/QtCore.framework/Headers",
         "-I",
-        "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/build-perceptron-Desktop_x86_darwin_generic_mach_o_64bit-Debug",
+        "/Users/lymondgl/s21_MultilayerPerceptron/src/build-perceptron-Desktop_x86_darwin_generic_mach_o_64bit-Debug",
         "-I",
         "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk/System/Library/Frameworks/OpenGL.framework/Headers",
         "-I",
@@ -1434,10 +1362,10 @@
         "-Wno-unknown-pragmas",
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
-        "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/model/graph_network.h"
+        "/Users/lymondgl/s21_MultilayerPerceptron/src/model/matrix.h"
     ],
-    "directory": "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/build-perceptron-Desktop_x86_darwin_generic_mach_o_64bit-Debug/.qtc_clangd",
-    "file": "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/model/graph_network.h"
+    "directory": "/Users/lymondgl/s21_MultilayerPerceptron/src/build-perceptron-Desktop_x86_darwin_generic_mach_o_64bit-Debug/.qtc_clangd",
+    "file": "/Users/lymondgl/s21_MultilayerPerceptron/src/model/matrix.h"
 },
 {
     "arguments": [
@@ -1447,7 +1375,7 @@
         "-I",
         "/Volumes/Qt Creator/Qt Creator.app/Contents/Resources/cplusplus/wrappedQtHeaders/QtCore",
         "-I",
-        "/private/var/folders/zz/zyxvpxvq6csfxvn_n003vsjc00yycb/T/QtCreator-GrAMGv/clang-uiheader-XNyrKv",
+        "/private/var/folders/zz/zyxvpxvq6csfxvn_n003vsjc00yycb/T/QtCreator-lueTag/clang-uiheader-mLeSwd",
         "-nostdinc",
         "-nostdinc++",
         "-pipe",
@@ -1469,7 +1397,7 @@
         "-DQT_GUI_LIB",
         "-DQT_CORE_LIB",
         "-I",
-        "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/view",
+        "/Users/lymondgl/s21_MultilayerPerceptron/src/view",
         "-I",
         "/usr/local/lib/QtWidgets.framework/Headers",
         "-I",
@@ -1477,7 +1405,7 @@
         "-I",
         "/usr/local/lib/QtCore.framework/Headers",
         "-I",
-        "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/build-perceptron-Desktop_x86_darwin_generic_mach_o_64bit-Debug",
+        "/Users/lymondgl/s21_MultilayerPerceptron/src/build-perceptron-Desktop_x86_darwin_generic_mach_o_64bit-Debug",
         "-I",
         "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk/System/Library/Frameworks/OpenGL.framework/Headers",
         "-I",
@@ -1506,10 +1434,10 @@
         "-Wno-unknown-pragmas",
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
-        "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/model/matrix.h"
+        "/Users/lymondgl/s21_MultilayerPerceptron/src/model/metric.h"
     ],
-    "directory": "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/build-perceptron-Desktop_x86_darwin_generic_mach_o_64bit-Debug/.qtc_clangd",
-    "file": "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/model/matrix.h"
+    "directory": "/Users/lymondgl/s21_MultilayerPerceptron/src/build-perceptron-Desktop_x86_darwin_generic_mach_o_64bit-Debug/.qtc_clangd",
+    "file": "/Users/lymondgl/s21_MultilayerPerceptron/src/model/metric.h"
 },
 {
     "arguments": [
@@ -1519,7 +1447,7 @@
         "-I",
         "/Volumes/Qt Creator/Qt Creator.app/Contents/Resources/cplusplus/wrappedQtHeaders/QtCore",
         "-I",
-        "/private/var/folders/zz/zyxvpxvq6csfxvn_n003vsjc00yycb/T/QtCreator-GrAMGv/clang-uiheader-XNyrKv",
+        "/private/var/folders/zz/zyxvpxvq6csfxvn_n003vsjc00yycb/T/QtCreator-lueTag/clang-uiheader-mLeSwd",
         "-nostdinc",
         "-nostdinc++",
         "-pipe",
@@ -1541,7 +1469,7 @@
         "-DQT_GUI_LIB",
         "-DQT_CORE_LIB",
         "-I",
-        "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/view",
+        "/Users/lymondgl/s21_MultilayerPerceptron/src/view",
         "-I",
         "/usr/local/lib/QtWidgets.framework/Headers",
         "-I",
@@ -1549,7 +1477,7 @@
         "-I",
         "/usr/local/lib/QtCore.framework/Headers",
         "-I",
-        "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/build-perceptron-Desktop_x86_darwin_generic_mach_o_64bit-Debug",
+        "/Users/lymondgl/s21_MultilayerPerceptron/src/build-perceptron-Desktop_x86_darwin_generic_mach_o_64bit-Debug",
         "-I",
         "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk/System/Library/Frameworks/OpenGL.framework/Headers",
         "-I",
@@ -1578,10 +1506,10 @@
         "-Wno-unknown-pragmas",
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
-        "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/model/metric.h"
+        "/Users/lymondgl/s21_MultilayerPerceptron/src/model/network.h"
     ],
-    "directory": "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/build-perceptron-Desktop_x86_darwin_generic_mach_o_64bit-Debug/.qtc_clangd",
-    "file": "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/model/metric.h"
+    "directory": "/Users/lymondgl/s21_MultilayerPerceptron/src/build-perceptron-Desktop_x86_darwin_generic_mach_o_64bit-Debug/.qtc_clangd",
+    "file": "/Users/lymondgl/s21_MultilayerPerceptron/src/model/network.h"
 },
 {
     "arguments": [
@@ -1591,7 +1519,7 @@
         "-I",
         "/Volumes/Qt Creator/Qt Creator.app/Contents/Resources/cplusplus/wrappedQtHeaders/QtCore",
         "-I",
-        "/private/var/folders/zz/zyxvpxvq6csfxvn_n003vsjc00yycb/T/QtCreator-GrAMGv/clang-uiheader-XNyrKv",
+        "/private/var/folders/zz/zyxvpxvq6csfxvn_n003vsjc00yycb/T/QtCreator-lueTag/clang-uiheader-mLeSwd",
         "-nostdinc",
         "-nostdinc++",
         "-pipe",
@@ -1613,7 +1541,7 @@
         "-DQT_GUI_LIB",
         "-DQT_CORE_LIB",
         "-I",
-        "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/view",
+        "/Users/lymondgl/s21_MultilayerPerceptron/src/view",
         "-I",
         "/usr/local/lib/QtWidgets.framework/Headers",
         "-I",
@@ -1621,7 +1549,7 @@
         "-I",
         "/usr/local/lib/QtCore.framework/Headers",
         "-I",
-        "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/build-perceptron-Desktop_x86_darwin_generic_mach_o_64bit-Debug",
+        "/Users/lymondgl/s21_MultilayerPerceptron/src/build-perceptron-Desktop_x86_darwin_generic_mach_o_64bit-Debug",
         "-I",
         "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk/System/Library/Frameworks/OpenGL.framework/Headers",
         "-I",
@@ -1650,10 +1578,10 @@
         "-Wno-unknown-pragmas",
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
-        "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/model/network.h"
+        "/Users/lymondgl/s21_MultilayerPerceptron/src/model/neuron.h"
     ],
-    "directory": "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/build-perceptron-Desktop_x86_darwin_generic_mach_o_64bit-Debug/.qtc_clangd",
-    "file": "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/model/network.h"
+    "directory": "/Users/lymondgl/s21_MultilayerPerceptron/src/build-perceptron-Desktop_x86_darwin_generic_mach_o_64bit-Debug/.qtc_clangd",
+    "file": "/Users/lymondgl/s21_MultilayerPerceptron/src/model/neuron.h"
 },
 {
     "arguments": [
@@ -1663,7 +1591,7 @@
         "-I",
         "/Volumes/Qt Creator/Qt Creator.app/Contents/Resources/cplusplus/wrappedQtHeaders/QtCore",
         "-I",
-        "/private/var/folders/zz/zyxvpxvq6csfxvn_n003vsjc00yycb/T/QtCreator-GrAMGv/clang-uiheader-XNyrKv",
+        "/private/var/folders/zz/zyxvpxvq6csfxvn_n003vsjc00yycb/T/QtCreator-lueTag/clang-uiheader-mLeSwd",
         "-nostdinc",
         "-nostdinc++",
         "-pipe",
@@ -1685,7 +1613,7 @@
         "-DQT_GUI_LIB",
         "-DQT_CORE_LIB",
         "-I",
-        "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/view",
+        "/Users/lymondgl/s21_MultilayerPerceptron/src/view",
         "-I",
         "/usr/local/lib/QtWidgets.framework/Headers",
         "-I",
@@ -1693,7 +1621,7 @@
         "-I",
         "/usr/local/lib/QtCore.framework/Headers",
         "-I",
-        "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/build-perceptron-Desktop_x86_darwin_generic_mach_o_64bit-Debug",
+        "/Users/lymondgl/s21_MultilayerPerceptron/src/build-perceptron-Desktop_x86_darwin_generic_mach_o_64bit-Debug",
         "-I",
         "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk/System/Library/Frameworks/OpenGL.framework/Headers",
         "-I",
@@ -1722,10 +1650,10 @@
         "-Wno-unknown-pragmas",
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
-        "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/model/neuron.h"
+        "/Users/lymondgl/s21_MultilayerPerceptron/src/model/reader.h"
     ],
-    "directory": "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/build-perceptron-Desktop_x86_darwin_generic_mach_o_64bit-Debug/.qtc_clangd",
-    "file": "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/model/neuron.h"
+    "directory": "/Users/lymondgl/s21_MultilayerPerceptron/src/build-perceptron-Desktop_x86_darwin_generic_mach_o_64bit-Debug/.qtc_clangd",
+    "file": "/Users/lymondgl/s21_MultilayerPerceptron/src/model/reader.h"
 },
 {
     "arguments": [
@@ -1735,7 +1663,7 @@
         "-I",
         "/Volumes/Qt Creator/Qt Creator.app/Contents/Resources/cplusplus/wrappedQtHeaders/QtCore",
         "-I",
-        "/private/var/folders/zz/zyxvpxvq6csfxvn_n003vsjc00yycb/T/QtCreator-GrAMGv/clang-uiheader-XNyrKv",
+        "/private/var/folders/zz/zyxvpxvq6csfxvn_n003vsjc00yycb/T/QtCreator-lueTag/clang-uiheader-mLeSwd",
         "-nostdinc",
         "-nostdinc++",
         "-pipe",
@@ -1757,7 +1685,7 @@
         "-DQT_GUI_LIB",
         "-DQT_CORE_LIB",
         "-I",
-        "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/view",
+        "/Users/lymondgl/s21_MultilayerPerceptron/src/view",
         "-I",
         "/usr/local/lib/QtWidgets.framework/Headers",
         "-I",
@@ -1765,7 +1693,7 @@
         "-I",
         "/usr/local/lib/QtCore.framework/Headers",
         "-I",
-        "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/build-perceptron-Desktop_x86_darwin_generic_mach_o_64bit-Debug",
+        "/Users/lymondgl/s21_MultilayerPerceptron/src/build-perceptron-Desktop_x86_darwin_generic_mach_o_64bit-Debug",
         "-I",
         "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk/System/Library/Frameworks/OpenGL.framework/Headers",
         "-I",
@@ -1794,10 +1722,10 @@
         "-Wno-unknown-pragmas",
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
-        "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/model/reader.h"
+        "/Users/lymondgl/s21_MultilayerPerceptron/src/view/qcustomplot.h"
     ],
-    "directory": "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/build-perceptron-Desktop_x86_darwin_generic_mach_o_64bit-Debug/.qtc_clangd",
-    "file": "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/model/reader.h"
+    "directory": "/Users/lymondgl/s21_MultilayerPerceptron/src/build-perceptron-Desktop_x86_darwin_generic_mach_o_64bit-Debug/.qtc_clangd",
+    "file": "/Users/lymondgl/s21_MultilayerPerceptron/src/view/qcustomplot.h"
 },
 {
     "arguments": [
@@ -1807,7 +1735,7 @@
         "-I",
         "/Volumes/Qt Creator/Qt Creator.app/Contents/Resources/cplusplus/wrappedQtHeaders/QtCore",
         "-I",
-        "/private/var/folders/zz/zyxvpxvq6csfxvn_n003vsjc00yycb/T/QtCreator-GrAMGv/clang-uiheader-XNyrKv",
+        "/private/var/folders/zz/zyxvpxvq6csfxvn_n003vsjc00yycb/T/QtCreator-lueTag/clang-uiheader-mLeSwd",
         "-nostdinc",
         "-nostdinc++",
         "-pipe",
@@ -1829,7 +1757,7 @@
         "-DQT_GUI_LIB",
         "-DQT_CORE_LIB",
         "-I",
-        "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/view",
+        "/Users/lymondgl/s21_MultilayerPerceptron/src/view",
         "-I",
         "/usr/local/lib/QtWidgets.framework/Headers",
         "-I",
@@ -1837,7 +1765,7 @@
         "-I",
         "/usr/local/lib/QtCore.framework/Headers",
         "-I",
-        "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/build-perceptron-Desktop_x86_darwin_generic_mach_o_64bit-Debug",
+        "/Users/lymondgl/s21_MultilayerPerceptron/src/build-perceptron-Desktop_x86_darwin_generic_mach_o_64bit-Debug",
         "-I",
         "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk/System/Library/Frameworks/OpenGL.framework/Headers",
         "-I",
@@ -1866,10 +1794,10 @@
         "-Wno-unknown-pragmas",
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
-        "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/view/qcustomplot.h"
+        "/Users/lymondgl/s21_MultilayerPerceptron/src/view/render_scene.h"
     ],
-    "directory": "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/build-perceptron-Desktop_x86_darwin_generic_mach_o_64bit-Debug/.qtc_clangd",
-    "file": "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/view/qcustomplot.h"
+    "directory": "/Users/lymondgl/s21_MultilayerPerceptron/src/build-perceptron-Desktop_x86_darwin_generic_mach_o_64bit-Debug/.qtc_clangd",
+    "file": "/Users/lymondgl/s21_MultilayerPerceptron/src/view/render_scene.h"
 },
 {
     "arguments": [
@@ -1879,7 +1807,7 @@
         "-I",
         "/Volumes/Qt Creator/Qt Creator.app/Contents/Resources/cplusplus/wrappedQtHeaders/QtCore",
         "-I",
-        "/private/var/folders/zz/zyxvpxvq6csfxvn_n003vsjc00yycb/T/QtCreator-GrAMGv/clang-uiheader-XNyrKv",
+        "/private/var/folders/zz/zyxvpxvq6csfxvn_n003vsjc00yycb/T/QtCreator-lueTag/clang-uiheader-mLeSwd",
         "-nostdinc",
         "-nostdinc++",
         "-pipe",
@@ -1901,7 +1829,7 @@
         "-DQT_GUI_LIB",
         "-DQT_CORE_LIB",
         "-I",
-        "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/view",
+        "/Users/lymondgl/s21_MultilayerPerceptron/src/view",
         "-I",
         "/usr/local/lib/QtWidgets.framework/Headers",
         "-I",
@@ -1909,7 +1837,7 @@
         "-I",
         "/usr/local/lib/QtCore.framework/Headers",
         "-I",
-        "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/build-perceptron-Desktop_x86_darwin_generic_mach_o_64bit-Debug",
+        "/Users/lymondgl/s21_MultilayerPerceptron/src/build-perceptron-Desktop_x86_darwin_generic_mach_o_64bit-Debug",
         "-I",
         "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk/System/Library/Frameworks/OpenGL.framework/Headers",
         "-I",
@@ -1938,10 +1866,10 @@
         "-Wno-unknown-pragmas",
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
-        "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/view/render_scene.h"
+        "/Users/lymondgl/s21_MultilayerPerceptron/src/view/s21_view.h"
     ],
-    "directory": "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/build-perceptron-Desktop_x86_darwin_generic_mach_o_64bit-Debug/.qtc_clangd",
-    "file": "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/view/render_scene.h"
+    "directory": "/Users/lymondgl/s21_MultilayerPerceptron/src/build-perceptron-Desktop_x86_darwin_generic_mach_o_64bit-Debug/.qtc_clangd",
+    "file": "/Users/lymondgl/s21_MultilayerPerceptron/src/view/s21_view.h"
 },
 {
     "arguments": [
@@ -1951,7 +1879,7 @@
         "-I",
         "/Volumes/Qt Creator/Qt Creator.app/Contents/Resources/cplusplus/wrappedQtHeaders/QtCore",
         "-I",
-        "/private/var/folders/zz/zyxvpxvq6csfxvn_n003vsjc00yycb/T/QtCreator-GrAMGv/clang-uiheader-XNyrKv",
+        "/private/var/folders/zz/zyxvpxvq6csfxvn_n003vsjc00yycb/T/QtCreator-lueTag/clang-uiheader-mLeSwd",
         "-nostdinc",
         "-nostdinc++",
         "-pipe",
@@ -1973,7 +1901,7 @@
         "-DQT_GUI_LIB",
         "-DQT_CORE_LIB",
         "-I",
-        "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/view",
+        "/Users/lymondgl/s21_MultilayerPerceptron/src/view",
         "-I",
         "/usr/local/lib/QtWidgets.framework/Headers",
         "-I",
@@ -1981,7 +1909,7 @@
         "-I",
         "/usr/local/lib/QtCore.framework/Headers",
         "-I",
-        "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/build-perceptron-Desktop_x86_darwin_generic_mach_o_64bit-Debug",
+        "/Users/lymondgl/s21_MultilayerPerceptron/src/build-perceptron-Desktop_x86_darwin_generic_mach_o_64bit-Debug",
         "-I",
         "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk/System/Library/Frameworks/OpenGL.framework/Headers",
         "-I",
@@ -2010,81 +1938,9 @@
         "-Wno-unknown-pragmas",
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
-        "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/view/s21_view.h"
+        "/Users/lymondgl/s21_MultilayerPerceptron/src/build-perceptron-Desktop_x86_darwin_generic_mach_o_64bit-Debug/ui_s21_view.h"
     ],
-    "directory": "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/build-perceptron-Desktop_x86_darwin_generic_mach_o_64bit-Debug/.qtc_clangd",
-    "file": "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/view/s21_view.h"
-},
-{
-    "arguments": [
-        "clang",
-        "-I",
-        "/Volumes/Qt Creator/Qt Creator.app/Contents/Resources/cplusplus/wrappedQtHeaders",
-        "-I",
-        "/Volumes/Qt Creator/Qt Creator.app/Contents/Resources/cplusplus/wrappedQtHeaders/QtCore",
-        "-I",
-        "/private/var/folders/zz/zyxvpxvq6csfxvn_n003vsjc00yycb/T/QtCreator-GrAMGv/clang-uiheader-XNyrKv",
-        "-nostdinc",
-        "-nostdinc++",
-        "-pipe",
-        "-stdlib=libc++",
-        "-g",
-        "-std=gnu++1z",
-        "-isysroot",
-        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk",
-        "-mmacosx-version-min=11",
-        "-Wall",
-        "-Wextra",
-        "-fPIC",
-        "-fsyntax-only",
-        "-m64",
-        "--target=x86_64-apple-darwin20.6.0",
-        "-DQ_CREATOR_RUN",
-        "-DQT_QML_DEBUG",
-        "-DQT_WIDGETS_LIB",
-        "-DQT_GUI_LIB",
-        "-DQT_CORE_LIB",
-        "-I",
-        "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/view",
-        "-I",
-        "/usr/local/lib/QtWidgets.framework/Headers",
-        "-I",
-        "/usr/local/lib/QtGui.framework/Headers",
-        "-I",
-        "/usr/local/lib/QtCore.framework/Headers",
-        "-I",
-        "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/build-perceptron-Desktop_x86_darwin_generic_mach_o_64bit-Debug",
-        "-I",
-        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk/System/Library/Frameworks/OpenGL.framework/Headers",
-        "-I",
-        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk/System/Library/Frameworks/AGL.framework/Headers",
-        "-I",
-        "/usr/local/share/qt/mkspecs/macx-clang",
-        "-F",
-        "/usr/local/lib",
-        "-F",
-        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks",
-        "-isystem",
-        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1",
-        "-isystem",
-        "/Volumes/Qt Creator/Qt Creator.app/Contents/Resources/libexec/clang/lib/clang/14.0.0/include",
-        "-isystem",
-        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include",
-        "-isystem",
-        "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include",
-        "-fmessage-length=0",
-        "-fdiagnostics-show-note-include-stack",
-        "-fretain-comments-from-system-headers",
-        "-fmacro-backtrace-limit=0",
-        "-ferror-limit=1000",
-        "-x",
-        "c++-header",
-        "-Wno-unknown-pragmas",
-        "-Wno-unknown-warning-option",
-        "-Wno-documentation-unknown-command",
-        "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/build-perceptron-Desktop_x86_darwin_generic_mach_o_64bit-Debug/ui_s21_view.h"
-    ],
-    "directory": "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/build-perceptron-Desktop_x86_darwin_generic_mach_o_64bit-Debug/.qtc_clangd",
-    "file": "/Users/lymondgl/Desktop/s21_MultilayerPerceptron/src/build-perceptron-Desktop_x86_darwin_generic_mach_o_64bit-Debug/ui_s21_view.h"
+    "directory": "/Users/lymondgl/s21_MultilayerPerceptron/src/build-perceptron-Desktop_x86_darwin_generic_mach_o_64bit-Debug/.qtc_clangd",
+    "file": "/Users/lymondgl/s21_MultilayerPerceptron/src/build-perceptron-Desktop_x86_darwin_generic_mach_o_64bit-Debug/ui_s21_view.h"
 }
 ]

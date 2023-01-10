@@ -1,6 +1,0 @@
-# ninja log v5
-1	179	1667996685000000000	build.ninja	2bb8c3f860476a00
-0	1005	1667996718000000000	CMakeFiles/s21_MultilayerPerceptron.dir/src/model/neuron.cc.o	7e738f09ad89cf8b
-1005	1120	1667996719000000000	s21_MultilayerPerceptron	8fe420a93a349f10
-3	773	1667996730000000000	CMakeFiles/s21_MultilayerPerceptron.dir/src/model/neuron.cc.o	7e738f09ad89cf8b
-773	834	1667996730000000000	s21_MultilayerPerceptron	8fe420a93a349f10
